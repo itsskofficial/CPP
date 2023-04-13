@@ -6,7 +6,7 @@ using namespace std;
 typedef struct list
 {
 int data;
-struct list  *next;
+struct list *next;
 } node;
 
 node *ptr[max], *root[max], *temp[max];
