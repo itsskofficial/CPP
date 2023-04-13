@@ -7,9 +7,9 @@ typedef struct list
 {
 int data;
 struct list  *next;
-} node_type;
+} node;
 
-node_type *ptr[max], *root[max], *temp[max];
+node *ptr[max], *root[max], *temp[max];
 
 class Dictionary
 {
