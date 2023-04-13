@@ -133,8 +133,10 @@ int main()
 
         switch(choice)
         {
-            case 1: 
-                b1.create();break;
+            case 1: {
+                b1.create();
+                break;
+                
             case 2: 
                 if(b1.root==NULL)
                     cout<<"\nTree Not Created";
