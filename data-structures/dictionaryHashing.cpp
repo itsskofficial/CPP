@@ -74,6 +74,7 @@ void Dictionary::search(int key)
     if (flag==0)
     cout<<"\nsearch key not found.......";
 }
+
 void Dictionary::delete_ele(int key)
 {
 index=int(key%max);
