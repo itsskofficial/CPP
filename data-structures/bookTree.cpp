@@ -65,26 +65,26 @@ class Book
             else
                 insert(root->left, temp);
         }
-        }
+    }
 
         void rec_inorder(BTNode *root)
         {
-        if(root!=NULL)
-        {
-        rec_inorder(root->left);
-        cout<<root->data;
-        rec_inorder(root->right);
-        }
-        }
-        void printLevelOrder(BTNode *root)
-        {
-        int h = height(root);
-        int i;
-        for(i=1;i<=h;i++)
-        {
-        cout<<"\n";
-        printLevel(root,i);
-        }
+            if(root!=NULL)
+            {
+            rec_inorder(root->left);
+            cout<<root->data;
+            rec_inorder(root->right);
+            }
+            }
+            void printLevelOrder(BTNode *root)
+            {
+            int h = height(root);
+            int i;
+            for(i=1;i<=h;i++)
+            {
+            cout<<"\n";
+            printLevel(root,i);
+            }
     }
     void printLevel(BTNode *root, int level)
     {
