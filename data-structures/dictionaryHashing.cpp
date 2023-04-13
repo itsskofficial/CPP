@@ -113,17 +113,20 @@ int main()
                     d.insert(num);
                 }
                 break;
-                
+
             case 2:
                 cout<<"\nEnter the element to be searched:";
                 cin>>n;
                 d.search(n);
                 break;
-            case 3:cout<<"\nEnter the element to be deleted:";
-            cin>>n;
-            d.delete_ele(n);
-            break;
-            default:cout<<"\nInvalid choice....";
+
+            case 3:
+                cout<<"\nEnter the element to be deleted:";
+                cin>>n;
+                d.delete_ele(n);
+                break;
+            default:
+            cout<<"\nInvalid choice....";
         }
         cout<<"\nEnter y to continue......";
         cin>>c;
