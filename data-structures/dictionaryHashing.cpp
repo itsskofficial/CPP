@@ -26,13 +26,13 @@ class Dictionary
 
 Dictionary::Dictionary()
 {
-index=-1;
-for(int i=0;i<max;i++)
-{
-root[i]=NULL;
-ptr[i]=NULL;
-temp[i]=NULL;
-}
+    index=-1;
+    for(int i=0;i<max;i++)
+        {
+        root[i]=NULL;
+        ptr[i]=NULL;
+        temp[i]=NULL;
+        }
 }
 void Dictionary::insert(int key)
 {
