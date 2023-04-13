@@ -1,6 +1,7 @@
 #include<iostream>
 #include<conio.h>
 #include<stdlib.h>
+# define max 10
 using namespace std;
 
 
