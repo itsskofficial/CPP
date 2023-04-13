@@ -88,7 +88,7 @@ class Book
             }
         }
 
-        void printLevel(BTNode *root, int level)
+        int printLevel(BTNode *root, int level)
         {
             if(root == NULL)
                 return 0;
