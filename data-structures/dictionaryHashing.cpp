@@ -56,7 +56,7 @@ void Dictionary::insert(int key)
     }
     }
 
-void Dictionary::search(int key)
+void Dictionary::search_element(int key)
 {
     int flag=0;
     index=int(key%max);
@@ -101,7 +101,7 @@ int main()
         cout<<"\n2.Search for a value\n3.Delete an value";
         cout<<"\nEnter your choice:";
         cin>>ch;
-        
+
         switch(ch)
         {
             case 1:
