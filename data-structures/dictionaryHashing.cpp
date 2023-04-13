@@ -113,9 +113,10 @@ int main()
                     d.insert(num);
                 }
                 break;
-            case 2:cout<<"\nEnter the element to be searched:";
-            cin>>n;
-            d.search(n);
+            case 2:
+                cout<<"\nEnter the element to be searched:";
+                cin>>n;
+                d.search(n);
             case 3:cout<<"\nEnter the element to be deleted:";
             cin>>n;
             d.delete_ele(n);
