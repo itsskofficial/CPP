@@ -125,4 +125,5 @@ cout<<"\nEnter y to continue......";
 cin>>c;
 }while(c=='y');
 getch();
+return 0;
 }
