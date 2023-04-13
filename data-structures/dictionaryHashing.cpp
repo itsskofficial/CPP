@@ -2,14 +2,16 @@
 #include<conio.h>
 #include<stdlib.h>
 using namespace std;
-# define max 10
+
+
+
 typedef struct list
 {
 int data;
 struct list  *next;
-}node_type;
+} node_type;
 
-node_type *ptr[max], *root[max],*temp[max];
+node_type *ptr[max], *root[max], *temp[max];
 
 class Dictionary
 {
