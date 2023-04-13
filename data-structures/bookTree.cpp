@@ -78,14 +78,14 @@ class Book
             }
             void printLevelOrder(BTNode *root)
             {
-            int h = height(root);
-            int i;
-            for(i=1;i<=h;i++)
-            {
-                cout<<"\n";
-                printLevel(root,i);
+                int h = height(root);
+                int i;
+                for(i=1;i<=h;i++)
+                {
+                    cout<<"\n";
+                    printLevel(root,i);
+                }
             }
-        }
 
     void printLevel(BTNode *root, int level)
     {
