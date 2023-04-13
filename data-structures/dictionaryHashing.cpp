@@ -77,18 +77,18 @@ void Dictionary::search(int key)
 
 void Dictionary::delete_ele(int key)
 {
-index=int(key%max);
-temp[index]=root[index];
-while(temp[index]->data!=key && temp[index]!=NULL)
-{
-ptr[index]=temp[index];
-temp[index]=temp[index]->next;
-}
-ptr[index]->next=temp[index]->next;
-cout<<"\n"<<temp[index]->data<<" has been deleted.";
-temp[index]->data=-1;
-temp[index]=NULL;
-free(temp[index]);
+    index=int(key%max);
+    temp[index]=root[index];
+    while(temp[index]->data!=key && temp[index]!=NULL)
+    {
+    ptr[index]=temp[index];
+    temp[index]=temp[index]->next;
+    }
+    ptr[index]->next=temp[index]->next;
+    cout<<"\n"<<temp[index]->data<<" has been deleted.";
+    temp[index]->data=-1;
+    temp[index]=NULL;
+    free(temp[index]);
 }
 main()
 {
