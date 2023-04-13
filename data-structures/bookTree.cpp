@@ -123,7 +123,7 @@ int main()
     Book b1;
     do
     {
-    cout<"\n\tMain Menu:";
+    cout<<"\n\tMain Menu:";
     cout<<"\n1.Create";
     cout<<"\n2.Display";
     cout<<"\n3.Exit";
@@ -140,4 +140,4 @@ int main()
     }
     }while(choice <=2);
     return 0; 
-    }
+}
