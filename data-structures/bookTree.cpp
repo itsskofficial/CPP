@@ -43,6 +43,7 @@ class Book
         char ch;
         cout<<"\nWhere to insert left/right?"<<root->data<<":";
         cin>>ch;
+        
         if(ch == 'r' || ch == 'R')
         {
             if(root->right == NULL)
@@ -54,13 +55,14 @@ class Book
         }
         else
         {
-        if(root->left == NULL)
-        {
-        root->left = temp;
+            if(root->left == NULL)
+            {
+                root->left = temp;
+            }
+            else
+                insert(root->left, temp);
         }
-        else
-        insert(root->left, temp);
-        }
+
         }
         void rec_inorder(BTNode *root)
         {
