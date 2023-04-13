@@ -16,12 +16,12 @@ node_type *ptr[max], *root[max], *temp[max];
 
 class Dictionary
 {
-public:
-int index;
-Dictionary();
-void insert(int);
-void search(int);
-void delete_ele(int);
+    public:
+    int index;
+    Dictionary();
+    void insert(int);
+    void search(int);
+    void delete_ele(int);
 };
 Dictionary::Dictionary()
 {
