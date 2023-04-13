@@ -35,7 +35,7 @@ class Book
             {
             insert(root, temp);
             }
-            
+
             cout<<"\nDo You Want to Enter More Elements?(y/n)";
             cin>>ans;
         } while(ans == 'y'|| ans == 'Y');
@@ -65,8 +65,8 @@ class Book
             else
                 insert(root->left, temp);
         }
-
         }
+
         void rec_inorder(BTNode *root)
         {
         if(root!=NULL)
