@@ -35,8 +35,8 @@ class Book
         }
         cout<<"\nDo You Want to Enter More Elements?(y/n)";
         cin>>ans;
-    }while(ans == 'y'|| ans == 'Y');
-    }
+    } while(ans == 'y'|| ans == 'Y');
+}
     void insert(BTNode *root, BTNode *temp)
     {
     char ch;
