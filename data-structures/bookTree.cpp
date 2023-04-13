@@ -45,7 +45,7 @@ class Book
         cin>>ch;
         if(ch == 'r' || ch == 'R')
         {
-            if(root->right == NULL)
+        if(root->right == NULL)
         {
         root->right = temp;
         }
