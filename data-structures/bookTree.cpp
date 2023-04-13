@@ -71,11 +71,11 @@ class Book
         {
             if(root!=NULL)
             {
-            rec_inorder(root->left);
-            cout<<root->data;
-            rec_inorder(root->right);
+                rec_inorder(root->left);
+                cout<<root->data;
+                rec_inorder(root->right);
             }
-            }
+        }
             void printLevelOrder(BTNode *root)
             {
                 int h = height(root);
