@@ -90,7 +90,7 @@ void Dictionary::delete_ele(int key)
     temp[index]=NULL;
     free(temp[index]);
 }
-main()
+int main()
 {
 int val,ch,n,num;
 char c;
