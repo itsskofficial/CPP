@@ -81,7 +81,7 @@ class Book
         {
             int h = height(root);
             int i;
-            for(i=1;i<=h;i++)
+            for (i=1;i<=h;i++)
             {
                 cout<<"\n";
                 printLevel(root,i);
