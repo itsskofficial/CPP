@@ -55,23 +55,23 @@ void Dictionary::insert(int key)
         temp[index]->next=ptr[index];
     }
     }
-    void Dictionary::search(int key)
-    {
-    int flag=0;
-    index=int(key%max);
-    temp[index]=root[index];
-    while(temp[index]!=NULL)
-    {
-    if(temp[index]->data==key)
-    {
-    cout<<"\nSearch key is found!!";
-    flag=1;
-    break;
-    }
-    else temp[index]=temp[index]->next;
-    }
-    if (flag==0)
-    cout<<"\nsearch key not found.......";
+void Dictionary::search(int key)
+{
+int flag=0;
+index=int(key%max);
+temp[index]=root[index];
+while(temp[index]!=NULL)
+{
+if(temp[index]->data==key)
+{
+cout<<"\nSearch key is found!!";
+flag=1;
+break;
+}
+else temp[index]=temp[index]->next;
+}
+if (flag==0)
+cout<<"\nsearch key not found.......";
 }
 void Dictionary::delete_ele(int key)
 {
