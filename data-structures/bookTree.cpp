@@ -85,7 +85,8 @@ class Book
             cout<<"\n";
             printLevel(root,i);
             }
-    }
+        }
+        
     void printLevel(BTNode *root, int level)
     {
     if(root == NULL)
