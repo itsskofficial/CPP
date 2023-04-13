@@ -19,7 +19,7 @@ class Dictionary
     public:
         int index;
         Dictionary();
-        void insert(int);
+        void insert_element(int);
         void search_element(int);
         void delete_ele(int);
 };
@@ -35,7 +35,7 @@ Dictionary::Dictionary()
         }
 }
 
-void Dictionary::insert(int key)
+void Dictionary::insert_element(int key)
 {
     index=int(key%max);
     ptr[index]=(node_type*)malloc(sizeof(node_type));
@@ -111,7 +111,7 @@ int main()
                 for(int i=0;i<n;i++)
                 {
                     cin>>num;
-                    d.insert(num);
+                    d.insert_element(num);
                 }
                 break;
 
