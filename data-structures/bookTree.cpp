@@ -82,11 +82,11 @@ class Book
             int i;
             for(i=1;i<=h;i++)
             {
-            cout<<"\n";
-            printLevel(root,i);
+                cout<<"\n";
+                printLevel(root,i);
             }
         }
-        
+
     void printLevel(BTNode *root, int level)
     {
     if(root == NULL)
