@@ -20,7 +20,7 @@ class Dictionary
         int index;
         Dictionary();
         void insert(int);
-        void search(int);
+        void search_element(int);
         void delete_ele(int);
 };
 
@@ -56,7 +56,7 @@ void Dictionary::insert(int key)
     }
     }
 
-void Dictionary::search(int key)
+void Dictionary::search_element(int key)
 {
     int flag=0;
     index=int(key%max);
@@ -118,7 +118,7 @@ int main()
             case 2:
                 cout<<"\nEnter the element to be searched:";
                 cin>>n;
-                d.search(n);
+                d.search_element(n);
                 break;
 
             case 3:
