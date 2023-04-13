@@ -121,24 +121,26 @@ int main()
 {
     int choice;
     Book b1;
-    
+
     do
     {
-    cout<<"\n\tMain Menu:";
-    cout<<"\n1.Create";
-    cout<<"\n2.Display";
-    cout<<"\n3.Exit";
-    cout<<"\nEnter Your Choice:";
-    cin>>choice;
-    switch(choice)
-    {
-    case 1: b1.create();break;
-    case 2: if(b1.root==NULL)
-    cout<<"\nTree Not Created";
-    else
-    b1.printLevelOrder(b1.root);
-    break;
-    }
+        cout<<"\n\tMain Menu:";
+        cout<<"\n1.Create";
+        cout<<"\n2.Display";
+        cout<<"\n3.Exit";
+        cout<<"\nEnter Your Choice:";
+        cin>>choice;
+
+        switch(choice)
+        {
+            case 1: 
+                b1.create();break;
+            case 2: if(b1.root==NULL)
+            cout<<"\nTree Not Created";
+            else
+            b1.printLevelOrder(b1.root);
+            break;
+        }
     }while(choice <=2);
     return 0; 
 }
