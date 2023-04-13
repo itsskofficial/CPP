@@ -23,6 +23,7 @@ class Dictionary
         void search(int);
         void delete_ele(int);
 };
+
 Dictionary::Dictionary()
 {
 index=-1;
