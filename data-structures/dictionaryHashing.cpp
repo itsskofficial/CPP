@@ -34,6 +34,7 @@ Dictionary::Dictionary()
         temp[i]=NULL;
         }
 }
+
 void Dictionary::insert(int key)
 {
 index=int(key%max);
