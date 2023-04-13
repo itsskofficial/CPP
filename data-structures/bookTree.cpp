@@ -138,9 +138,9 @@ int main()
             case 2: 
                 if(b1.root==NULL)
                     cout<<"\nTree Not Created";
-            else
-            b1.printLevelOrder(b1.root);
-            break;
+                else
+                    b1.printLevelOrder(b1.root);
+                break;
         }
     }while(choice <=2);
     return 0; 
