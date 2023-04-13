@@ -101,6 +101,7 @@ int main()
         cout<<"\n2.Search for a value\n3.Delete an value";
         cout<<"\nEnter your choice:";
         cin>>ch;
+        
         switch(ch)
         {
             case 1:
@@ -133,7 +134,7 @@ int main()
         cout<<"\nEnter y to continue......";
         cin>>c;
     } while(c=='y');
-    
+
     getch();
     return 0;
 }
