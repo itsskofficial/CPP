@@ -40,8 +40,8 @@ void Dictionary::insert(int key)
     index=int(key%max);
     ptr[index]=(node_type*)malloc(sizeof(node_type));
     ptr[index]->data=key;
-    
-    if(root[index]==NULL)
+
+    if (root[index]==NULL)
     {
         root[index]=ptr[index];
         root[index]->next=NULL;
