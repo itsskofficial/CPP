@@ -76,7 +76,7 @@ class Book
                 rec_inorder(root->right);
             }
         }
-        
+
         void printLevelOrder(BTNode *root)
         {
             int h = height(root);
@@ -88,33 +88,33 @@ class Book
             }
         }
 
-    void printLevel(BTNode *root, int level)
-    {
-    if(root == NULL)
-    return;
-    if(level == 1 )
-    //
-    cout<<" "<<root->data;
-    else if (level>1)
-    {
-    printLevel(root->left,level-1);
-    printLevel(root->right,level-1);
-    }
-    }
-    int height(BTNode *node)
-    {
-    if(node == NULL)
-    return 0;
-    else
-    {
-    int lheight = height(node->left);
-    int rheight = height(node->right);
-    if(lheight>rheight)
-    return (lheight+1);
-    else
-    return (rheight+1);
-    }
-    }
+        void printLevel(BTNode *root, int level)
+        {
+        if(root == NULL)
+        return;
+        if(level == 1 )
+        //
+        cout<<" "<<root->data;
+        else if (level>1)
+        {
+        printLevel(root->left,level-1);
+        printLevel(root->right,level-1);
+        }
+        }
+        int height(BTNode *node)
+        {
+        if(node == NULL)
+        return 0;
+        else
+        {
+            int lheight = height(node->left);
+            int rheight = height(node->right);
+            if(lheight>rheight)
+            return (lheight+1);
+            else
+            return (rheight+1);
+        }
+        }
 };
 int main()
  {
