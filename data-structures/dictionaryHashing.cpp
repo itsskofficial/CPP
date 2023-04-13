@@ -97,7 +97,7 @@ int main()
     Dictionary d;
     do
     {
-        cout<<"\nMENU:\n1.Create";
+        cout<<"\nMENU:\n1.Create dictionary";
         cout<<"\n2.Search element\n3.Delete element";
         cout<<"\nEnter your choice:";
         cin>>ch;
