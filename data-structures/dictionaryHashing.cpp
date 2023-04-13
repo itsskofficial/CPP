@@ -103,23 +103,23 @@ int main()
         cin>>ch;
         switch(ch)
         {
-        case 1:cout<<"\nEnter the number of elements to be inserted:";
-        cin>>n;
-        cout<<"\nEnter the elements to be inserted:";
-        for(int i=0;i<n;i++)
-        {
-        cin>>num;
-        d.insert(num);
-        }
-        break;
-        case 2:cout<<"\nEnter the element to be searched:";
-        cin>>n;
-        d.search(n);
-        case 3:cout<<"\nEnter the element to be deleted:";
-        cin>>n;
-        d.delete_ele(n);
-        break;
-        default:cout<<"\nInvalid choice....";
+            case 1:cout<<"\nEnter the number of elements to be inserted:";
+            cin>>n;
+            cout<<"\nEnter the elements to be inserted:";
+            for(int i=0;i<n;i++)
+            {
+                cin>>num;
+                d.insert(num);
+            }
+            break;
+            case 2:cout<<"\nEnter the element to be searched:";
+            cin>>n;
+            d.search(n);
+            case 3:cout<<"\nEnter the element to be deleted:";
+            cin>>n;
+            d.delete_ele(n);
+            break;
+            default:cout<<"\nInvalid choice....";
         }
         cout<<"\nEnter y to continue......";
         cin>>c;
