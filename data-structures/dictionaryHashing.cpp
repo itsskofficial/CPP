@@ -21,7 +21,7 @@ class Dictionary
         Dictionary();
         void insert_element(int);
         void search_element(int);
-        void delete_ele(int);
+        void delete_element(int);
 };
 
 Dictionary::Dictionary()
@@ -75,7 +75,7 @@ void Dictionary::search_element(int key)
     cout<<"\nSearch key not found.......";
 }
 
-void Dictionary::delete_ele(int key)
+void Dictionary::delete_element(int key)
 {
     index=int(key%max);
     temp[index]=root[index];
@@ -124,7 +124,7 @@ int main()
             case 3:
                 cout<<"\nEnter the element to be deleted:";
                 cin>>n;
-                d.delete_ele(n);
+                d.delete_element(n);
                 break;
 
             default:
