@@ -49,10 +49,10 @@ void Dictionary::insert(int key)
     }
     else
     {
-    temp[index]=root[index];
-    while(temp[index]->next!=NULL)
-    temp[index]=temp[index]->next;
-    temp[index]->next=ptr[index];
+        temp[index]=root[index];
+        while(temp[index]->next!=NULL)
+        temp[index]=temp[index]->next;
+        temp[index]->next=ptr[index];
     }
     }
     void Dictionary::search(int key)
