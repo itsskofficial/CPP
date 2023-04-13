@@ -93,8 +93,7 @@ class Book
             if(root == NULL)
                 return 0;
             if(level == 1 )
-            //
-            cout<<" "<<root->data;
+                cout<<" "<<root->data;
             else if (level>1)
             {
             printLevel(root->left,level-1);
