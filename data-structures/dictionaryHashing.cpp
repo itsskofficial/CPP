@@ -125,9 +125,11 @@ int main()
                 cin>>n;
                 d.delete_ele(n);
                 break;
+
             default:
-            cout<<"\nInvalid choice....";
+                cout<<"\nInvalid choice....";
         }
+        
         cout<<"\nEnter y to continue......";
         cin>>c;
     } while(c=='y');
