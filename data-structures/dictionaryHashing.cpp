@@ -7,9 +7,9 @@ typedef struct list
 {
 int data;
 struct list  *next;
-} node_type;
+} node;
 
-node_type *ptr[max], *root[max], *temp[max];
+node *ptr[max], *root[max], *temp[max];
 
 class Dictionary
 {
@@ -35,7 +35,7 @@ Dictionary::Dictionary()
 void Dictionary::insert_element(int key)
 {
     index=int(key%max);
-    ptr[index]=(node_type*)malloc(sizeof(node_type));
+    ptr[index]=(node*)malloc(sizeof(node));
     ptr[index]->data=key;
 
     if (root[index]==NULL)
