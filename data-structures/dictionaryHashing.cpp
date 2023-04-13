@@ -65,14 +65,14 @@ void Dictionary::search_element(int key)
     {
     if(temp[index]->data==key)
     {
-    cout<<"\nSearch key is found!!";
+    cout<<"\nSearch key found";
     flag=1;
     break;
     }
     else temp[index]=temp[index]->next;
     }
     if (flag==0)
-    cout<<"\nsearch key not found.......";
+    cout<<"\nSearch key not found.......";
 }
 
 void Dictionary::delete_ele(int key)
