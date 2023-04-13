@@ -91,7 +91,7 @@ class Book
         void printLevel(BTNode *root, int level)
         {
             if(root == NULL)
-            return;
+                return 0;
             if(level == 1 )
             //
             cout<<" "<<root->data;
