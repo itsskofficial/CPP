@@ -37,40 +37,40 @@ Dictionary::Dictionary()
 
 void Dictionary::insert(int key)
 {
-index=int(key%max);
-ptr[index]=(node_type*)malloc(sizeof(node_type));
-ptr[index]->data=key;
-if(root[index]==NULL)
-{
-root[index]=ptr[index];
-root[index]->next=NULL;
-temp[index]=ptr[index];
-}
-else
-{
-temp[index]=root[index];
-while(temp[index]->next!=NULL)
-temp[index]=temp[index]->next;
-temp[index]->next=ptr[index];
-}
-}
-void Dictionary::search(int key)
-{
-int flag=0;
-index=int(key%max);
-temp[index]=root[index];
-while(temp[index]!=NULL)
-{
-if(temp[index]->data==key)
-{
-cout<<"\nSearch key is found!!";
-flag=1;
-break;
-}
-else temp[index]=temp[index]->next;
-}
-if (flag==0)
-cout<<"\nsearch key not found.......";
+    index=int(key%max);
+    ptr[index]=(node_type*)malloc(sizeof(node_type));
+    ptr[index]->data=key;
+    if(root[index]==NULL)
+    {
+    root[index]=ptr[index];
+    root[index]->next=NULL;
+    temp[index]=ptr[index];
+    }
+    else
+    {
+    temp[index]=root[index];
+    while(temp[index]->next!=NULL)
+    temp[index]=temp[index]->next;
+    temp[index]->next=ptr[index];
+    }
+    }
+    void Dictionary::search(int key)
+    {
+    int flag=0;
+    index=int(key%max);
+    temp[index]=root[index];
+    while(temp[index]!=NULL)
+    {
+    if(temp[index]->data==key)
+    {
+    cout<<"\nSearch key is found!!";
+    flag=1;
+    break;
+    }
+    else temp[index]=temp[index]->next;
+    }
+    if (flag==0)
+    cout<<"\nsearch key not found.......";
 }
 void Dictionary::delete_ele(int key)
 {
