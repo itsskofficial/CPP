@@ -98,7 +98,7 @@ int main()
     do
     {
         cout<<"\nMENU:\n1.Create";
-        cout<<"\n2.Search for a value\n3.Delete a value";
+        cout<<"\n2.Search element\n3.Delete element";
         cout<<"\nEnter your choice:";
         cin>>ch;
         
