@@ -20,21 +20,21 @@ class Book
     char ans='y';
     do
     {
-    temp = new BTNode();
-    cout<<"\nEnter The Element:";
-    cin>>temp->data;
-    temp->left=NULL;
-    temp->right=NULL;
-    if(root == NULL)
-    {
-    root = temp;
-    }
-    else
-    {
-    insert(root, temp);
-    }
-    cout<<"\nDo You Want to Enter More Elements?(y/n)";
-    cin>>ans;
+        temp = new BTNode();
+        cout<<"\nEnter The Element:";
+        cin>>temp->data;
+        temp->left=NULL;
+        temp->right=NULL;
+        if(root == NULL)
+        {
+        root = temp;
+        }
+        else
+        {
+        insert(root, temp);
+        }
+        cout<<"\nDo You Want to Enter More Elements?(y/n)";
+        cin>>ans;
     }while(ans == 'y'|| ans == 'Y');
     }
     void insert(BTNode *root, BTNode *temp)
