@@ -45,12 +45,12 @@ class Book
         cin>>ch;
         if(ch == 'r' || ch == 'R')
         {
-        if(root->right == NULL)
-        {
-        root->right = temp;
-        }
-        else
-        insert(root->right, temp);
+            if(root->right == NULL)
+            {
+                root->right = temp;
+            }
+            else
+                insert(root->right, temp);
         }
         else
         {
