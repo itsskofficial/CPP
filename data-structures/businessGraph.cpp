@@ -60,11 +60,13 @@ class Graph
             u=from[v];
             cout<<data[u]<<"==>"<<data[v]<<"\tcost: "<<AM[u][v]<<endl;
             visited[v]=1;
-            for(int j=1;j<num;j++)
+            for(int j=1;j<num;j++){
                 if(visited[j]==0&&AM[j][v]<distance[j])
                 {
                     distance[j]=AM[j][v];from[j]=v;
                 }
+            }
+            
             cost+=AM[u][v];
         }
         cout<<"Total cost of connecting all cities : "<<cost<<endl;
