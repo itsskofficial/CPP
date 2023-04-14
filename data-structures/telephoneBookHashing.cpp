@@ -243,7 +243,7 @@ int main()
         }
     }
 
-} while(ch!=4);
+  } while(ch!=4);
     return 0;
 
 }
