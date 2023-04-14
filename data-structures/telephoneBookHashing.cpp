@@ -240,7 +240,7 @@ int main()
     {
       std::cout << "Please enter valid choice" << std::endl;
       break;
-      
+    }
     }
 
 } while(ch!=4);
