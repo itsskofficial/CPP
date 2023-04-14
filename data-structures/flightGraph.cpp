@@ -84,7 +84,7 @@ void flight::display(int city_count)
 {
 	int i,j;
 	cout<<"\n\t Displaying Adjacency Matrix :\n\t";
-    
+
 	for(i=0;i<city_count;i++)
 		cout<<"\t"<<city_index[i];
 	cout<<"\n";
@@ -105,6 +105,7 @@ int main()
 	flight f;
 	int n,city_count;
 	char c;
+
 	do
 	{
 		cout<<"\n\t***** Flight Main Menu *****";
@@ -124,6 +125,6 @@ int main()
 		}
 		cout<<"\n\t Do you Want to Continue in Main Menu....(y/n) : ";
 		cin>>c;
-	}while(c=='y'||c=='Y');
+	} while(c=='y'||c=='Y');
 	return 0;
 }
