@@ -15,10 +15,12 @@ class Graph
         cout<<"Enter names of all cities : ";
         for(int i=0;i<n;i++)
             cin>>data[i];
+            
         cout<<"Enter cost if you want to connect cities else enter 0: \n";
         for(int j=0;j<n;j++)
             cout<<data[j]<<" ";
         cout<<endl;
+
         for(int i=0,cost=0;i<n;i++)
         {   cout<<"Nodes connected to "<<data[i]<<" :\n";
             for(int j=0;j<i;j++)
@@ -27,6 +29,7 @@ class Graph
                 if(j==i) {cout<<"0\t";AM[i][j]=AM[j][i]=0;}
                 else {cin>>cost;AM[i][j]=AM[j][i]=cost;}
         }
+
         for(int i=0;i<n;i++)
             for(int j=0;j<n;j++)
                 if(AM[i][j]==0)AM[i][j]=INT_MAX;
