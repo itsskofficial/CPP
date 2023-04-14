@@ -84,6 +84,7 @@ void flight::display(int city_count)
 {
 	int i,j;
 	cout<<"\n\t Displaying Adjacency Matrix :\n\t";
+    
 	for(i=0;i<city_count;i++)
 		cout<<"\t"<<city_index[i];
 	cout<<"\n";
