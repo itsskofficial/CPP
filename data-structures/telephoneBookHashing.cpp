@@ -130,6 +130,7 @@ int hash::searchLinearProbing(std::string name)
       {
         loc = (loc + 1) % size;
         count++;
+
         if(hashtable[loc].name == name)
         {
           std::cout << "The phone number of " << name << "is " << hashtable[loc].telephoneNo << std::endl;
@@ -168,7 +169,7 @@ int hash::searchQuadraticProbing(std::string name)
       {
         loc = (loc + i*i) % size;
         count++;
-        
+
         if(hashtable[loc].name == name)
         {
           std::cout << "The phone number of " << name << "is " << hashtable[loc].telephoneNo << std::endl;
@@ -196,11 +197,13 @@ int main()
   long telephoneNo;
   hash book1, book2;
 
-  do{
+  do
+  {
     std::cout << "1) Insert \n2) Search \n3)Display \n4)Exit" << std::endl;
     std::cin >> ch;
 
-    switch(ch){
+    switch(ch)
+    {
     case 1:
       std::cout << "Enter name" << std::endl;
       std::getline(std::cin >> std::ws, name);
