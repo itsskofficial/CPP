@@ -235,10 +235,12 @@ int main()
       book2.display();
       break;
     }
-    
+
     default:
+    {
       std::cout << "Please enter valid choice" << std::endl;
       break;
+      
     }
 
 } while(ch!=4);
