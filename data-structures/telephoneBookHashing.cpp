@@ -111,6 +111,7 @@ int hash::searchLinearProbing(std::string name)
   }
 
   loc = (ASCII_sum/name.size()) % size;
+  
   if(flag[loc] == 0)
   {
     std::cout << name << " does not exist in the telephone book!" << std::endl;
@@ -146,6 +147,7 @@ int hash::searchQuadraticProbing(std::string name)
   {
     ASCII_sum = ASCII_sum + int(name[i]);
   }
+
   loc = (ASCII_sum/name.size()) % size;
 
   if(flag[loc] == 0)
