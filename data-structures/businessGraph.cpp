@@ -44,10 +44,11 @@ class Graph
         visited[0]=1;
         for(int i=0;i<num;i++)
             distance[i]=AM[0][i];
-            
+
         int u,v;
         for(int count=num-1;count>0;count--)
-        {   int min=INT_MAX;
+        {   
+            int min=INT_MAX;
             for(int j=1;j<num;j++)
                 if(visited[j]==0&&distance[j]<min)
                 {v=j;min=distance[j];}
