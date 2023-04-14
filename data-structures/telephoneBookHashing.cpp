@@ -85,7 +85,7 @@ void hash::insertQuadraticProbing(std::string name, long telephoneNo)
   {
     ASCII_sum = ASCII_sum + int(t->name[i]);
   }
-  
+
   loc = (ASCII_sum/t->name.size()) % size;
   for(int i = 0; i < size; i++)
   {
@@ -109,8 +109,8 @@ int hash::searchLinearProbing(std::string name)
   {
     ASCII_sum = ASCII_sum + int(name[i]);
   }
-  loc = (ASCII_sum/name.size()) % size;
 
+  loc = (ASCII_sum/name.size()) % size;
   if(flag[loc] == 0)
   {
     std::cout << name << " does not exist in the telephone book!" << std::endl;
