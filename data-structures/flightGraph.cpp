@@ -72,15 +72,14 @@ int flight::create()
 			if(strcmp(city_index[j],d)==0)
 				di=j;
 		}
-
-
-
 		am[si][di]=wt;
 		cout<<"\n\t Do you want to add more cities.....(y/n) : ";
 		cin>>c;	
-	}while(c=='y'||c=='Y');
+	} while(c=='y'||c=='Y');
+
  return(city_count);
 }
+
 void flight::display(int city_count)
 {
 	int i,j;
