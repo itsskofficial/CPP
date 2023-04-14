@@ -204,43 +204,43 @@ int main()
 
     switch(ch)
     {
-    case 1:
-    {
-      std::cout << "Enter name" << std::endl;
-      std::getline(std::cin >> std::ws, name);
-      std::cout << "Enter telephone number" << std::endl;
-      std::cin >> telephoneNo;
-      book1.insertLinearProbing(name, telephoneNo);
-      book2.insertQuadraticProbing(name, telephoneNo);
-      break;
-    }
+        case 1:
+        {
+        std::cout << "Enter name" << std::endl;
+        std::getline(std::cin >> std::ws, name);
+        std::cout << "Enter telephone number" << std::endl;
+        std::cin >> telephoneNo;
+        book1.insertLinearProbing(name, telephoneNo);
+        book2.insertQuadraticProbing(name, telephoneNo);
+        break;
+        }
 
-    case 2:
-    {
-      std::cout << "Enter name to be searched: ";
-      std::getline(std::cin >> std::ws, name);
-      n1 = book1.searchLinearProbing(name);
-      n2 = book2.searchQuadraticProbing(name);
-      std::cout << "No. of comparisons by linear probing: " << n1 << std::endl;
-      std::cout << "No. of comparisons by quadratic probing: " << n2 << std::endl;
-      break;
-    }
+        case 2:
+        {
+        std::cout << "Enter name to be searched: ";
+        std::getline(std::cin >> std::ws, name);
+        n1 = book1.searchLinearProbing(name);
+        n2 = book2.searchQuadraticProbing(name);
+        std::cout << "No. of comparisons by linear probing: " << n1 << std::endl;
+        std::cout << "No. of comparisons by quadratic probing: " << n2 << std::endl;
+        break;
+        }
 
-    case 3:
-    {
-      std::cout << "Book 1 (Linear Probing): " << std::endl;
-      book1.display();
-      std::cout << std::endl;
-      std::cout << "Book 2 (Quadratic Probing): " << std::endl;
-      book2.display();
-      break;
-    }
+        case 3:
+        {
+        std::cout << "Book 1 (Linear Probing): " << std::endl;
+        book1.display();
+        std::cout << std::endl;
+        std::cout << "Book 2 (Quadratic Probing): " << std::endl;
+        book2.display();
+        break;
+        }
 
-    default:
-    {
-      std::cout << "Please enter valid choice" << std::endl;
-      break;
-    }
+        default:
+        {
+        std::cout << "Please enter valid choice" << std::endl;
+        break;
+        }
     }
 
 } while(ch!=4);
