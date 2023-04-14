@@ -55,6 +55,7 @@ public:
         cout<<"Total cost of connecting all cities : "<<cost<<endl;
     }
 };
+
 int main()
 {   int n;
     cout<<"Enter number of cities: ";
