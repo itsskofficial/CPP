@@ -205,6 +205,7 @@ int main()
     switch(ch)
     {
     case 1:
+    {
       std::cout << "Enter name" << std::endl;
       std::getline(std::cin >> std::ws, name);
       std::cout << "Enter telephone number" << std::endl;
@@ -212,7 +213,8 @@ int main()
       book1.insertLinearProbing(name, telephoneNo);
       book2.insertQuadraticProbing(name, telephoneNo);
       break;
-
+    }
+    
     case 2:
       std::cout << "Enter name to be searched: ";
       std::getline(std::cin >> std::ws, name);
