@@ -7,15 +7,17 @@ class Graph
     T * data;
     public:
     Graph(int n)
-    {   AM=new int*[n];
+    {   
+        AM=new int*[n];
         for(int i=0;i<n;i++)
             AM[i]=new int[n];
         num=n;
         data=new T[n];
+
         cout<<"Enter names of all cities : ";
         for(int i=0;i<n;i++)
             cin>>data[i];
-            
+
         cout<<"Enter cost if you want to connect cities else enter 0: \n";
         for(int j=0;j<n;j++)
             cout<<data[j]<<" ";
@@ -34,6 +36,7 @@ class Graph
             for(int j=0;j<n;j++)
                 if(AM[i][j]==0)AM[i][j]=INT_MAX;
     }
+
     void prims()
     {
         cout<<"\nCities that we need to connect:\n";
@@ -41,6 +44,7 @@ class Graph
         visited[0]=1;
         for(int i=0;i<num;i++)
             distance[i]=AM[0][i];
+            
         int u,v;
         for(int count=num-1;count>0;count--)
         {   int min=INT_MAX;
