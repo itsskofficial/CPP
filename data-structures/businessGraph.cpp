@@ -5,7 +5,7 @@ template <class T>
 class Graph
 {   int ** AM,num;
     T * data;
-public:
+    public:
     Graph(int n)
     {   AM=new int*[n];
         for(int i=0;i<n;i++)
