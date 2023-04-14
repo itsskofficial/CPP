@@ -57,7 +57,7 @@ void hash::insertLinearProbing(std::string name, long telephoneNo)
   {
     ASCII_sum = ASCII_sum + int(t->name[i]);
   }
-  
+
   loc = (ASCII_sum/t->name.size()) % size;
   for(int i = 0; i < size; i++)
   {
@@ -85,6 +85,7 @@ void hash::insertQuadraticProbing(std::string name, long telephoneNo)
   {
     ASCII_sum = ASCII_sum + int(t->name[i]);
   }
+  
   loc = (ASCII_sum/t->name.size()) % size;
   for(int i = 0; i < size; i++)
   {
