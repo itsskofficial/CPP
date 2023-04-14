@@ -25,6 +25,7 @@ class hash
       hashtable[i].telephoneNo = -1;
     }
   }
+
   hash(int a)
   {
     std::cout << "Creating telephone book of size " << a << std::endl;
@@ -37,6 +38,7 @@ class hash
       hashtable[i].telephoneNo = -1;
     }
   }
+
   void insertLinearProbing(std::string name, long telephoneNo);
   void insertQuadraticProbing(std::string name, long telephoneNo);
   int searchLinearProbing(std::string name);
@@ -55,6 +57,7 @@ void hash::insertLinearProbing(std::string name, long telephoneNo)
   {
     ASCII_sum = ASCII_sum + int(t->name[i]);
   }
+  
   loc = (ASCII_sum/t->name.size()) % size;
   for(int i = 0; i < size; i++)
   {
