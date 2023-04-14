@@ -51,7 +51,9 @@ class Graph
             int min=INT_MAX;
             for(int j=1;j<num;j++)
                 if(visited[j]==0&&distance[j]<min)
-                {v=j;min=distance[j];}
+                {
+                    v=j;min=distance[j];
+                }
             u=from[v];
             cout<<data[u]<<"==>"<<data[v]<<"\tcost: "<<AM[u][v]<<endl;
             visited[v]=1;
