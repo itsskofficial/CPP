@@ -66,9 +66,10 @@ class Graph
                     distance[j]=AM[j][v];from[j]=v;
                 }
             }
-            
+
             cost+=AM[u][v];
         }
+        
         cout<<"Total cost of connecting all cities : "<<cost<<endl;
     }
 };
