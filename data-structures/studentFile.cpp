@@ -77,7 +77,7 @@ int main()
                 object.delete_student(rollno);
                 break;
             }
-            
+
             case 4:
             { 
                 object.update(); 
@@ -97,6 +97,7 @@ int main()
                 cout<<"\nRecord Not Found ";
                 break;
             }
+            
             case 6:
             { 
                 object.pack();
