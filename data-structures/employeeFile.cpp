@@ -9,9 +9,9 @@ class Employee
 {
  typedef struct emp
  {
- char name[10];
- int emp_id;
- int salary;
+    char name[10];
+    int emp_id;
+    int salary;
  } rec;
  typedef struct index
  {
