@@ -138,7 +138,7 @@ void Employee::Update()
         cout<<"\n Name: ";cin>>New_name;
         cout<<"\n Salary: ";cin>>New_salary;
         //calculating the position of record in seq. file using the pos of ind. file
-        int offset=pos*sizeof(Rec);
+        int offset=pos*sizeof(rec);
         seqfile.seekp(offset);//seeking the desired record for modification
         strcpy(records.name,New_name);//can be updated
         records.emp_id=id;//It's unique id,so don't change
