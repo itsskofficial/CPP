@@ -76,7 +76,7 @@ void sequential::insert_student(student rec)
     return;
     }
     /* Shift records until the point of insertion */
-    i=n+­1;
+    i=n+1;
     while(i>=0)
     { fp.seekg(i*sizeof(student),ios::beg);
     fp.read((char*)&current,sizeof(student));
