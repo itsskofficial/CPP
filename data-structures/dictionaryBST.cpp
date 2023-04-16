@@ -231,6 +231,7 @@ int main()
 	cout<<"\n4. Search and update a word";
 	cout<<"\n5. Delete a word";
 	cout<<"\n6. Comparisons";
+    cout<<"\n7. Exity"
 	cout<<"\n\nEnter your choice: ";
 	cin>>choice;
 	do
