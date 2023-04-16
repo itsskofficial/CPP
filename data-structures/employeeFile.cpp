@@ -279,7 +279,6 @@ int main()
     Employee list;
     char ans='y';
     int choice,key;
-    clrscr();
 
     do
     {
