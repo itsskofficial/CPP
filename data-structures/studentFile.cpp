@@ -46,7 +46,7 @@ void sequential::read()
 { 
     student crec; int i=1,n;
     cout<<"\n*********Data File*********\n";
-    fp.open(master,ios::binary | ios::in | ios::nocreate);
+    fp.open(master,ios::binary | ios::in |);
     fp.seekg(0,ios::end);/*go to the end of file */
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
@@ -62,7 +62,7 @@ void sequential::read()
 void sequential::insert_student(student rec)
 { student crec;
 int n,i,k;
-fp.open(master,ios::in | ios::out | ios::nocreate);
+fp.open(master,ios::in | ios::out |);
 rec.status=0;
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
@@ -92,7 +92,7 @@ fp.close();
 }
 int sequential::delete_student(int rollno)
 { student crec;
-int i,n; fp.open(master,ios::in | ios::out | ios::nocreate);
+int i,n; fp.open(master,ios::in | ios::out |);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 fp.seekg(0,ios::beg);
@@ -118,7 +118,7 @@ return(0);
 }
 int sequential::search_student(int rollno){ student crec;
 int i,n;
-fp.open(master,ios::in | ios::out | ios::nocreate);
+fp.open(master,ios::in | ios::out |);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 fp.seekg(0,ios::beg);
