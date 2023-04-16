@@ -214,8 +214,10 @@ int main()
                         cout<<"General Check up";
                         break;
                         case 6:
-                        cout<<"Visiting";
-                        break;
+                        {
+                            cout<<"Visiting";
+                            break;
+                        }
                     }
                 }
 
