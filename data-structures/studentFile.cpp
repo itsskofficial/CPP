@@ -206,8 +206,8 @@ void sequential::update()
     cin>>rollno;
     cout<<"\nEnter a new record(roll no. name marks : ";
     cin>>rec.rollno>>rec.name>>rec.marks;
-    if(Delete(rollno))
-    insert(rec);
+    if(delete_student(rollno))
+    insert_student(rec);
     else
     cout<<"\n Record not found :";
 }
