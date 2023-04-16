@@ -292,7 +292,8 @@ int main()
         
         default:
             cout<<"\nInvalid input!";
-	} while (choice!=7)
+	}
+    } while (choice!=7)
 	
 	return 0;
 }
