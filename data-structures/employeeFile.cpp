@@ -13,7 +13,7 @@ class Employee
  int emp_id;
  int salary;
  } rec;
- typedef struct INDEX
+ typedef struct index
  {
  int emp_id;
  int position;
