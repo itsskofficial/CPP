@@ -17,9 +17,9 @@ class Employee
     {
     int emp_id;
     int position;
-    }Ind_Rec;
+    }ind;
     rec Records;
-    Ind_Rec Ind_Records;
+    ind Ind_Records;
     public:
     Employee();
     void Create();
@@ -174,7 +174,7 @@ void Employee::Delete()
  Records.salary=-1; //logical deletion
  seqfile.write((char*)&Records,sizeof(Records))<<flush;//writing deleted status 
     //From index file also the desired record gets deleted as follows
- offset=pos*sizeof(Ind_Rec);//getting position in index file
+ offset=pos*sizeof(ind);//getting position in index file
  indexfile.seekp(offset); //seeking that record
  Ind_Records.emp_id=-1; //logical deletion of emp_id
  Ind_Records.position=pos;//position remain unchanged
