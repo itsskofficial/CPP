@@ -44,36 +44,36 @@ class sequential
 void main()
 { 
     sequential object(“master.txt”);
-int rollno,op,recno;
-student rec1;
-do
-{ cout<<“\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update”;
-cout<<“\n5)Search\n6)Pack\n7)Quit”;
-cout<<“\nEnter Your Choice:”;
-cin>>op;
-switch(op)
-{ case 1: object.read();break; case 2: cout<<“\nEnter a record to be inserted(roll no,name,marks : “;
-cin>>rec1.rollno>>rec1.name>>rec1.marks;
-object.insert(rec1);
-break;
-case 3: cout<<“\nEnter the roll no.:”;
-cin>>rollno;
-object.delete_student(rollno);
-break;
-case 4: object.update(); break;
-case 5: cout<<“\nEnter a roll no. : “;
-cin>>rollno;
-recno=object.search_student(rollno);
-if(recno>=0)
-{ cout<<“\n Record No.: “<< recno;
-object.display(recno);
-}
-else
-cout<<“\nRecord Not Found “;
-break;
-case 6: object.pack();break;
-}
-}while(op!=7);
+    int rollno,op,recno;
+    student rec1;
+    do
+    { cout<<“\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update”;
+    cout<<“\n5)Search\n6)Pack\n7)Quit”;
+    cout<<“\nEnter Your Choice:”;
+    cin>>op;
+    switch(op)
+    { case 1: object.read();break; case 2: cout<<“\nEnter a record to be inserted(roll no,name,marks : “;
+    cin>>rec1.rollno>>rec1.name>>rec1.marks;
+    object.insert(rec1);
+    break;
+    case 3: cout<<“\nEnter the roll no.:”;
+    cin>>rollno;
+    object.delete_student(rollno);
+    break;
+    case 4: object.update(); break;
+    case 5: cout<<“\nEnter a roll no. : “;
+    cin>>rollno;
+    recno=object.search_student(rollno);
+    if(recno>=0)
+    { cout<<“\n Record No.: “<< recno;
+    object.display(recno);
+    }
+    else
+    cout<<“\nRecord Not Found “;
+    break;
+    case 6: object.pack();break;
+    }
+    } while(op!=7);
 }
 void sequential::read()
 { student crec; int i=1,n;
