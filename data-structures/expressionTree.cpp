@@ -208,9 +208,9 @@ int main()
 
 			case 3:
             {
-                cout<<"Deleting the tree: "
-                e.
-             break;
+                cout << "Deleting the tree: ";
+                e.deleteTree(e.root);
+                    break;
 		}
 
 	} while(ch != 3);
