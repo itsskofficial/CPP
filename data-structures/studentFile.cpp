@@ -41,11 +41,13 @@ class sequential
             fp.close();
         }
 };
-void main()
+
+int main()
 { 
     sequential object(“master.txt”);
     int rollno,op,recno;
     student rec1;
+    
     do
     { cout<<“\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update”;
     cout<<“\n5)Search\n6)Pack\n7)Quit”;
@@ -74,6 +76,8 @@ void main()
     case 6: object.pack();break;
     }
     } while(op!=7);
+
+    return 0;
 }
 void sequential::read()
 { student crec; int i=1,n;
