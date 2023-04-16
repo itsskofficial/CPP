@@ -102,12 +102,15 @@ void sequential::insert_student(student rec)
 int sequential::delete_student(int rollno)
 { 
     student current;
-    int i,n; fp.open(master,ios::in | ios::out);
-    fp.seekg(0,ios::end);/*go to the end of file */
+    int i,n; 
+    fp.open(master,ios::in | ios::out);
+    fp.seekg(0,ios::end);
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
+
     for(i=0;i<n;i++)
-    { fp.read((char*)&current,sizeof(student));
+    { 
+        fp.read((char*)&current,sizeof(student));
     if(current.status==0)
     {
     if(current.rollno>rollno)
