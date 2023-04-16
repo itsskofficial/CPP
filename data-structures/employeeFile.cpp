@@ -302,10 +302,13 @@ int main()
                 list.Create();
                 break;
             }
-            
+
             case 2:
+            {
                 list.Display();
                 break;
+            }
+            
             case 3:
                 list.Update();
                 break;
