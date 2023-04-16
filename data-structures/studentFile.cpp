@@ -108,6 +108,7 @@ int main()
 
     return 0;
 }
+
 void sequential::read()
 { student crec; int i=1,n;
 cout<<"\n*********Data File*********\n";
