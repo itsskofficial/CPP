@@ -185,13 +185,15 @@ int main()
             }
 
 			case 2:
+            {
                 cout<<"\n Non Recursive Postorder Traversal: "; 
 				e.nonrec_postorder(e.root);
 				break;
-				
+            }
+
 			case 3: break;
 		}
-	}while(ch != 3);
+	} while(ch != 3);
 	
 	return 0;
 }
