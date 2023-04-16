@@ -58,8 +58,10 @@ void sequential::read()
         else
             cout<<"\n"<<i<<") "<<" ****** deleted *********";
     }
+
     fp.close();
 }
+
 void sequential::insert_student(student rec)
 { student crec;
 int n,i,k;
