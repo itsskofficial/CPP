@@ -161,6 +161,8 @@ void expressiontree :: nonrec_postorder(node *temp)
 	}
 }
 
+void express
+
 int main()
 {
 	expressiontree e;
