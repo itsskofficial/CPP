@@ -17,8 +17,8 @@ class Employee
     {
     int emp_id;
     int position;
-    }ind;
-    rec Records;
+    } ind;
+    rec records;
     ind Ind_Records;
     public:
     Employee();
@@ -31,7 +31,7 @@ class Employee
 };
 Employee::Employee()//constructor 
   {
-   strcpy(Records.name,"");
+   strcpy(records.name,"");
   }
 void Employee::Create()
 {
@@ -45,13 +45,13 @@ void Employee::Create()
  do
  {
   cout<<"\n Enter Name: ";
-  cin>>Records.name;
+  cin>>records.name;
   cout<<"\n Enter Emp_ID: ";
-  cin>>Records.emp_id;
+  cin>>records.emp_id;
   cout<<"\n Enter Salary: ";
-  cin>>Records.salary;
-  seqfile.write((char*)&Records,sizeof(Records))<<flush;
-  Ind_Records.emp_id=Records.emp_id;
+  cin>>records.salary;
+  seqfile.write((char*)&records,sizeof(records))<<flush;
+  Ind_Records.emp_id=records.emp_id;
   Ind_Records.position=i;
   indexfile.write((char*)&Ind_Records,sizeof(Ind_Records))<<flush;
   i++;
@@ -77,12 +77,12 @@ void Employee::Display()
 
    i=Ind_Records.position*sizeof(Rec);//getting pos from index file
    seqfile.seekg(i,ios::beg);//seeking record of that pos from seq.file
-   seqfile.read((char *)&Records,sizeof(Records));//reading record
-   if(Records.emp_id!=-1)//if rec. is not deleted logically
+   seqfile.read((char *)&records,sizeof(records));//reading record
+   if(records.emp_id!=-1)//if rec. is not deleted logically
    {   //then display it
-   cout<<"\nName: "<<Records.name<<flush;
-   cout<<"\nEmp_ID: "<<Records.emp_id;
-   cout<<"\nSalary: "<<Records.salary;
+   cout<<"\nName: "<<records.name<<flush;
+   cout<<"\nEmp_ID: "<<records.emp_id;
+   cout<<"\nSalary: "<<records.salary;
    cout<<"\n";
     }
 
@@ -128,10 +128,10 @@ void Employee::Update()
 //calculating the position of record in seq. file using the pos of ind. file
   int offset=pos*sizeof(Rec);
   seqfile.seekp(offset);//seeking the desired record for modification
-  strcpy(Records.name,New_name);//can be updated
-  Records.emp_id=id;//It's unique id,so don't change
-  Records.salary=New_salary;//can be updated
-  seqfile.write((char*)&Records,sizeof(Records))<<flush;
+  strcpy(records.name,New_name);//can be updated
+  records.emp_id=id;//It's unique id,so don't change
+  records.salary=New_salary;//can be updated
+  seqfile.write((char*)&records,sizeof(records))<<flush;
   cout<<"\n The record is updated!!!";
  }
  seqfile.close();
@@ -169,10 +169,10 @@ void Employee::Delete()
 //calculating the position of record in seq. file using the pos of ind. file
  int offset=pos*sizeof(Rec);
  seqfile.seekp(offset);//seeking the desired record for deletion
- strcpy(Records.name,"");
- Records.emp_id=-1; //logical deletion
- Records.salary=-1; //logical deletion
- seqfile.write((char*)&Records,sizeof(Records))<<flush;//writing deleted status 
+ strcpy(records.name,"");
+ records.emp_id=-1; //logical deletion
+ records.salary=-1; //logical deletion
+ seqfile.write((char*)&records,sizeof(records))<<flush;//writing deleted status 
     //From index file also the desired record gets deleted as follows
  offset=pos*sizeof(ind);//getting position in index file
  indexfile.seekp(offset); //seeking that record
@@ -198,11 +198,11 @@ void Employee::Append()
  seqfile.open("EMP.DAT",ios::app|ios::binary);
 
  cout<<"\n Enter the record for appending";
- cout<<"\nName: ";cin>>Records.name;
- cout<<"\nEmp_ID: ";cin>>Records.emp_id;
- cout<<"\nSalary: ";cin>>Records.salary;
- seqfile.write((char*)&Records,sizeof(Records));//inserting rec at end in seq. file
- Ind_Records.emp_id=Records.emp_id;           //inserting rec at end in ind. file
+ cout<<"\nName: ";cin>>records.name;
+ cout<<"\nEmp_ID: ";cin>>records.emp_id;
+ cout<<"\nSalary: ";cin>>records.salary;
+ seqfile.write((char*)&records,sizeof(records));//inserting rec at end in seq. file
+ Ind_Records.emp_id=records.emp_id;           //inserting rec at end in ind. file
  Ind_Records.position=pos;                          //at calculated pos
  indexfile.write((char*)&Ind_Records,sizeof(Ind_Records))<<flush;
  seqfile.close();
@@ -233,12 +233,12 @@ void Employee::Search()
   return;
   }
 //calculate offset using position obtained from ind. file
-  offset=pos*sizeof(Records);
+  offset=pos*sizeof(records);
   seqfile.open("EMP.DAT",ios::in|ios::binary);
 //seeking the record from seq. file using calculated offset
   seqfile.seekg(offset,ios::beg);//seeking for reading purpose
-  seqfile.read((char *)&Records,sizeof(Records));
-  if(Records.emp_id==-1)
+  seqfile.read((char *)&records,sizeof(records));
+  if(records.emp_id==-1)
   {
   cout<<"\n Record is not present in the file";
   return;
@@ -246,9 +246,9 @@ void Employee::Search()
   else //emp_id=desired record’s id
   {
   cout<<"\n The Record is present in the file and it is...";
-  cout<<"\n Name: "<<Records.name;
-  cout<<"\n Emp_ID: "<<Records.emp_id;
-  cout<<"\n Salary: "<<Records.salary;
+  cout<<"\n Name: "<<records.name;
+  cout<<"\n Emp_ID: "<<records.emp_id;
+  cout<<"\n Salary: "<<records.salary;
   }
   seqfile.close();
   indexfile.close();
