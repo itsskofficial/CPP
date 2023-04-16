@@ -28,7 +28,7 @@ class sequential
         void read();  
         void insert_student(student rec1);
         int delete_student(int rollno);
-        int search(int rollno);
+        int search_student(int rollno);
         void pack();
         void update();
         void display(int recno) 
@@ -62,7 +62,7 @@ break;
 case 4: object.update(); break;
 case 5: cout<<“\nEnter a roll no. : “;
 cin>>rollno;
-recno=object.search(rollno);
+recno=object.search_student(rollno);
 if(recno>=0)
 { cout<<“\n Record No.: “<< recno;
 object.display(recno);
@@ -147,7 +147,7 @@ return(1);
 }
 return(0);
 }
-int sequential::search(int rollno){ student crec;
+int sequential::search_student(int rollno){ student crec;
 int i,n;
 fp.open(master1,ios::in | ios::out | ios::nocreate);
 fp.seekg(0,ios::end);/*go to the end of file */
