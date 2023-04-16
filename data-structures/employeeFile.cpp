@@ -71,32 +71,33 @@ void Employee::Create()
 
 void Employee::Display()
 {
- fstream seqfile;
- fstream indexfile;
- int n,i,j;
- seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
- indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
- indexfile.seekg(0,ios::beg);
- seqfile.seekg(0,ios::beg);
- cout<<"\n The Contents of file are ..."<<endl;
- i=0;
- while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
- {
+    fstream seqfile;
+    fstream indexfile;
+    int n,i,j;
+    seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
+    indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
+    indexfile.seekg(0,ios::beg);
+    seqfile.seekg(0,ios::beg);
+    cout<<"\n The Contents of file are ..."<<endl;
+    i=0;
+    
+    while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
+    {
 
-   i=ind_records.position*sizeof(Rec);//getting pos from index file
-   seqfile.seekg(i,ios::beg);//seeking record of that pos from seq.file
-   seqfile.read((char *)&records,sizeof(records));//reading record
-   if(records.emp_id!=-1)//if rec. is not deleted logically
-   {   //then display it
-   cout<<"\nName: "<<records.name<<flush;
-   cout<<"\nEmp_ID: "<<records.emp_id;
-   cout<<"\nSalary: "<<records.salary;
-   cout<<"\n";
+    i=ind_records.position*sizeof(Rec);//getting pos from index file
+    seqfile.seekg(i,ios::beg);//seeking record of that pos from seq.file
+    seqfile.read((char *)&records,sizeof(records));//reading record
+    if(records.emp_id!=-1)//if rec. is not deleted logically
+    {   //then display it
+    cout<<"\nName: "<<records.name<<flush;
+    cout<<"\nEmp_ID: "<<records.emp_id;
+    cout<<"\nSalary: "<<records.salary;
+    cout<<"\n";
+        }
+
     }
-
- }
- seqfile.close();
- indexfile.close();
+    seqfile.close();
+    indexfile.close();
 }
 void Employee::Update()
 {
