@@ -15,9 +15,10 @@ class Employee
     } rec;
     typedef struct index
     {
-    int emp_id;
-    int position;
+        int emp_id;
+        int position;
     } ind;
+    
     rec records;
     ind ind_records;
     public:
