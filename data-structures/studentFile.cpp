@@ -1,6 +1,5 @@
 #include <iostream>
 #include <iomanip>
-
 #include <fstream>
 #include <conio.h>
 #include <string.h>
