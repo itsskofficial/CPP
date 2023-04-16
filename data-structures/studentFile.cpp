@@ -179,17 +179,21 @@ void sequential::pack()
         if(current.status==0)
         temp.write((char*)&current,sizeof(student));
     }
+
     fp.close();
     temp.close();
     temp.open("temp.txt",ios::binary | ios::in);
     fp.open(master,ios::binary | ios::out | ios::trunc);
-    temp.seekg(0,ios::end);/*go to the end of file */
+    temp.seekg(0,ios::end);
     n=temp.tellg()/sizeof(student);
     temp.seekg(0,ios::beg);
+
     for(i=0;i<n;i++)
-    { temp.read((char*)&current,sizeof(student));
-    fp.write((char*)&current,sizeof(student));
+    {
+        temp.read((char*)&current,sizeof(student));
+        fp.write((char*)&current,sizeof(student));
     }
+
     fp.close();
     temp.close();
 }
