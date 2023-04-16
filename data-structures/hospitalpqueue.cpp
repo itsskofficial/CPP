@@ -196,25 +196,26 @@ int main()
                 {
                     cout<<"\n"<<dataid[j]<<"-"<<dataname[j]<<"("<<dataage[j]<<") - ";
                     p=dataprio[j];
-                    switch(p){
-                    case 1:
-                        cout<<"Major Accidents";
-                    break;
-                    case 2:
-                        cout<<"Minor Accidents";
-                    break;
-                    case 3:
-                        cout<<"Poisioning";
-                    break;
-                    case 4:
-                    cout<<"Allergies";
-                    break;
-                    case 5:
-                    cout<<"General Check up";
-                    break;
-                    case 6:
-                    cout<<"Visiting";
-                    break;
+                    switch(p)
+                    {
+                        case 1:
+                            cout<<"Major Accidents";
+                            break;
+                        case 2:
+                            cout<<"Minor Accidents";
+                            break;
+                        case 3:
+                            cout<<"Poisioning";
+                        break;
+                        case 4:
+                        cout<<"Allergies";
+                        break;
+                        case 5:
+                        cout<<"General Check up";
+                        break;
+                        case 6:
+                        cout<<"Visiting";
+                        break;
                     }
                 }
 
