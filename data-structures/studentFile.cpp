@@ -57,7 +57,12 @@ int main()
 
         switch(op)
         { 
-            case 1: object.read();break; case 2: cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
+            case 1: 
+            object.read();
+            break; 
+            
+            case 2: 
+            cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
         cin>>rec.rollno>>rec.name>>rec.marks;
         object.insert_student(rec);
         break;
