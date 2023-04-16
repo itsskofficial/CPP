@@ -308,11 +308,15 @@ int main()
                 list.Display();
                 break;
             }
-            
+
             case 3:
+            {
                 list.Update();
                 break;
+            }
+
             case 4:
+            
                 list.Delete();
                 break;
             case 5:
