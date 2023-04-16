@@ -110,7 +110,9 @@ int main()
             cout<<"\n1-Accident\n2-Other issues\n3-General Checkup\n4-visiting\n";
             cout<<"\nEnter the type of case : ";
             cin>>a;
-            switch(a){
+            
+            switch(a)
+            {
             case 1:
             cout<<"\nChoose 1 or 2\n 1-Major Accidents\n 2-Minor accidents\n";
             cin>>sub;
@@ -150,9 +152,9 @@ int main()
             default:
             cout<<"\nWrong choice";
             }
-        insert(id,age,name,priority);
-        i++;
-        break;
+            insert(id,age,name,priority);
+            i++;
+            break;
         case 2:
         remove();
         break;
