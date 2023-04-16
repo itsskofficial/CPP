@@ -199,6 +199,7 @@ void Employee::Delete()
     seqfile.close();
     cout<<"\n The record is deleted!!!";
 }
+
 void Employee::Append()
 {
  fstream seqfile;
