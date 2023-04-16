@@ -73,7 +73,7 @@ void display()
             cout<<ptr->id<<"-"<<ptr->patient_name<<"("<<ptr->age<<")\n";
             ptr = ptr->next;
         }
-        
+
         cout<<endl;
     }
 }
@@ -84,7 +84,8 @@ int main()
     char name[40];
     string dataname[40];
     i=0;
-    do {
+    do 
+    {
     vline('*');
     cout<<"\n1.Add patient\n";
     cout<<"2.Remove patient\n";
