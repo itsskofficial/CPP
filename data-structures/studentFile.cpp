@@ -4,10 +4,11 @@
 #include <conio.h>
 #include <string.h>
 struct student
-{int rollno;
-char name[20];
-float marks;
-int status;
+{
+    int rollno;
+    char name[20];
+    float marks;
+    int status;
 };
 class sequential
 { char master1[30];
