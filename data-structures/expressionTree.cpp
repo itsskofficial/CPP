@@ -164,11 +164,11 @@ void expressiontree :: nonrecPostorder(node *temp)
 
 void expressionTree :: deleteTree(node* root)
 {
-    if (node == NULL) 
+    if (root == NULL) 
         return;
  
     /* first delete both subtrees */
-    deleteTree(node->left);
+    deleteTree(toot->left);
     deleteTree(node->right);
      
     /* then delete the node */
