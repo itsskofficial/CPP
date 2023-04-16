@@ -252,7 +252,7 @@ int main()
             }
             break;
         }
-        
+
         case 2:
         {
             d1.display_asc(d1.root);
@@ -291,7 +291,6 @@ int main()
         default:
             cout<<"\nInvalid input!";
 	}
-	if(choice!=7)
-		goto menu;
+	
 	return 0;
 }
