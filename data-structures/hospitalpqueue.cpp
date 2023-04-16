@@ -27,15 +27,18 @@ void insert(int id,int age,char patient_name[],int priority)
     temp->age=age;
     strcpy(temp->patient_name,patient_name);
     temp->priority=priority;
-    if (front == NULL || priority < front->priority) {
-    temp->next = front;
-    front = temp;
-    } else {
-    ptr = front;
-    while (ptr->next != NULL && ptr->next->priority <= priority)
-    ptr=ptr->next;
-    temp->next = ptr->next;
-    ptr->next = temp;
+    if (front == NULL || priority < front->priority) 
+    {
+        temp->next = front;
+        front = temp;
+    } 
+    else
+    {
+        ptr = front;
+        while (ptr->next != NULL && ptr->next->priority <= priority)
+        ptr=ptr->next;
+        temp->next = ptr->next;
+        ptr->next = temp;
     }
 }
 
