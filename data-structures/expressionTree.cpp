@@ -176,11 +176,14 @@ int main()
 		
 		switch(ch)
 		{
-			case 1: 
+			case 1:
+            { 
                 cout<<"Enter Expression : ";
                 cin >> str;
                 e.create(str);
 				break;
+            }
+            
 			case 2:cout<<"\n Non Recursive Postorder Traversal: "; 
 						e.nonrec_postorder(e.root);
 				break;
