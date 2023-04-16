@@ -225,8 +225,9 @@ void Employee::Append()
     indexfile.close();
     cout<<"\n The record is Appended!!!";
     }
-    void Employee::Search()
-    {
+    
+void Employee::Search()
+{
     fstream seqfile;
     fstream indexfile;
     int id,pos,offset;
@@ -234,7 +235,7 @@ void Employee::Append()
     cin>>id;
     indexfile.open("IND.DAT",ios::in|ios::binary);
     pos=-1;
-    
+
     //reading index file to obtain the index of desired record
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
         {
