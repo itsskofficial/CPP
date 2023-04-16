@@ -166,41 +166,42 @@ int sequential::search_student(int rollno)
 void sequential::pack()
 { 
     fstream temp;
-student current;int i,n;
-fp.open(master,ios::binary | ios::in);
-temp.open("temp.txt",ios::out | ios::trunc | ios::binary);
-fp.seekg(0,ios::end);/*go to the end of file */
-n=fp.tellg()/sizeof(student);
-fp.seekg(0,ios::beg);
-for(i=0;i<n;i++)
-{ fp.read((char*)&current,sizeof(student));
-if(current.status==0)
-temp.write((char*)&current,sizeof(student));
-}
-fp.close();
-temp.close();
-temp.open("temp.txt",ios::binary | ios::in);
-fp.open(master,ios::binary | ios::out | ios::trunc);
-temp.seekg(0,ios::end);/*go to the end of file */
-n=temp.tellg()/sizeof(student);
-temp.seekg(0,ios::beg);
-for(i=0;i<n;i++)
-{ temp.read((char*)&current,sizeof(student));
-fp.write((char*)&current,sizeof(student));
-}
-fp.close();
-temp.close();
-}void sequential::update()
-{ int rollno;
-student rec;
-cout<<"\n Enter the rollno of the record to be updated : ";
-cin>>rollno;
-cout<<"\nEnter a new record(roll no. name marks : ";
-cin>>rec.rollno>>rec.name>>rec.marks;
-if(Delete(rollno))
-insert(rec);
-else
-cout<<"\n Record not found :";
+    student current;int i,n;
+    fp.open(master,ios::binary | ios::in);
+    temp.open("temp.txt",ios::out | ios::trunc | ios::binary);
+    fp.seekg(0,ios::end);/*go to the end of file */
+    n=fp.tellg()/sizeof(student);
+    fp.seekg(0,ios::beg);
+    for(i=0;i<n;i++)
+    { fp.read((char*)&current,sizeof(student));
+    if(current.status==0)
+    temp.write((char*)&current,sizeof(student));
+    }
+    fp.close();
+    temp.close();
+    temp.open("temp.txt",ios::binary | ios::in);
+    fp.open(master,ios::binary | ios::out | ios::trunc);
+    temp.seekg(0,ios::end);/*go to the end of file */
+    n=temp.tellg()/sizeof(student);
+    temp.seekg(0,ios::beg);
+    for(i=0;i<n;i++)
+    { temp.read((char*)&current,sizeof(student));
+    fp.write((char*)&current,sizeof(student));
+    }
+    fp.close();
+    temp.close();
+    }
+void sequential::update()
+    { int rollno;
+    student rec;
+    cout<<"\n Enter the rollno of the record to be updated : ";
+    cin>>rollno;
+    cout<<"\nEnter a new record(roll no. name marks : ";
+    cin>>rec.rollno>>rec.name>>rec.marks;
+    if(Delete(rollno))
+    insert(rec);
+    else
+    cout<<"\n Record not found :";
 }
 
 int main()
