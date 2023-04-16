@@ -65,14 +65,16 @@ void display()
     node *ptr;
     ptr = front;
     if (front == NULL)
-    cout<<"\nThere are no patients\n";
-    else {
-    cout<<"\nPatients who are in queue are:\n";
-    while(ptr != NULL) {
-    cout<<ptr->id<<"-"<<ptr->patient_name<<"("<<ptr->age<<")\n";
-    ptr = ptr->next;
-    }
-    cout<<endl;
+        cout<<"\nThere are no patients\n";
+    else 
+    {
+        cout<<"\nPatients who are in queue are:\n";
+        while(ptr != NULL) 
+        {
+        cout<<ptr->id<<"-"<<ptr->patient_name<<"("<<ptr->age<<")\n";
+        ptr = ptr->next;
+        }
+        cout<<endl;
     }
 }
 
