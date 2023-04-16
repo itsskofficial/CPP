@@ -33,8 +33,8 @@ public:
 	void display_desc(node *);
 	void comparisons(node*, string);
 	void updateWord(node*, string);
-	//void deleteWord(node*, string);
-	//node* min_node(node *);
+	void deleteWord(node*, string);
+	node* min_node(node *);
 };
 
 void Dictionary::insert(node* p, string key, string keyMeaning)
