@@ -3,6 +3,8 @@
 #include <fstream>
 #include <conio.h>
 #include <string.h>
+using namespace std;
+
 struct student
 {
     int rollno;
