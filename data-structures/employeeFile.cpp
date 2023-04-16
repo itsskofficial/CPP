@@ -47,6 +47,7 @@ void Employee::Create()
     i=0;
     indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
     seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
+
     do
     {
         cout<<"\n Enter Name: ";
@@ -63,10 +64,11 @@ void Employee::Create()
         cout<<"\nDo you want to add more records?";
         cin>>ch;
     } while(ch=='y');
-    
+
     seqfile.close();
     indexfile.close();
 }
+
 void Employee::Display()
 {
  fstream seqfile;
