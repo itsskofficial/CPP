@@ -186,9 +186,12 @@ int main()
 
         case 3:
         {
-        display();
-        break;
+            display();
+            break;
+        }
+
         case 4:
+        {
         for(j=0;j<=i;j++){
         cout<<"\n"<<dataid[j]<<"-"<<dataname[j]<<"("<<dataage[j]<<") - ";
         p=dataprio[j];
