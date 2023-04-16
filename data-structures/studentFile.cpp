@@ -65,34 +65,34 @@ void sequential::read()
 void sequential::insert_student(student rec)
 { 
     student crec;
-int n,i,k;
-fp.open(master,ios::in | ios::out);
-rec.status=0;
-fp.seekg(0,ios::end);/*go to the end of file */
-n=fp.tellg()/sizeof(student);
-if(n==0)
-{
-fp.write((char*)&rec,sizeof(student)); fp.close();
-return;
-}
-/* Shift records until the point of insertion */
-i=nÂ­1;
-while(i>=0)
-{ fp.seekg(i*sizeof(student),ios::beg);
-fp.read((char*)&crec,sizeof(student));
-if(crec.rollno>rec.rollno)
-{ fp.seekp((i+1)*sizeof(student),ios::beg);
-fp.write((char*)&crec,sizeof(student));
-}
-else
-break;
-iÂ­Â­;
-}
-/*insert the record at (i+1)th position */
-i++;
-fp.seekp(i*sizeof(student),ios::beg);
-fp.write((char*)&rec,sizeof(student));
-fp.close();
+    int n,i,k;
+    fp.open(master,ios::in | ios::out);
+    rec.status=0;
+    fp.seekg(0,ios::end);/*go to the end of file */
+    n=fp.tellg()/sizeof(student);
+    if(n==0)
+    {
+    fp.write((char*)&rec,sizeof(student)); fp.close();
+    return;
+    }
+    /* Shift records until the point of insertion */
+    i=nÂ­1;
+    while(i>=0)
+    { fp.seekg(i*sizeof(student),ios::beg);
+    fp.read((char*)&crec,sizeof(student));
+    if(crec.rollno>rec.rollno)
+    { fp.seekp((i+1)*sizeof(student),ios::beg);
+    fp.write((char*)&crec,sizeof(student));
+    }
+    else
+    break;
+    iÂ­Â­;
+    }
+    /*insert the record at (i+1)th position */
+    i++;
+    fp.seekp(i*sizeof(student),ios::beg);
+    fp.write((char*)&rec,sizeof(student));
+    fp.close();
 }
 int sequential::delete_student(int rollno)
 { student crec;
