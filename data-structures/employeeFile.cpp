@@ -331,9 +331,12 @@ int main()
             {
                 list.Search();
                 break;
+            }
+
             case 7:
                 exit(0);
         }
+        
         cout<<"\n\t Do you want to go back to Main Menu?";
         cin>>ans;
     } while(ans=='y');
