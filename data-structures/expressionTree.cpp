@@ -168,8 +168,8 @@ void expressionTree :: deleteTree(node* root)
         return;
  
     /* first delete both subtrees */
-    deleteTree(toot->left);
-    deleteTree(node->right);
+    deleteTree(root->left);
+    deleteTree(root->right);
      
     /* then delete the node */
     cout << "\n Deleting node: " << node->data;
