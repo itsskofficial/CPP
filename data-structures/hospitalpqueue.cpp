@@ -199,8 +199,10 @@ int main()
                     switch(p)
                     {
                         case 1:
+                        {
                             cout<<"Major Accidents";
-                            break;
+                        
+                            }    break;
                         case 2:
                             cout<<"Minor Accidents";
                             break;
@@ -210,11 +212,13 @@ int main()
                         case 4:
                         cout<<"Allergies";
                         break;
+
                         case 5:
                         {
                             cout<<"General Check up";
                             break;
                         }
+
                         case 6:
                         {
                             cout<<"Visiting";
