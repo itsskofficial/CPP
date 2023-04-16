@@ -44,10 +44,10 @@ class sequential
 
 int main()
 { 
-    sequential object(“master.txt”);
+    sequential object("master.txt");
     int rollno,op,recno;
     student rec1;
-    
+
     do
     { cout<<“\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update”;
     cout<<“\n5)Search\n6)Pack\n7)Quit”;
