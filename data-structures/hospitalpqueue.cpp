@@ -129,14 +129,15 @@ int main()
             }
             break;
             case 2:
-            cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
-            cin>>sub2;
-            if(sub2==1){
-            priority=3;
-            dataprio[i]=3;
-            cout<<"your priority is 3";
+            {
+                cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
+                cin>>sub2;
+                if(sub2==1){
+                priority=3;
+                dataprio[i]=3;
+                cout<<"your priority is 3";
             }
-            
+
             else
             {
                 priority=4;
