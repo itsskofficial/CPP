@@ -316,9 +316,10 @@ int main()
             }
 
             case 4:
-            
+            {
                 list.Delete();
                 break;
+            }
             case 5:
                 list.Append();
                 break;
