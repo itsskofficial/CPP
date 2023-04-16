@@ -87,6 +87,7 @@ void Employee::Display()
         i=ind_records.position*sizeof(rec);//getting pos from index file
         seqfile.seekg(i,ios::beg);//seeking record of that pos from seq.file
         seqfile.read((char *)&records,sizeof(records));//reading record
+
         if (records.emp_id!=-1)//if rec. is not deleted logically
         {   //then display it
             cout<<"\nName: "<<records.name<<flush;
@@ -96,6 +97,7 @@ void Employee::Display()
         }
 
     }
+    
     seqfile.close();
     indexfile.close();
 }
