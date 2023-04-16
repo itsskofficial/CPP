@@ -234,8 +234,8 @@ int main()
 	cout<<"\n\nEnter your choice: ";
 	cin>>choice;
 	do
-    {}
-switch(choice)
+    {
+        switch(choice)
 	{
         case 1:
         {
