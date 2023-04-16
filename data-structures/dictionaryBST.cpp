@@ -283,7 +283,4 @@ int main()
 	if(choice!=7)
 		goto menu;
 	return 0;
-
-
-
 }
