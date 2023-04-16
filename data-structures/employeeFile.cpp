@@ -297,25 +297,26 @@ int main()
 
         switch(choice)
         {
-        case 1:
-            list.Create();
-            break;
-        case 2:
-            list.Display();
-            break;
-        case 3:
-            list.Update();
-            break;
-        case 4:
-            list.Delete();
-            break;
-        case 5:
-            list.Append();
-            break;
-        case 6:
-            list.Search();
-            break;
-        case 7:exit(0);
+            case 1:
+                    list.Create();
+                    break;
+            case 2:
+                list.Display();
+                break;
+            case 3:
+                list.Update();
+                break;
+            case 4:
+                list.Delete();
+                break;
+            case 5:
+                list.Append();
+                break;
+            case 6:
+                list.Search();
+                break;
+            case 7:
+                exit(0);
         }
         cout<<"\n\t Do you want to go back to Main Menu?";
         cin>>ans;
