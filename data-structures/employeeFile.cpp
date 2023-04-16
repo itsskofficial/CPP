@@ -97,10 +97,11 @@ void Employee::Display()
         }
 
     }
-    
+
     seqfile.close();
     indexfile.close();
 }
+
 void Employee::Update()
 {
  int pos,id;
