@@ -138,7 +138,7 @@ int sequential::search_student(int rollno)
     student current;
     int i,n;
     fp.open(master,ios::in | ios::out);
-    fp.seekg(0,ios::end);/*go to the end of file */
+    fp.seekg(0,ios::end);
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
 
@@ -169,7 +169,7 @@ void sequential::pack()
     student current;int i,n;
     fp.open(master,ios::binary | ios::in);
     temp.open("temp.txt",ios::out | ios::trunc | ios::binary);
-    fp.seekg(0,ios::end);/*go to the end of file */
+    fp.seekg(0,ios::end);
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
 
