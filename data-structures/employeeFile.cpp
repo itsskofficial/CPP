@@ -309,9 +309,11 @@ int main()
         case 4:
             list.Delete();
             break;
-        case 5:list.Append();
+        case 5:
+            list.Append();
             break;
-        case 6:list.Search();
+        case 6:
+            list.Search();
             break;
         case 7:exit(0);
         }
