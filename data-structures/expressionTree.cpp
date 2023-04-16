@@ -27,7 +27,7 @@ public:
 	}
 	void create(string str);
 	void nonrecPostorder(node *temp);
-    void deleteTree(node *)
+    void deleteTree(node *temp)
 	int priority(char ch);
 	
 };
