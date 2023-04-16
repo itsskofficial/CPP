@@ -181,8 +181,11 @@ int main()
         case 2:
         {
             remove();
-        break;
+            break;
+        }
+
         case 3:
+        {
         display();
         break;
         case 4:
