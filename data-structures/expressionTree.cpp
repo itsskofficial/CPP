@@ -172,7 +172,7 @@ void expressionTree :: deleteTree(node* temp)
     deleteTree(temp->right);
      
     /* then delete the node */
-    cout << "\n Deleting node: " << root->data;
+    cout << "\n Deleting node: " << temp->data;
     delete node;
 }
 
@@ -208,6 +208,7 @@ int main()
 
 			case 3: break;
 		}
+        
 	} while(ch != 3);
 	
 	return 0;
