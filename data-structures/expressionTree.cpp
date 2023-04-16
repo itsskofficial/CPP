@@ -27,6 +27,7 @@ public:
 	}
 	void create(string str);
 	void nonrecPostorder(node *temp);
+    void 
 	int priority(char ch);
 	
 };
