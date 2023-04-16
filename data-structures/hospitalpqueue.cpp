@@ -201,9 +201,11 @@ int main()
                         case 1:
                         {
                             cout<<"Major Accidents";
-                        
-                            }    break;
+                            break;
+                        }
+
                         case 2:
+                        {
                             cout<<"Minor Accidents";
                             break;
                         case 3:
