@@ -40,31 +40,31 @@ Employee::Employee()//constructor
 
 void Employee::Create()
 {
- int i,j;
- char ch='y';
- fstream seqfile;
- fstream indexfile;
- i=0;
- indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
- seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
- do
- {
-  cout<<"\n Enter Name: ";
-  cin>>records.name;
-  cout<<"\n Enter Emp_ID: ";
-  cin>>records.emp_id;
-  cout<<"\n Enter Salary: ";
-  cin>>records.salary;
-  seqfile.write((char*)&records,sizeof(records))<<flush;
-  ind_records.emp_id=records.emp_id;
-  ind_records.position=i;
-  indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
-  i++;
-  cout<<"\nDo you want to add more records?";
-  cin>>ch;
-  }while(ch=='y');
-  seqfile.close();
-  indexfile.close();
+    int i,j;
+    char ch='y';
+    fstream seqfile;
+    fstream indexfile;
+    i=0;
+    indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
+    seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
+    do
+    {
+    cout<<"\n Enter Name: ";
+    cin>>records.name;
+    cout<<"\n Enter Emp_ID: ";
+    cin>>records.emp_id;
+    cout<<"\n Enter Salary: ";
+    cin>>records.salary;
+    seqfile.write((char*)&records,sizeof(records))<<flush;
+    ind_records.emp_id=records.emp_id;
+    ind_records.position=i;
+    indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
+    i++;
+    cout<<"\nDo you want to add more records?";
+    cin>>ch;
+    }while(ch=='y');
+    seqfile.close();
+    indexfile.close();
 }
 void Employee::Display()
 {
