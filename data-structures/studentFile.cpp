@@ -83,7 +83,8 @@ int main()
             break;
             }
 
-            case 5: 
+            case 5:
+            { 
             cout<<"\nEnter a roll no. : ";
             cin>>rollno;
             recno=object.search_student(rollno);
@@ -94,7 +95,9 @@ int main()
             else
             cout<<"\nRecord Not Found ";
             break;
-            case 6: object.pack();break;
+            }
+            case 6: 
+            object.pack();break;
             }
     } while(op!=7);
 
