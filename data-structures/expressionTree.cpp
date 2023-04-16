@@ -26,7 +26,7 @@ public:
 		root=NULL;
 	}
 	void create(string str);
-	void nonrec_postorder(node *temp);
+	void nonrecPostorder(node *temp);
 	int priority(char ch);
 	
 };
@@ -134,7 +134,7 @@ void expressiontree :: create(string str)
 	
 }
 
-void expressiontree :: nonrec_postorder(node *temp)
+void expressiontree :: nonrecPostorder(node *temp)
 {
 	if(root==NULL)
 		cout<<"\n Empty";
@@ -161,7 +161,7 @@ void expressiontree :: nonrec_postorder(node *temp)
 	}
 }
 
-void expressionTree:: deleteTree(node* node)
+void expressionTree :: deleteTree(node* node)
 {
     if (node == NULL) return;
  
@@ -200,7 +200,7 @@ int main()
 			case 2:
             {
                 cout<<"\n Non Recursive Postorder Traversal: "; 
-				e.nonrec_postorder(e.root);
+				e.nonrecPostorder(e.root);
 				break;
             }
 
