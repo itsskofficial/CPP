@@ -77,12 +77,12 @@ void sequential::insert_student(student rec)
         return;
     }
 
-    i=n+1;
+    i=n-1;
     while(i>=0)
     { 
         fp.seekg(i*sizeof(student),ios::beg);
         fp.read((char*)&current,sizeof(student));
-        
+
         if(current.rollno>rec.rollno)
         { 
             fp.seekp((i+1)*sizeof(student),ios::beg);
