@@ -101,24 +101,24 @@ void sequential::insert_student(student rec)
 
 int sequential::delete_student(int rollno)
 { 
-    student crec;
+    student current;
     int i,n; fp.open(master,ios::in | ios::out);
     fp.seekg(0,ios::end);/*go to the end of file */
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
     for(i=0;i<n;i++)
-    { fp.read((char*)&crec,sizeof(student));
-    if(crec.status==0)
+    { fp.read((char*)&current,sizeof(student));
+    if(current.status==0)
     {
-    if(crec.rollno>rollno)
+    if(current.rollno>rollno)
     {cout<<"\nRecord does not exist …";
     fp.close();
     return(0);
     }
-    if(crec.rollno==rollno)
-    {crec.status=1;
+    if(current.rollno==rollno)
+    {current.status=1;
     fp.seekp(i*sizeof(student),ios::beg);
-    fp.write((char*)&crec,sizeof(student));
+    fp.write((char*)&current,sizeof(student));
     fp.close();
     return(1);
     }
@@ -126,21 +126,21 @@ int sequential::delete_student(int rollno)
     }
     return(0);
 }
-int sequential::search_student(int rollno){ student crec;
+int sequential::search_student(int rollno){ student current;
 int i,n;
 fp.open(master,ios::in | ios::out);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 fp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
-{ fp.read((char*)&crec,sizeof(student));
-if(crec.status==0)
+{ fp.read((char*)&current,sizeof(student));
+if(current.status==0)
 {
-if(crec.rollno>rollno)
+if(current.rollno>rollno)
 {fp.close();
 return(Â­1);
 }
-if(crec.rollno==rollno)
+if(current.rollno==rollno)
 { fp.close();
 return(i);
 }
@@ -150,16 +150,16 @@ return(Â­1);
 }
 void sequential::pack()
 { fstream temp;
-student crec;int i,n;
+student current;int i,n;
 fp.open(master,ios::binary | ios::in);
 temp.open("temp.txt",ios::out | ios::trunc | ios::binary);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 fp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
-{ fp.read((char*)&crec,sizeof(student));
-if(crec.status==0)
-temp.write((char*)&crec,sizeof(student));
+{ fp.read((char*)&current,sizeof(student));
+if(current.status==0)
+temp.write((char*)&current,sizeof(student));
 }
 fp.close();
 temp.close();
@@ -169,8 +169,8 @@ temp.seekg(0,ios::end);/*go to the end of file */
 n=temp.tellg()/sizeof(student);
 temp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
-{ temp.read((char*)&crec,sizeof(student));
-fp.write((char*)&crec,sizeof(student));
+{ temp.read((char*)&current,sizeof(student));
+fp.write((char*)&current,sizeof(student));
 }
 fp.close();
 temp.close();
