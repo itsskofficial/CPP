@@ -13,14 +13,16 @@ class Employee
         int emp_id;
         int salary;
     } rec;
+
     typedef struct index
     {
         int emp_id;
         int position;
     } ind;
-    
+
     rec records;
     ind ind_records;
+    
     public:
         Employee();
         void Create();
