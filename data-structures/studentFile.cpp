@@ -141,9 +141,10 @@ int sequential::search_student(int rollno)
     fp.seekg(0,ios::end);/*go to the end of file */
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
-    
+
     for(i=0;i<n;i++)
-    { fp.read((char*)&current,sizeof(student));
+    { 
+        fp.read((char*)&current,sizeof(student));
     if(current.status==0)
     {
     if(current.rollno>rollno)
