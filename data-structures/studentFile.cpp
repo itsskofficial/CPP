@@ -18,9 +18,9 @@ class sequential
         sequential(char *a)
         {
             strcpy(master1,a);
-            mas.open(master1,ios::binary|ios::in);
+            mas.open(master1, ios::binary|ios::in);
             if(mas.fail())
-            mas.open(master1,ios::binary | ios::out);
+            mas.open(master1, ios::binary | ios::out);
             mas.close();
         }
         void read();  
@@ -29,7 +29,7 @@ class sequential
         int search(int rollno);
         void pack();
         void update();
-void display(int recno) // display a particular record
+void display(int recno) 
 { 
     student rec1;
 mas.open(master1,ios::binary | ios::in | ios::nocreate);
