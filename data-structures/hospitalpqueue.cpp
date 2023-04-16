@@ -114,63 +114,63 @@ int main()
 
             switch(a)
             {
-            case 1:
-            {
-                cout<<"\nChoose 1 or 2\n 1-Major Accidents\n 2-Minor accidents\n";
-                cin>>sub;
-
-                if(sub==1)
+                case 1:
                 {
-                    priority=1;
-                    dataprio[i]=1;
-                    cout<<"your priority is 1";
+                    cout<<"\nChoose 1 or 2\n 1-Major Accidents\n 2-Minor accidents\n";
+                    cin>>sub;
+
+                    if(sub==1)
+                    {
+                        priority=1;
+                        dataprio[i]=1;
+                        cout<<"your priority is 1";
+                    }
+
+                    else
+                    {
+                        priority=2;
+                        dataprio[i]=2;
+                        cout<<"your priority is 2";
+                    }
+                    
+                    break;
                 }
 
-                else
+                case 2:
                 {
-                    priority=2;
-                    dataprio[i]=2;
-                    cout<<"your priority is 2";
-                }
-                
+                    cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
+                    cin>>sub2;
+                    if(sub2==1)
+                    {
+                        priority=3;
+                        dataprio[i]=3;
+                        cout<<"your priority is 3";
+                    }
+
+                    else
+                    {
+                        priority=4;
+                        dataprio[i]=4;
+                        cout<<"your priority is 4";
+                    }
+                } 
                 break;
-            }
-
-            case 2:
-            {
-                cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
-                cin>>sub2;
-                if(sub2==1)
+                case 3:
                 {
-                    priority=3;
-                    dataprio[i]=3;
-                    cout<<"your priority is 3";
+                    priority=5;
+                    dataprio[i]=5;
+                    cout<<"your priority is 5";
                 }
 
-                else
+                case 4:
                 {
-                    priority=4;
-                    dataprio[i]=4;
-                    cout<<"your priority is 4";
+                    priority=6;
+                    dataprio[i]=6;
+                    cout<<"your priority is 6";
                 }
-            } 
-            break;
-            case 3:
-            {
-                priority=5;
-                dataprio[i]=5;
-                cout<<"your priority is 5";
-            }
 
-            case 4:
-            {
-                priority=6;
-                dataprio[i]=6;
-                cout<<"your priority is 6";
-            }
-
-            default:
-                cout<<"\nWrong choice";
+                default:
+                    cout<<"\nWrong choice";
             }
 
             insert(id,age,name,priority);
