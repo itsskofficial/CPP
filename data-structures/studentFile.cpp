@@ -135,28 +135,29 @@ int sequential::delete_student(int rollno)
 
 int sequential::search_student(int rollno)
 {
-     student current;
-int i,n;
-fp.open(master,ios::in | ios::out);
-fp.seekg(0,ios::end);/*go to the end of file */
-n=fp.tellg()/sizeof(student);
-fp.seekg(0,ios::beg);
-for(i=0;i<n;i++)
-{ fp.read((char*)&current,sizeof(student));
-if(current.status==0)
-{
-if(current.rollno>rollno)
-{fp.close();
-return(Â­1);
-}
-if(current.rollno==rollno)
-{ fp.close();
-return(i);
-}
-}
-}
-return(Â­1);
-}
+    student current;
+    int i,n;
+    fp.open(master,ios::in | ios::out);
+    fp.seekg(0,ios::end);/*go to the end of file */
+    n=fp.tellg()/sizeof(student);
+    fp.seekg(0,ios::beg);
+    
+    for(i=0;i<n;i++)
+    { fp.read((char*)&current,sizeof(student));
+    if(current.status==0)
+    {
+    if(current.rollno>rollno)
+    {fp.close();
+    return(Â­1);
+    }
+    if(current.rollno==rollno)
+    { fp.close();
+    return(i);
+    }
+    }
+    }
+    return(Â­1);
+    }
 void sequential::pack()
 { fstream temp;
 student current;int i,n;
