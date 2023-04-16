@@ -294,16 +294,20 @@ int main()
         cout<<"\n 7.Exit";
         cout<<"\n Enter your choice: ";
         cin>>choice;
-        
+
         switch(choice)
         {
-        case 1:list.Create();
+        case 1:
+            list.Create();
             break;
-        case 2:list.Display();
+        case 2:
+            list.Display();
             break;
-        case 3:list.Update();
+        case 3:
+            list.Update();
             break;
-        case 4:list.Delete();
+        case 4:
+            list.Delete();
             break;
         case 5:list.Append();
             break;
