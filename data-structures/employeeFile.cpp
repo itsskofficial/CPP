@@ -5,7 +5,7 @@
 #include<conio.h>
 #include<stdlib.h>
 using namespace std;
-class EMP_CLASS
+class Employee
 {
  typedef struct EMPLOYEE
  {
@@ -21,7 +21,7 @@ class EMP_CLASS
  Rec Records;
  Ind_Rec Ind_Records;
  public:
-  EMP_CLASS();
+  Employee();
   void Create();
   void Display();
   void Update();
@@ -29,11 +29,11 @@ class EMP_CLASS
   void Append();
   void Search();
 };
-EMP_CLASS::EMP_CLASS()//constructor 
+Employee::Employee()//constructor 
   {
    strcpy(Records.name,"");
   }
-void EMP_CLASS::Create()
+void Employee::Create()
 {
  int i,j;
  char ch='y';
@@ -61,7 +61,7 @@ void EMP_CLASS::Create()
   seqfile.close();
   indexfile.close();
 }
-void EMP_CLASS::Display()
+void Employee::Display()
 {
  fstream seqfile;
  fstream indexfile;
@@ -90,7 +90,7 @@ void EMP_CLASS::Display()
  seqfile.close();
  indexfile.close();
 }
-void EMP_CLASS::Update()
+void Employee::Update()
 {
  int pos,id;
  char New_name[10];
@@ -138,7 +138,7 @@ void EMP_CLASS::Update()
  indexfile.close();
 
 }
-void EMP_CLASS::Delete()
+void Employee::Delete()
 {
  int id,pos;
  cout<<"\n For deletion,";
@@ -184,7 +184,7 @@ void EMP_CLASS::Delete()
  seqfile.close();
  cout<<"\n The record is Deleted!!!";
 }
-void EMP_CLASS::Append()
+void Employee::Append()
 {
  fstream seqfile;
  fstream indexfile;
@@ -209,7 +209,7 @@ void EMP_CLASS::Append()
  indexfile.close();
  cout<<"\n The record is Appended!!!";
 }
-void EMP_CLASS::Search()
+void Employee::Search()
 {
  fstream seqfile;
  fstream indexfile;
@@ -255,7 +255,7 @@ void EMP_CLASS::Search()
 }
 void main()
 {
- EMP_CLASS List;
+ Employee List;
  char ans='y';
  int choice,key;
  clrscr();
