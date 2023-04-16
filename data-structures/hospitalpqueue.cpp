@@ -215,8 +215,9 @@ int main()
                             cout<<"Poisioning";
                             break;
                         }
-                        
+
                         case 4:
+                        {
                         cout<<"Allergies";
                         break;
 
