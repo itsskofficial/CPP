@@ -25,7 +25,7 @@ public:
 	Dictionary()
 	{
 		root = NULL;
-		q=NULL;
+		q = NULL;
 	}
 
 	void insert(node*, string, string);
