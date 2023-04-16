@@ -59,7 +59,9 @@ ptr = ptr->next;
 cout<<endl;
 }
 }
-int main() {
+
+int main() 
+{
     int ch, id, priority,age,a,sub,i=0,j=0,p,sub2,dataid[40],dataage[40],dataprio[40];
     char name[40];
     string dataname[40];
