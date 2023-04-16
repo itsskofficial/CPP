@@ -88,7 +88,7 @@ void sequential::insert_student(student rec)
         }
         else
             break;
-        i--­;
+        i--;
     }
     /*insert the record at (i+1)th position */
     i++;
