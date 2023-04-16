@@ -150,7 +150,7 @@ int sequential::search_student(int rollno)
             if(current.rollno>rollno)
             {
                 fp.close();
-                return(Â­1);
+                return(-1);
             }
             if(current.rollno==rollno)
             { 
@@ -159,7 +159,7 @@ int sequential::search_student(int rollno)
             }
         }
     }
-    return(Â­1);
+    return(-­1);
     }
 void sequential::pack()
 { fstream temp;
