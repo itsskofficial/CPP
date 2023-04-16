@@ -168,17 +168,18 @@ void Employee::Delete()
     //reading index file for getting the index
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
     {
-    if(id==ind_records.emp_id) //desired record is found
-    {
-    pos=ind_records.position;
-    ind_records.emp_id=-1;
-    break;
+        if(id==ind_records.emp_id) //desired record is found
+        {
+            pos=ind_records.position;
+            ind_records.emp_id=-1;
+            break;
+        }
     }
-    }
+
     if(pos==-1)
     {
-    cout<<"\n The record is not present in the file";
-    return;
+        cout<<"\n The record is not present in the file";
+        return;
     }
     //calculating the position of record in seq. file using the pos of ind. file
     int offset=pos*sizeof(rec);
