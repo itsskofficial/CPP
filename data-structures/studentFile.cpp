@@ -30,7 +30,8 @@ class sequential
         void pack();
         void update();
 void display(int recno) // display a particular record
-{ student rec1;
+{ 
+    student rec1;
 mas.open(master1,ios::binary | ios::in | ios::nocreate);
 mas.seekg(recno*sizeof(student),ios::beg);
 mas.read((char*) &rec1,sizeof(student));
