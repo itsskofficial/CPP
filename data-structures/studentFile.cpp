@@ -71,11 +71,12 @@ int main()
             }
 
         case 3:
-        {} 
-        cout<<"\nEnter the roll no.:";
-        cin>>rollno;
-        object.delete_student(rollno);
-        break;
+        { 
+            cout<<"\nEnter the roll no.:";
+            cin>>rollno;
+            object.delete_student(rollno);
+            break;
+        }
         case 4: object.update(); break;
         case 5: cout<<"\nEnter a roll no. : ";
         cin>>rollno;
