@@ -1,9 +1,10 @@
-include<iostream>
+#include<iostream>
 #include<iomanip>
 #include<fstream>
 #include<string.h>
 #include<conio.h>
 #include<stdlib.h>
+using name
 class EMP_CLASS
 {
  typedef struct EMPLOYEE
