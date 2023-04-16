@@ -173,7 +173,7 @@ void expressiontree :: deleteTree(node* temp)
      
     /* then delete the node */
     cout << "\n Deleting node: " << temp->data;
-    delete node;
+    delete temp;
 }
 
 int main()
