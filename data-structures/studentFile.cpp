@@ -127,11 +127,14 @@ int sequential::delete_student(int rollno)
                 fp.close();
                 return(1);
             }
-            }
+        }
     }
+
     return(0);
 }
-int sequential::search_student(int rollno){ student current;
+
+int sequential::
+search_student(int rollno){ student current;
 int i,n;
 fp.open(master,ios::in | ios::out);
 fp.seekg(0,ios::end);/*go to the end of file */
