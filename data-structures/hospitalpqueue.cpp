@@ -36,7 +36,7 @@ void insert(int id,int age,char patient_name[],int priority)
     {
         ptr = front;
         while (ptr->next != NULL && ptr->next->priority <= priority)
-        ptr=ptr->next;
+            ptr=ptr->next;
         temp->next = ptr->next;
         ptr->next = temp;
     }
