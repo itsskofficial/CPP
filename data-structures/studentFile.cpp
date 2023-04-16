@@ -76,17 +76,18 @@ void sequential::insert_student(student rec)
         fp.write((char*)&rec,sizeof(student)); fp.close();
         return;
     }
-    
+
     i=n+1;
     while(i>=0)
-    { fp.seekg(i*sizeof(student),ios::beg);
-    fp.read((char*)&current,sizeof(student));
-    if(current.rollno>rec.rollno)
-    { fp.seekp((i+1)*sizeof(student),ios::beg);
-    fp.write((char*)&current,sizeof(student));
-    }
-    else
-    break;
+    { 
+        fp.seekg(i*sizeof(student),ios::beg);
+        fp.read((char*)&current,sizeof(student));
+        if(current.rollno>rec.rollno)
+        { fp.seekp((i+1)*sizeof(student),ios::beg);
+        fp.write((char*)&current,sizeof(student));
+        }
+        else
+        break;
     i++­;
     }
     /*insert the record at (i+1)th position */
