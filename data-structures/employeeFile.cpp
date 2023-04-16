@@ -29,6 +29,7 @@ class Employee
         void Append();
         void Search();
 };
+
 Employee::Employee()//constructor 
   {
    strcpy(records.name,"");
