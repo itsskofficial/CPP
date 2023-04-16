@@ -70,26 +70,28 @@ int main()
                 break;
             }
 
-        case 3:
-        { 
-            cout<<"\nEnter the roll no.:";
-            cin>>rollno;
-            object.delete_student(rollno);
+            case 3:
+            { 
+                cout<<"\nEnter the roll no.:";
+                cin>>rollno;
+                object.delete_student(rollno);
+                break;
+            }
+            case 4: 
+            object.update(); 
             break;
-        }
-        case 4: object.update(); break;
-        case 5: cout<<"\nEnter a roll no. : ";
-        cin>>rollno;
-        recno=object.search_student(rollno);
-        if(recno>=0)
-        { cout<<"\n Record No.: "<< recno;
-        object.display(recno);
-        }
-        else
-        cout<<"\nRecord Not Found ";
-        break;
-        case 6: object.pack();break;
-        }
+            case 5: cout<<"\nEnter a roll no. : ";
+            cin>>rollno;
+            recno=object.search_student(rollno);
+            if(recno>=0)
+            { cout<<"\n Record No.: "<< recno;
+            object.display(recno);
+            }
+            else
+            cout<<"\nRecord Not Found ";
+            break;
+            case 6: object.pack();break;
+            }
     } while(op!=7);
 
     return 0;
