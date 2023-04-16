@@ -7,27 +7,27 @@
 using namespace std;
 class Employee
 {
- typedef struct emp
- {
-    char name[10];
+    typedef struct emp
+    {
+        char name[10];
+        int emp_id;
+        int salary;
+    } rec;
+    typedef struct index
+    {
     int emp_id;
-    int salary;
- } rec;
- typedef struct index
- {
- int emp_id;
- int position;
- }Ind_Rec;
- Rec Records;
- Ind_Rec Ind_Records;
- public:
-  Employee();
-  void Create();
-  void Display();
-  void Update();
-  void Delete();
-  void Append();
-  void Search();
+    int position;
+    }Ind_Rec;
+    rec Records;
+    Ind_Rec Ind_Records;
+    public:
+    Employee();
+    void Create();
+    void Display();
+    void Update();
+    void Delete();
+    void Append();
+    void Search();
 };
 Employee::Employee()//constructor 
   {
