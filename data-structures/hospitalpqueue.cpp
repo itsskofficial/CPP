@@ -223,6 +223,7 @@ int main()
         default :
         cout<<"\nWrong choice\n";
         }
+        }
     } while(ch != 5);
     return 0;
 }
