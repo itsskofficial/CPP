@@ -233,7 +233,9 @@ int main()
 	cout<<"\n6. Comparisons";
 	cout<<"\n\nEnter your choice: ";
 	cin>>choice;
-	switch(choice)
+	do
+    {}
+switch(choice)
 	{
         case 1:
         {
@@ -290,7 +292,7 @@ int main()
         
         default:
             cout<<"\nInvalid input!";
-	}
+	} while (choice!=7)
 	
 	return 0;
 }
