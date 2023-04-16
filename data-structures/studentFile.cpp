@@ -82,9 +82,11 @@ void sequential::insert_student(student rec)
     { 
         fp.seekg(i*sizeof(student),ios::beg);
         fp.read((char*)&current,sizeof(student));
+        
         if(current.rollno>rec.rollno)
-        { fp.seekp((i+1)*sizeof(student),ios::beg);
-        fp.write((char*)&current,sizeof(student));
+        { 
+            fp.seekp((i+1)*sizeof(student),ios::beg);
+            fp.write((char*)&current,sizeof(student));
         }
         else
             break;
