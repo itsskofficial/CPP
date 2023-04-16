@@ -172,8 +172,10 @@ void sequential::pack()
     fp.seekg(0,ios::end);/*go to the end of file */
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
+
     for(i=0;i<n;i++)
-    { fp.read((char*)&current,sizeof(student));
+    { 
+        fp.read((char*)&current,sizeof(student));
     if(current.status==0)
     temp.write((char*)&current,sizeof(student));
     }
@@ -190,9 +192,11 @@ void sequential::pack()
     }
     fp.close();
     temp.close();
-    }
+}
+
 void sequential::update()
-    { int rollno;
+{ 
+    int rollno;
     student rec;
     cout<<"\n Enter the rollno of the record to be updated : ";
     cin>>rollno;
