@@ -27,7 +27,7 @@ class sequential
         }
         void read();  
         void insert(student rec1);
-        int Delete(int rollno);
+        int delete_student(int rollno);
         int search(int rollno);
         void pack();
         void update();
@@ -57,7 +57,7 @@ object.insert(rec1);
 break;
 case 3: cout<<“\nEnter the roll no.:”;
 cin>>rollno;
-object.Delete(rollno);
+object.delete_student(rollno);
 break;
 case 4: object.update(); break;
 case 5: cout<<“\nEnter a roll no. : “;
@@ -121,7 +121,7 @@ fp.seekp(i*sizeof(student),ios::beg);
 fp.write((char*)&rec1,sizeof(student));
 fp.close();
 }
-int sequential::Delete(int rollno)
+int sequential::delete_student(int rollno)
 { student crec;
 int i,n; fp.open(master1,ios::in | ios::out | ios::nocreate);
 fp.seekg(0,ios::end);/*go to the end of file */
