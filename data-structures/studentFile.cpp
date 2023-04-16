@@ -42,7 +42,8 @@ class sequential
         }
 };
 void main()
-{ sequential object(“master.txt”);
+{ 
+    sequential object(“master.txt”);
 int rollno,op,recno;
 student rec1;
 do
