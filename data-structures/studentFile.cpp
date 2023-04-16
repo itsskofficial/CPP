@@ -77,10 +77,14 @@ int main()
                 object.delete_student(rollno);
                 break;
             }
-            case 4: 
+            case 4:
+            { 
             object.update(); 
             break;
-            case 5: cout<<"\nEnter a roll no. : ";
+            }
+
+            case 5: 
+            cout<<"\nEnter a roll no. : ";
             cin>>rollno;
             recno=object.search_student(rollno);
             if(recno>=0)
