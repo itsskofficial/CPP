@@ -162,14 +162,14 @@ void expressiontree :: nonrecPostorder(node *temp)
 	}
 }
 
-void expressionTree :: deleteTree(node* root)
+void expressionTree :: deleteTree(node* temp)
 {
-    if (root == NULL) 
+    if (temp == NULL) 
         return;
  
     /* first delete both subtrees */
-    deleteTree(root->left);
-    deleteTree(root->right);
+    deleteTree(temp->left);
+    deleteTree(temp->right);
      
     /* then delete the node */
     cout << "\n Deleting node: " << root->data;
