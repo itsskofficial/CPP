@@ -31,15 +31,15 @@ class sequential
         int search(int rollno);
         void pack();
         void update();
-void display(int recno) 
-{ 
-    student rec1;
-fp.open(master1,ios::binary | ios::in);
-fp.seekg(recno*sizeof(student),ios::beg);
-fp.read((char*) &rec1,sizeof(student));
-cout<<"\n"<<rec1.rollno<<" "<<rec1.name<<" "<<setprecision(2)<<rec1.marks;
-fp.close();
-}
+        void display(int recno) 
+        { 
+            student rec1;
+            fp.open(master1,ios::binary | ios::in);
+            fp.seekg(recno*sizeof(student),ios::beg);
+            fp.read((char*) &rec1,sizeof(student));
+            cout<<"\n"<<rec1.rollno<<" "<<rec1.name<<" "<<setprecision(2)<<rec1.marks;
+            fp.close();
+        }
 };
 void main()
 { sequential object(“master.txt”);
