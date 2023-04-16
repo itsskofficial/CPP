@@ -63,7 +63,8 @@ void sequential::read()
 }
 
 void sequential::insert_student(student rec)
-{ student crec;
+{ 
+    student crec;
 int n,i,k;
 fp.open(master,ios::in | ios::out);
 rec.status=0;
