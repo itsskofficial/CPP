@@ -320,10 +320,15 @@ int main()
                 list.Delete();
                 break;
             }
+
             case 5:
+            {
                 list.Append();
                 break;
+            }
+
             case 6:
+            {
                 list.Search();
                 break;
             case 7:
