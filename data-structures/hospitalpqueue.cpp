@@ -147,14 +147,17 @@ int main()
             priority=5;
             dataprio[i]=5;
             cout<<"your priority is 5";
+            }
             case 4:
+            {
             priority=6;
             dataprio[i]=6;
             cout<<"your priority is 6";
+            }
             default:
             cout<<"\nWrong choice";
             }
-            
+
             insert(id,age,name,priority);
             i++;
             break;
