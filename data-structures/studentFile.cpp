@@ -102,29 +102,29 @@ void sequential::insert_student(student rec)
 int sequential::delete_student(int rollno)
 { 
     student crec;
-int i,n; fp.open(master,ios::in | ios::out);
-fp.seekg(0,ios::end);/*go to the end of file */
-n=fp.tellg()/sizeof(student);
-fp.seekg(0,ios::beg);
-for(i=0;i<n;i++)
-{ fp.read((char*)&crec,sizeof(student));
-if(crec.status==0)
-{
-if(crec.rollno>rollno)
-{cout<<"\nRecord does not exist …";
-fp.close();
-return(0);
-}
-if(crec.rollno==rollno)
-{crec.status=1;
-fp.seekp(i*sizeof(student),ios::beg);
-fp.write((char*)&crec,sizeof(student));
-fp.close();
-return(1);
-}
-}
-}
-return(0);
+    int i,n; fp.open(master,ios::in | ios::out);
+    fp.seekg(0,ios::end);/*go to the end of file */
+    n=fp.tellg()/sizeof(student);
+    fp.seekg(0,ios::beg);
+    for(i=0;i<n;i++)
+    { fp.read((char*)&crec,sizeof(student));
+    if(crec.status==0)
+    {
+    if(crec.rollno>rollno)
+    {cout<<"\nRecord does not exist …";
+    fp.close();
+    return(0);
+    }
+    if(crec.rollno==rollno)
+    {crec.status=1;
+    fp.seekp(i*sizeof(student),ios::beg);
+    fp.write((char*)&crec,sizeof(student));
+    fp.close();
+    return(1);
+    }
+    }
+    }
+    return(0);
 }
 int sequential::search_student(int rollno){ student crec;
 int i,n;
