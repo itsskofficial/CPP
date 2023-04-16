@@ -117,7 +117,7 @@ void Employee::Update()
     indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
     indexfile.seekg(0,ios::beg);
     pos=-1;
-    
+
     //reading index file for getting the index
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
     {
@@ -151,51 +151,52 @@ void Employee::Update()
     seqfile.close();
     indexfile.close();
 }
+
 void Employee::Delete()
 {
- int id,pos;
- cout<<"\n For deletion,";
- cout<<"\n Enter the Emp_ID for for searching ";
- cin>>id;
- fstream seqfile;
- fstream indexfile;
- seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
- indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
- seqfile.seekg(0,ios::beg);
- indexfile.seekg(0,ios::beg);
- pos=-1;
- //reading index file for getting the index
- while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
- {
-  if(id==ind_records.emp_id) //desired record is found
-  {
-   pos=ind_records.position;
-   ind_records.emp_id=-1;
-   break;
-  }
- }
- if(pos==-1)
- {
-  cout<<"\n The record is not present in the file";
-  return;
- }
-//calculating the position of record in seq. file using the pos of ind. file
- int offset=pos*sizeof(Rec);
- seqfile.seekp(offset);//seeking the desired record for deletion
- strcpy(records.name,"");
- records.emp_id=-1; //logical deletion
- records.salary=-1; //logical deletion
- seqfile.write((char*)&records,sizeof(records))<<flush;//writing deleted status 
-    //From index file also the desired record gets deleted as follows
- offset=pos*sizeof(ind);//getting position in index file
- indexfile.seekp(offset); //seeking that record
- ind_records.emp_id=-1; //logical deletion of emp_id
- ind_records.position=pos;//position remain unchanged
- indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
- seqfile.seekg(0);
- indexfile.close();
- seqfile.close();
- cout<<"\n The record is Deleted!!!";
+    int id,pos;
+    cout<<"\n For deletion,";
+    cout<<"\n Enter the Emp_ID for for searching ";
+    cin>>id;
+    fstream seqfile;
+    fstream indexfile;
+    seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
+    indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
+    seqfile.seekg(0,ios::beg);
+    indexfile.seekg(0,ios::beg);
+    pos=-1;
+    //reading index file for getting the index
+    while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
+    {
+    if(id==ind_records.emp_id) //desired record is found
+    {
+    pos=ind_records.position;
+    ind_records.emp_id=-1;
+    break;
+    }
+    }
+    if(pos==-1)
+    {
+    cout<<"\n The record is not present in the file";
+    return;
+    }
+    //calculating the position of record in seq. file using the pos of ind. file
+    int offset=pos*sizeof(Rec);
+    seqfile.seekp(offset);//seeking the desired record for deletion
+    strcpy(records.name,"");
+    records.emp_id=-1; //logical deletion
+    records.salary=-1; //logical deletion
+    seqfile.write((char*)&records,sizeof(records))<<flush;//writing deleted status 
+        //From index file also the desired record gets deleted as follows
+    offset=pos*sizeof(ind);//getting position in index file
+    indexfile.seekp(offset); //seeking that record
+    ind_records.emp_id=-1; //logical deletion of emp_id
+    ind_records.position=pos;//position remain unchanged
+    indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
+    seqfile.seekg(0);
+    indexfile.close();
+    seqfile.close();
+    cout<<"\n The record is deleted!!!";
 }
 void Employee::Append()
 {
