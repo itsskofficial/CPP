@@ -274,7 +274,8 @@ void Employee::Search()
     seqfile.close();
     indexfile.close();
 }
-void main()
+
+int main()
 {
  Employee List;
  char ans='y';
@@ -312,4 +313,6 @@ void main()
     cout<<"\n\t Do you want to go back to Main Menu?";
     cin>>ans;
  } while(ans=='y');
+
+ return 0;
 }
