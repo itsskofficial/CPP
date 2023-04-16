@@ -111,7 +111,7 @@ int sequential::delete_student(int rollno)
     for(i=0;i<n;i++)
     { 
         fp.read((char*)&current,sizeof(student));
-    if(current.status==0)
+        if(current.status==0)
     {
     if(current.rollno>rollno)
     {cout<<"\nRecord does not exist …";
