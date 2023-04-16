@@ -198,13 +198,13 @@ int main()
                     p=dataprio[j];
                     switch(p){
                     case 1:
-                    cout<<"Major Accidents";
+                        cout<<"Major Accidents";
                     break;
                     case 2:
-                    cout<<"Minor Accidents";
+                        cout<<"Minor Accidents";
                     break;
                     case 3:
-                    cout<<"Poisioning";
+                        cout<<"Poisioning";
                     break;
                     case 4:
                     cout<<"Allergies";
@@ -220,6 +220,7 @@ int main()
 
                 break;
             }
+
             case 5:
             {
                 cout<<"\nExit"<<endl;
