@@ -23,7 +23,8 @@ class sequential
             mas.open(master1,ios::binary | ios::out);
             mas.close();
         }
-        void read(); //dispaly master file void insert(student rec1);
+        void read();  
+        void insert(student rec1);
         int Delete(int rollno);
         int search(int rollno);
         void pack();
