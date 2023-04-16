@@ -134,7 +134,8 @@ int sequential::delete_student(int rollno)
 }
 
 int sequential::search_student(int rollno)
- student current;
+{
+     student current;
 int i,n;
 fp.open(master,ios::in | ios::out);
 fp.seekg(0,ios::end);/*go to the end of file */
