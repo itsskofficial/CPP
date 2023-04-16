@@ -196,6 +196,7 @@ int main()
                 {
                     cout<<"\n"<<dataid[j]<<"-"<<dataname[j]<<"("<<dataage[j]<<") - ";
                     p=dataprio[j];
+                    
                     switch(p)
                     {
                         case 1:
@@ -235,7 +236,6 @@ int main()
                         }
                     }
                 }
-                
                 break;
             }
 
