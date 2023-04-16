@@ -44,7 +44,7 @@ class sequential
 
 void sequential::read()
 { 
-    student crec; int i=1,n;
+    student current; int i=1,n;
     cout<<"\n*********Data File*********\n";
     fp.open(master,ios::binary | ios::in);
     fp.seekg(0,ios::end);
@@ -52,9 +52,9 @@ void sequential::read()
     fp.seekg(0,ios::beg);
     for(i=1;i<=n;i++)
     { 
-        fp.read((char*)&crec,sizeof(student));
-        if(crec.status==0)
-            cout<<"\n"<<i<<") "<<crec.rollno<<""<<crec.name<<""<<setprecision(2)<<crec.marks;
+        fp.read((char*)&current,sizeof(student));
+        if(current.status==0)
+            cout<<"\n"<<i<<") "<<current.rollno<<""<<current.name<<""<<setprecision(2)<<current.marks;
         else
             cout<<"\n"<<i<<") "<<" ****** deleted *********";
     }
@@ -64,7 +64,7 @@ void sequential::read()
 
 void sequential::insert_student(student rec)
 { 
-    student crec;
+    student current;
     int n,i,k;
     fp.open(master,ios::in | ios::out);
     rec.status=0;
@@ -79,10 +79,10 @@ void sequential::insert_student(student rec)
     i=nÂ­1;
     while(i>=0)
     { fp.seekg(i*sizeof(student),ios::beg);
-    fp.read((char*)&crec,sizeof(student));
-    if(crec.rollno>rec.rollno)
+    fp.read((char*)&current,sizeof(student));
+    if(current.rollno>rec.rollno)
     { fp.seekp((i+1)*sizeof(student),ios::beg);
-    fp.write((char*)&crec,sizeof(student));
+    fp.write((char*)&current,sizeof(student));
     }
     else
     break;
