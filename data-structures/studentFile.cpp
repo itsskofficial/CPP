@@ -98,8 +98,10 @@ void sequential::insert_student(student rec)
     fp.write((char*)&rec,sizeof(student));
     fp.close();
 }
+
 int sequential::delete_student(int rollno)
-{ student crec;
+{ 
+    student crec;
 int i,n; fp.open(master,ios::in | ios::out);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
