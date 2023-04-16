@@ -10,40 +10,44 @@ struct node{
 	int priority;
 	struct node *next;
 };
+
 node *front=NULL;
 void vline(char ch){
 	cout<<"\n";
 	for (int i=80;i>0;i--)
 		cout<<ch;
 }
-void insert(int id,int age,char patient_name[],int priority){
-node *temp,*ptr;
-temp= new node;
-temp->id=id;
-temp->age=age;
-strcpy(temp->patient_name,patient_name);
-temp->priority=priority;
-if (front == NULL || priority < front->priority) {
-temp->next = front;
-front = temp;
-} else {
-ptr = front;
-while (ptr->next != NULL && ptr->next->priority <= priority)
-ptr=ptr->next;
-temp->next = ptr->next;
-ptr->next = temp;
+void insert(int id,int age,char patient_name[],int priority)
+{
+    node *temp,*ptr;
+    temp= new node;
+    temp->id=id;
+    temp->age=age;
+    strcpy(temp->patient_name,patient_name);
+    temp->priority=priority;
+    if (front == NULL || priority < front->priority) {
+    temp->next = front;
+    front = temp;
+    } else {
+    ptr = front;
+    while (ptr->next != NULL && ptr->next->priority <= priority)
+    ptr=ptr->next;
+    temp->next = ptr->next;
+    ptr->next = temp;
+    }
 }
-}
-void remove() {
-node *temp;
-if(front == NULL)
-cout<<"\nThere are no patients in the queue\n";
-else {
-temp = front;
-cout<<"\npatient with id: "<<temp->id<<" and name: "<<temp->patient_name<<"("<<temp->age<<") has been left."<<endl;
-front = front->next;
-free(temp);
-}
+
+void remove() 
+{
+    node *temp;
+    if(front == NULL)
+    cout<<"\nThere are no patients in the queue\n";
+    else {
+    temp = front;
+    cout<<"\npatient with id: "<<temp->id<<" and name: "<<temp->patient_name<<"("<<temp->age<<") has been left."<<endl;
+    front = front->next;
+    free(temp);
+    }
 }
 
 void display() 
