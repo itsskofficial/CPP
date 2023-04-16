@@ -161,7 +161,7 @@ void expressiontree :: nonrec_postorder(node *temp)
 	}
 }
 
-void expressionTree::
+void expressionTree::delete_tree(**node)
 
 int main()
 {
