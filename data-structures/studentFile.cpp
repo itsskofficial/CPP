@@ -34,7 +34,7 @@ class sequential
 void display(int recno) 
 { 
     student rec1;
-fp.open(master1,ios::binary | ios::in | ios::nocreate);
+fp.open(master1,ios::binary | ios::in);
 fp.seekg(recno*sizeof(student),ios::beg);
 fp.read((char*) &rec1,sizeof(student));
 cout<<“\n”<<rec1.rollno<<“”<<rec1.name<<“”<<setprecision(2)<<rec1.marks;
