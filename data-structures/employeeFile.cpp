@@ -116,21 +116,22 @@ void Employee::Update()
     seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
     indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
     indexfile.seekg(0,ios::beg);
-
     pos=-1;
+    
     //reading index file for getting the index
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
     {
-    if(id==ind_records.emp_id)//the desired record is found
-    {
-    pos=ind_records.position;//getting the position
-    break;
+        if(id==ind_records.emp_id)//the desired record is found
+        {
+            pos=ind_records.position;//getting the position
+            break;
+        }
     }
-    }
+
     if(pos==-1)
     {
-    cout<<"\n The record is not present in the file";
-    return;
+        cout<<"\n The record is not present in the file";
+        return;
     }
     else
     {
