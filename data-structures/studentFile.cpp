@@ -14,15 +14,15 @@ struct student
 };
 class sequential
 { 
-    char master1[30];
+    char master[30];
     fstream fp;
     public:
         sequential(char *a)
         {
-            strcpy(master1,a);
-            fp.open(master1, ios::binary|ios::in);
+            strcpy(master,a);
+            fp.open(master, ios::binary|ios::in);
             if(fp.fail())
-            fp.open(master1, ios::binary | ios::out);
+            fp.open(master, ios::binary | ios::out);
             fp.close();
         }
         void read();  
@@ -34,7 +34,7 @@ class sequential
         void display(int recno) 
         { 
             student rec;
-            fp.open(master1,ios::binary | ios::in);
+            fp.open(master,ios::binary | ios::in);
             fp.seekg(recno*sizeof(student),ios::beg);
             fp.read((char*) &rec,sizeof(student));
             cout<<"\n"<<rec.rollno<<" "<<rec.name<<" "<<setprecision(2)<<rec.marks;
@@ -46,7 +46,7 @@ void sequential::read()
 { 
     student crec; int i=1,n;
     cout<<"\n*********Data File*********\n";
-    fp.open(master1,ios::binary | ios::in | ios::nocreate);
+    fp.open(master,ios::binary | ios::in | ios::nocreate);
     fp.seekg(0,ios::end);/*go to the end of file */
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
@@ -62,7 +62,7 @@ void sequential::read()
 void sequential::insert_student(student rec)
 { student crec;
 int n,i,k;
-fp.open(master1,ios::in | ios::out | ios::nocreate);
+fp.open(master,ios::in | ios::out | ios::nocreate);
 rec.status=0;
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
@@ -92,7 +92,7 @@ fp.close();
 }
 int sequential::delete_student(int rollno)
 { student crec;
-int i,n; fp.open(master1,ios::in | ios::out | ios::nocreate);
+int i,n; fp.open(master,ios::in | ios::out | ios::nocreate);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 fp.seekg(0,ios::beg);
@@ -118,7 +118,7 @@ return(0);
 }
 int sequential::search_student(int rollno){ student crec;
 int i,n;
-fp.open(master1,ios::in | ios::out | ios::nocreate);
+fp.open(master,ios::in | ios::out | ios::nocreate);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 fp.seekg(0,ios::beg);
@@ -141,7 +141,7 @@ return(Â­1);
 void sequential::pack()
 { fstream temp;
 student crec;int i,n;
-fp.open(master1,ios::binary | ios::in);
+fp.open(master,ios::binary | ios::in);
 temp.open("temp.txt",ios::out | ios::trunc | ios::binary);
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
@@ -154,7 +154,7 @@ temp.write((char*)&crec,sizeof(student));
 fp.close();
 temp.close();
 temp.open("temp.txt",ios::binary | ios::in);
-fp.open(master1,ios::binary | ios::out | ios::trunc);
+fp.open(master,ios::binary | ios::out | ios::trunc);
 temp.seekg(0,ios::end);/*go to the end of file */
 n=temp.tellg()/sizeof(student);
 temp.seekg(0,ios::beg);
