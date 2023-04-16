@@ -16,18 +16,18 @@ class sequential
     fstream mas;
     public:
         sequential(char *a)
-{
-strcpy(master1,a);
-mas.open(master1,ios::binary|ios::in);
-if(mas.fail())
-mas.open(master1,ios::binary | ios::out);
-mas.close();
-}
-void read(); //dispaly master file void insert(student rec1);
-int Delete(int rollno);
-int search(int rollno);
-void pack();
-void update();
+        {
+            strcpy(master1,a);
+            mas.open(master1,ios::binary|ios::in);
+            if(mas.fail())
+            mas.open(master1,ios::binary | ios::out);
+            mas.close();
+        }
+        void read(); //dispaly master file void insert(student rec1);
+        int Delete(int rollno);
+        int search(int rollno);
+        void pack();
+        void update();
 void display(int recno) // display a particular record
 { student rec1;
 mas.open(master1,ios::binary | ios::in | ios::nocreate);
