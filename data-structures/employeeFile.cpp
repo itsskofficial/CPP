@@ -80,11 +80,11 @@ void Employee::Display()
     seqfile.seekg(0,ios::beg);
     cout<<"\n The Contents of file are ..."<<endl;
     i=0;
-    
+
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
     {
 
-    i=ind_records.position*sizeof(Rec);//getting pos from index file
+    i=ind_records.position*sizeof(rec);//getting pos from index file
     seqfile.seekg(i,ios::beg);//seeking record of that pos from seq.file
     seqfile.read((char *)&records,sizeof(records));//reading record
     if(records.emp_id!=-1)//if rec. is not deleted logically
