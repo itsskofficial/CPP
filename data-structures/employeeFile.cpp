@@ -277,42 +277,42 @@ void Employee::Search()
 
 int main()
 {
- Employee List;
- char ans='y';
- int choice,key;
- clrscr();
+    Employee List;
+    char ans='y';
+    int choice,key;
+    clrscr();
 
- do
- {
-    cout<<"\n             Main Menu             "<<endl;
-    cout<<"\n 1.Create";
-    cout<<"\n 2.Display";
-    cout<<"\n 3.Update";
-    cout<<"\n 4.Delete";
-    cout<<"\n 5.Append";
-    cout<<"\n 6.Search";
-    cout<<"\n 7.Exit";
-    cout<<"\n Enter your choice: ";
-    cin>>choice;
-    switch(choice)
+    do
     {
-    case 1:List.Create();
-        break;
-    case 2:List.Display();
-        break;
-    case 3:List.Update();
-        break;
-    case 4:List.Delete();
-        break;
-    case 5:List.Append();
-        break;
-    case 6:List.Search();
-        break;
-    case 7:exit(0);
-    }
-    cout<<"\n\t Do you want to go back to Main Menu?";
-    cin>>ans;
- } while(ans=='y');
+        cout<<"\n             Main Menu             "<<endl;
+        cout<<"\n 1.Create";
+        cout<<"\n 2.Display";
+        cout<<"\n 3.Update";
+        cout<<"\n 4.Delete";
+        cout<<"\n 5.Append";
+        cout<<"\n 6.Search";
+        cout<<"\n 7.Exit";
+        cout<<"\n Enter your choice: ";
+        cin>>choice;
+        switch(choice)
+        {
+        case 1:List.Create();
+            break;
+        case 2:List.Display();
+            break;
+        case 3:List.Update();
+            break;
+        case 4:List.Delete();
+            break;
+        case 5:List.Append();
+            break;
+        case 6:List.Search();
+            break;
+        case 7:exit(0);
+        }
+        cout<<"\n\t Do you want to go back to Main Menu?";
+        cin>>ans;
+    } while(ans=='y');
 
- return 0;
+    return 0;
 }
