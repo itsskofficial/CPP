@@ -45,7 +45,7 @@ class sequential
 int main()
 { 
     sequential object("master.txt");
-    int rollno,op,recno;
+    int rollno,ch,recno;
     student rec;
 
     do
@@ -53,9 +53,9 @@ int main()
         cout<<"\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update";
         cout<<"\n5)Search\n6)Pack\n7)Quit";
         cout<<"\nEnter Your Choice:";
-        cin>>op;
+        cin>>ch;
 
-        switch(op)
+        switch(ch)
         { 
             case 1:
             { 
@@ -97,14 +97,14 @@ int main()
                 cout<<"\nRecord Not Found ";
                 break;
             }
-            
+
             case 6:
             { 
                 object.pack();
                 break;
             }
         }
-    } while(op!=7);
+    } while(ch!=7);
 
     return 0;
 }
