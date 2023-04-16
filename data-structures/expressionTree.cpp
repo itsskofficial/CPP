@@ -183,9 +183,10 @@ int main()
                 e.create(str);
 				break;
             }
-            
-			case 2:cout<<"\n Non Recursive Postorder Traversal: "; 
-						e.nonrec_postorder(e.root);
+
+			case 2:
+                cout<<"\n Non Recursive Postorder Traversal: "; 
+				e.nonrec_postorder(e.root);
 				break;
 				
 			case 3: break;
