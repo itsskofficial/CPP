@@ -338,7 +338,6 @@ int main()
         cout<<"\n\t Do you want to go back to Main Menu?";
         cin>>ans;
     } while(ans=='y');
-
-    getch();
+    
     return 0;
 }
