@@ -159,10 +159,13 @@ int sequential::search_student(int rollno)
             }
         }
     }
+
     return(-­1);
-    }
+}
+
 void sequential::pack()
-{ fstream temp;
+{ 
+    fstream temp;
 student current;int i,n;
 fp.open(master,ios::binary | ios::in);
 temp.open("temp.txt",ios::out | ios::trunc | ios::binary);
