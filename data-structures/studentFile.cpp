@@ -13,7 +13,7 @@ struct student
 class sequential
 { 
     char master1[30];
-    istrea;
+    istream m;
     public:
         sequential(char *a)
         {
