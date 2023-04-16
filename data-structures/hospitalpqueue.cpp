@@ -218,8 +218,9 @@ int main()
 
                         case 4:
                         {
-                        cout<<"Allergies";
-                        break;
+                            cout<<"Allergies";
+                            break;
+                        }
 
                         case 5:
                         {
@@ -234,7 +235,7 @@ int main()
                         }
                     }
                 }
-
+                
                 break;
             }
 
