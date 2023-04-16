@@ -137,6 +137,7 @@ int main()
             cout<<"your priority is 3";
             }
             else{
+                
             priority=4;
             dataprio[i]=4;
             cout<<"your priority is 4";
@@ -144,9 +145,9 @@ int main()
             break;
             case 3:
             {
-            priority=5;
-            dataprio[i]=5;
-            cout<<"your priority is 5";
+                priority=5;
+                dataprio[i]=5;
+                cout<<"your priority is 5";
             }
 
             case 4:
