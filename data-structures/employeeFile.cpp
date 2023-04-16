@@ -277,7 +277,7 @@ void Employee::Search()
 
 int main()
 {
-    Employee List;
+    Employee list;
     char ans='y';
     int choice,key;
     clrscr();
@@ -294,19 +294,20 @@ int main()
         cout<<"\n 7.Exit";
         cout<<"\n Enter your choice: ";
         cin>>choice;
+        
         switch(choice)
         {
-        case 1:List.Create();
+        case 1:list.Create();
             break;
-        case 2:List.Display();
+        case 2:list.Display();
             break;
-        case 3:List.Update();
+        case 3:list.Update();
             break;
-        case 4:List.Delete();
+        case 4:list.Delete();
             break;
-        case 5:List.Append();
+        case 5:list.Append();
             break;
-        case 6:List.Search();
+        case 6:list.Search();
             break;
         case 7:exit(0);
         }
