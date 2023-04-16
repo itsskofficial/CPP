@@ -19,15 +19,15 @@ class Employee
     int position;
     } ind;
     rec records;
-    ind Ind_Records;
+    ind ind_records;
     public:
-    Employee();
-    void Create();
-    void Display();
-    void Update();
-    void Delete();
-    void Append();
-    void Search();
+        Employee();
+        void Create();
+        void Display();
+        void Update();
+        void Delete();
+        void Append();
+        void Search();
 };
 Employee::Employee()//constructor 
   {
@@ -51,9 +51,9 @@ void Employee::Create()
   cout<<"\n Enter Salary: ";
   cin>>records.salary;
   seqfile.write((char*)&records,sizeof(records))<<flush;
-  Ind_Records.emp_id=records.emp_id;
-  Ind_Records.position=i;
-  indexfile.write((char*)&Ind_Records,sizeof(Ind_Records))<<flush;
+  ind_records.emp_id=records.emp_id;
+  ind_records.position=i;
+  indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
   i++;
   cout<<"\nDo you want to add more records?";
   cin>>ch;
@@ -72,10 +72,10 @@ void Employee::Display()
  seqfile.seekg(0,ios::beg);
  cout<<"\n The Contents of file are ..."<<endl;
  i=0;
- while(indexfile.read((char *)&Ind_Records,sizeof(Ind_Records)))
+ while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
  {
 
-   i=Ind_Records.position*sizeof(Rec);//getting pos from index file
+   i=ind_records.position*sizeof(Rec);//getting pos from index file
    seqfile.seekg(i,ios::beg);//seeking record of that pos from seq.file
    seqfile.read((char *)&records,sizeof(records));//reading record
    if(records.emp_id!=-1)//if rec. is not deleted logically
@@ -107,11 +107,11 @@ void Employee::Update()
 
  pos=-1;
  //reading index file for getting the index
- while(indexfile.read((char *)&Ind_Records,sizeof(Ind_Records)))
+ while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
  {
-  if(id==Ind_Records.emp_id)//the desired record is found
+  if(id==ind_records.emp_id)//the desired record is found
   {
-   pos=Ind_Records.position;//getting the position
+   pos=ind_records.position;//getting the position
    break;
   }
  }
@@ -152,12 +152,12 @@ void Employee::Delete()
  indexfile.seekg(0,ios::beg);
  pos=-1;
  //reading index file for getting the index
- while(indexfile.read((char *)&Ind_Records,sizeof(Ind_Records)))
+ while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
  {
-  if(id==Ind_Records.emp_id) //desired record is found
+  if(id==ind_records.emp_id) //desired record is found
   {
-   pos=Ind_Records.position;
-   Ind_Records.emp_id=-1;
+   pos=ind_records.position;
+   ind_records.emp_id=-1;
    break;
   }
  }
@@ -176,9 +176,9 @@ void Employee::Delete()
     //From index file also the desired record gets deleted as follows
  offset=pos*sizeof(ind);//getting position in index file
  indexfile.seekp(offset); //seeking that record
- Ind_Records.emp_id=-1; //logical deletion of emp_id
- Ind_Records.position=pos;//position remain unchanged
- indexfile.write((char*)&Ind_Records,sizeof(Ind_Records))<<flush;
+ ind_records.emp_id=-1; //logical deletion of emp_id
+ ind_records.position=pos;//position remain unchanged
+ indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
  seqfile.seekg(0);
  indexfile.close();
  seqfile.close();
@@ -191,7 +191,7 @@ void Employee::Append()
  int pos;
  indexfile.open("IND.DAT",ios::in|ios::binary);
  indexfile.seekg(0,ios::end);
- pos=indexfile.tellg()/sizeof(Ind_Records);
+ pos=indexfile.tellg()/sizeof(ind_records);
  indexfile.close();
 
  indexfile.open("IND.DAT",ios::app|ios::binary);
@@ -202,9 +202,9 @@ void Employee::Append()
  cout<<"\nEmp_ID: ";cin>>records.emp_id;
  cout<<"\nSalary: ";cin>>records.salary;
  seqfile.write((char*)&records,sizeof(records));//inserting rec at end in seq. file
- Ind_Records.emp_id=records.emp_id;           //inserting rec at end in ind. file
- Ind_Records.position=pos;                          //at calculated pos
- indexfile.write((char*)&Ind_Records,sizeof(Ind_Records))<<flush;
+ ind_records.emp_id=records.emp_id;           //inserting rec at end in ind. file
+ ind_records.position=pos;                          //at calculated pos
+ indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
  seqfile.close();
  indexfile.close();
  cout<<"\n The record is Appended!!!";
@@ -219,11 +219,11 @@ void Employee::Search()
  indexfile.open("IND.DAT",ios::in|ios::binary);
  pos=-1;
  //reading index file to obtain the index of desired record
- while(indexfile.read((char *)&Ind_Records,sizeof(Ind_Records)))
+ while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
  {
-  if(id==Ind_Records.emp_id)//desired record found
+  if(id==ind_records.emp_id)//desired record found
   {
-   pos=Ind_Records.position;//seeking the position
+   pos=ind_records.position;//seeking the position
    break;
   }
  }
