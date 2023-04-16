@@ -26,7 +26,7 @@ class sequential
             fp.close();
         }
         void read();  
-        void insert(student rec1);
+        void insert_student(student rec1);
         int delete_student(int rollno);
         int search(int rollno);
         void pack();
@@ -90,7 +90,7 @@ cout<<“\n”<<i<<“) “<<” ****** deleted *********”;
 }
 fp.close();
 }
-void sequential::insert(student rec1)
+void sequential::insert_student(student rec1)
 { student crec;
 int n,i,k;
 fp.open(master1,ios::in | ios::out | ios::nocreate);
