@@ -223,7 +223,7 @@ int main()
 	int choice, n;
 	string newWord, searchWord, newMeaning;
 	Dictionary d1;
-	menu:
+    
 	cout<<"\n\nDICTIONARY: ";
 	cout<<"\n\n1. Insert new words";
 	cout<<"\n2. Display the dictionary in ascending order";
@@ -234,8 +234,6 @@ int main()
     cout<<"\n7. Exit"
 	cout<<"\n\nEnter your choice: ";
 	cin>>choice;
-	do
-    {
         switch(choice)
         {
             case 1:
