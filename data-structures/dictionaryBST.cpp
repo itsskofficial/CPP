@@ -255,7 +255,8 @@ int main()
     {
 		d1.display_asc(d1.root);
 		break;
-
+    }
+    
 	case 3:
 		d1.display_desc(d1.root);
 		break;
