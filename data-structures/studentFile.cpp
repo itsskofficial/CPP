@@ -42,73 +42,6 @@ class sequential
         }
 };
 
-int main()
-{ 
-    sequential object("master.txt");
-    int rollno,ch,recno;
-    student rec;
-
-    do
-    { 
-        cout<<"\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update";
-        cout<<"\n5)Search\n6)Pack\n7)Quit";
-        cout<<"\nEnter Your Choice:";
-        cin>>ch;
-
-        switch(ch)
-        { 
-            case 1:
-            { 
-                object.read();
-                break; 
-            }
-            case 2:
-            { 
-                cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
-                cin>>rec.rollno>>rec.name>>rec.marks;
-                object.insert_student(rec);
-                break;
-            }
-
-            case 3:
-            { 
-                cout<<"\nEnter the roll no.:";
-                cin>>rollno;
-                object.delete_student(rollno);
-                break;
-            }
-
-            case 4:
-            { 
-                object.update(); 
-                break;
-            }
-
-            case 5:
-            { 
-                cout<<"\nEnter a roll no. : ";
-                cin>>rollno;
-                recno=object.search_student(rollno);
-                if(recno>=0)
-                { cout<<"\n Record No.: "<< recno;
-                object.display(recno);
-                }
-                else
-                cout<<"\nRecord Not Found ";
-                break;
-            }
-
-            case 6:
-            { 
-                object.pack();
-                break;
-            }
-        }
-    } while(ch!=7);
-
-    return 0;
-}
-
 void sequential::read()
 { student crec; int i=1,n;
 cout<<"\n*********Data File*********\n";
@@ -242,4 +175,73 @@ insert(rec);
 else
 cout<<"\n Record not found :";
 }
+
+int main()
+{ 
+    sequential object("master.txt");
+    int rollno,ch,recno;
+    student rec;
+
+    do
+    { 
+        cout<<"\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update";
+        cout<<"\n5)Search\n6)Pack\n7)Quit";
+        cout<<"\nEnter Your Choice:";
+        cin>>ch;
+
+        switch(ch)
+        { 
+            case 1:
+            { 
+                object.read();
+                break; 
+            }
+            case 2:
+            { 
+                cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
+                cin>>rec.rollno>>rec.name>>rec.marks;
+                object.insert_student(rec);
+                break;
+            }
+
+            case 3:
+            { 
+                cout<<"\nEnter the roll no.:";
+                cin>>rollno;
+                object.delete_student(rollno);
+                break;
+            }
+
+            case 4:
+            { 
+                object.update(); 
+                break;
+            }
+
+            case 5:
+            { 
+                cout<<"\nEnter a roll no. : ";
+                cin>>rollno;
+                recno=object.search_student(rollno);
+                if(recno>=0)
+                { cout<<"\n Record No.: "<< recno;
+                object.display(recno);
+                }
+                else
+                cout<<"\nRecord Not Found ";
+                break;
+            }
+
+            case 6:
+            { 
+                object.pack();
+                break;
+            }
+        }
+    } while(ch!=7);
+
+    return 0;
+}
+
+
 
