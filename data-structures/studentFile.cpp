@@ -96,9 +96,12 @@ int main()
             cout<<"\nRecord Not Found ";
             break;
             }
-            case 6: 
-            object.pack();break;
+            case 6:
+            { 
+            object.pack();
+            break;
             }
+        }
     } while(op!=7);
 
     return 0;
