@@ -47,11 +47,12 @@ void sequential::read()
     student crec; int i=1,n;
     cout<<"\n*********Data File*********\n";
     fp.open(master,ios::binary | ios::in);
-    fp.seekg(0,ios::end); /*go to the end of file */
+    fp.seekg(0,ios::end);
     n=fp.tellg()/sizeof(student);
     fp.seekg(0,ios::beg);
     for(i=1;i<=n;i++)
-    { fp.read((char*)&crec,sizeof(student));
+    { 
+        fp.read((char*)&crec,sizeof(student));
     if(crec.status==0)
     cout<<"\n"<<i<<") "<<crec.rollno<<""<<crec.name<<""<<setprecision(2)<<crec.marks;
     else
