@@ -98,58 +98,58 @@ int main()
         switch(ch) 
         {
         case 1:
-        cout<<"\nEnter the patient id : ";
-        cin>>id;
-        dataid[i]=id;
-        cout<<"Enter the patient name: ";
-        cin>>name;
-        dataname[i]=name;
-        cout<<"Enter the patient age: ";
-        cin>>age;
-        dataage[i]=age;
-        cout<<"\n1-Accident\n2-Other issues\n3-General Checkup\n4-visiting\n";
-        cout<<"\nEnter the type of case : ";
-        cin>>a;
-        switch(a){
-        case 1:
-        cout<<"\nChoose 1 or 2\n 1-Major Accidents\n 2-Minor accidents\n";
-        cin>>sub;
-        if(sub==1){
-        priority=1;
-        dataprio[i]=1;
-        cout<<"your priority is 1";
-        }
-        else{
-        priority=2;
-        dataprio[i]=2;
-        cout<<"your priority is 2";
-        }
-        break;
-        case 2:
-        cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
-        cin>>sub2;
-        if(sub2==1){
-        priority=3;
-        dataprio[i]=3;
-        cout<<"your priority is 3";
-        }
-        else{
-        priority=4;
-        dataprio[i]=4;
-        cout<<"your priority is 4";
-        }
-        break;
-        case 3:
-        priority=5;
-        dataprio[i]=5;
-        cout<<"your priority is 5";
-        case 4:
-        priority=6;
-        dataprio[i]=6;
-        cout<<"your priority is 6";
-        default:
-        cout<<"\nWrong choice";
-        }
+            cout<<"\nEnter the patient id : ";
+            cin>>id;
+            dataid[i]=id;
+            cout<<"Enter the patient name: ";
+            cin>>name;
+            dataname[i]=name;
+            cout<<"Enter the patient age: ";
+            cin>>age;
+            dataage[i]=age;
+            cout<<"\n1-Accident\n2-Other issues\n3-General Checkup\n4-visiting\n";
+            cout<<"\nEnter the type of case : ";
+            cin>>a;
+            switch(a){
+            case 1:
+            cout<<"\nChoose 1 or 2\n 1-Major Accidents\n 2-Minor accidents\n";
+            cin>>sub;
+            if(sub==1){
+            priority=1;
+            dataprio[i]=1;
+            cout<<"your priority is 1";
+            }
+            else{
+            priority=2;
+            dataprio[i]=2;
+            cout<<"your priority is 2";
+            }
+            break;
+            case 2:
+            cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
+            cin>>sub2;
+            if(sub2==1){
+            priority=3;
+            dataprio[i]=3;
+            cout<<"your priority is 3";
+            }
+            else{
+            priority=4;
+            dataprio[i]=4;
+            cout<<"your priority is 4";
+            }
+            break;
+            case 3:
+            priority=5;
+            dataprio[i]=5;
+            cout<<"your priority is 5";
+            case 4:
+            priority=6;
+            dataprio[i]=6;
+            cout<<"your priority is 6";
+            default:
+            cout<<"\nWrong choice";
+            }
         insert(id,age,name,priority);
         i++;
         break;
