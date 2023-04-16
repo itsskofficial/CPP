@@ -225,16 +225,16 @@ int main()
 	Dictionary d1;
     do
     {
-	cout<<"\n\nDICTIONARY: ";
-	cout<<"\n\n1. Insert new words";
-	cout<<"\n2. Display the dictionary in ascending order";
-	cout<<"\n3. Display the dictionary in descending order";
-	cout<<"\n4. Search and update a word";
-	cout<<"\n5. Delete a word";
-	cout<<"\n6. Comparisons";
-    cout << "\n7. Exit";
-    cout<<"\n\nEnter your choice: ";
-	cin>>choice;
+        cout<<"\n\nDICTIONARY: ";
+        cout<<"\n\n1. Insert new words";
+        cout<<"\n2. Display the dictionary in ascending order";
+        cout<<"\n3. Display the dictionary in descending order";
+        cout<<"\n4. Search and update a word";
+        cout<<"\n5. Delete a word";
+        cout<<"\n6. Comparisons";
+        cout << "\n7. Exit";
+        cout<<"\n\nEnter your choice: ";
+        cin>>choice;
         switch(choice)
         {
             case 1:
@@ -293,7 +293,7 @@ int main()
             default:
                 cout<<"\nInvalid input!";
         }
-    } while (choice!=7)
-	
-	return 0;
+    } while (choice != 7);
+
+    return 0;
 }
