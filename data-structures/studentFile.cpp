@@ -146,18 +146,18 @@ int sequential::search_student(int rollno)
     { 
         fp.read((char*)&current,sizeof(student));
         if(current.status==0)
-    {
-    if(current.rollno>rollno)
-    {
-        fp.close();
-        return(Â­1);
-    }
-    if(current.rollno==rollno)
-    { 
-        fp.close();
-        return(i);
-    }
-    }
+        {
+            if(current.rollno>rollno)
+            {
+                fp.close();
+                return(Â­1);
+            }
+            if(current.rollno==rollno)
+            { 
+                fp.close();
+                return(i);
+            }
+        }
     }
     return(Â­1);
     }
