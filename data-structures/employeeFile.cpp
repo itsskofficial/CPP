@@ -279,7 +279,7 @@ void main()
  Employee List;
  char ans='y';
  int choice,key;
- clrsrc();
+ clrscr();
  do
  {
   cout<<"\n             Main Menu             "<<endl;
