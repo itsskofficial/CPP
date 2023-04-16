@@ -12,7 +12,7 @@ class EMP_CLASS
  char name[10];
  int emp_id;
  int salary;
- }Rec;
+ } rec;
  typedef struct INDEX
  {
  int emp_id;
