@@ -67,11 +67,13 @@ void display()
     else 
     {
         cout<<"\nPatients who are in queue are:\n";
+
         while(ptr != NULL) 
         {
             cout<<ptr->id<<"-"<<ptr->patient_name<<"("<<ptr->age<<")\n";
             ptr = ptr->next;
         }
+        
         cout<<endl;
     }
 }
