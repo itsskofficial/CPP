@@ -35,11 +35,12 @@ void insert(int id,int age,char patient_name[],int priority)
     else
     {
         ptr = front;
+
         while (ptr->next != NULL && ptr->next->priority <= priority)
         {
             ptr=ptr->next;
         }
-        
+
         temp->next = ptr->next;
         ptr->next = temp;
     }
@@ -49,12 +50,13 @@ void remove()
 {
     node *temp;
     if(front == NULL)
-    cout<<"\nThere are no patients in the queue\n";
-    else {
-    temp = front;
-    cout<<"\npatient with id: "<<temp->id<<" and name: "<<temp->patient_name<<"("<<temp->age<<") has been left."<<endl;
-    front = front->next;
-    free(temp);
+        cout<<"\nThere are no patients in the queue\n";
+    else 
+    {
+        temp = front;
+        cout<<"\npatient with id: "<<temp->id<<" and name: "<<temp->patient_name<<"("<<temp->age<<") has been left."<<endl;
+        front = front->next;
+        free(temp);
     }
 }
 
