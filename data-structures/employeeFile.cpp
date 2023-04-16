@@ -104,51 +104,51 @@ void Employee::Display()
 
 void Employee::Update()
 {
- int pos,id;
- char New_name[10];
- int New_emp_id;
- int New_salary;
- cout<<"\n For updation,";
- cout<<"\n Enter the Emp_ID for for searching ";
- cin>>id;
- fstream seqfile;
- fstream indexfile;
- seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
- indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
- indexfile.seekg(0,ios::beg);
+    int pos,id;
+    char New_name[10];
+    int New_emp_id;
+    int New_salary;
+    cout<<"\n For updation,";
+    cout<<"\n Enter the Emp_ID for for searching ";
+    cin>>id;
+    fstream seqfile;
+    fstream indexfile;
+    seqfile.open("EMP.DAT",ios::in|ios::out|ios::binary);
+    indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
+    indexfile.seekg(0,ios::beg);
 
- pos=-1;
- //reading index file for getting the index
- while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
- {
-  if(id==ind_records.emp_id)//the desired record is found
-  {
-   pos=ind_records.position;//getting the position
-   break;
-  }
- }
- if(pos==-1)
- {
-  cout<<"\n The record is not present in the file";
-  return;
- }
- else
- {
-  cout<<"\n Enter the values for updation...";
-  cout<<"\n Name: ";cin>>New_name;
-  cout<<"\n Salary: ";cin>>New_salary;
-//calculating the position of record in seq. file using the pos of ind. file
-  int offset=pos*sizeof(Rec);
-  seqfile.seekp(offset);//seeking the desired record for modification
-  strcpy(records.name,New_name);//can be updated
-  records.emp_id=id;//It's unique id,so don't change
-  records.salary=New_salary;//can be updated
-  seqfile.write((char*)&records,sizeof(records))<<flush;
-  cout<<"\n The record is updated!!!";
- }
- seqfile.close();
- indexfile.close();
+    pos=-1;
+    //reading index file for getting the index
+    while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
+    {
+    if(id==ind_records.emp_id)//the desired record is found
+    {
+    pos=ind_records.position;//getting the position
+    break;
+    }
+    }
+    if(pos==-1)
+    {
+    cout<<"\n The record is not present in the file";
+    return;
+    }
+    else
+    {
+        cout<<"\n Enter the values for updation...";
+        cout<<"\n Name: ";cin>>New_name;
+        cout<<"\n Salary: ";cin>>New_salary;
+        //calculating the position of record in seq. file using the pos of ind. file
+        int offset=pos*sizeof(Rec);
+        seqfile.seekp(offset);//seeking the desired record for modification
+        strcpy(records.name,New_name);//can be updated
+        records.emp_id=id;//It's unique id,so don't change
+        records.salary=New_salary;//can be updated
+        seqfile.write((char*)&records,sizeof(records))<<flush;
+        cout<<"\n The record is updated!!!";
+    }
 
+    seqfile.close();
+    indexfile.close();
 }
 void Employee::Delete()
 {
