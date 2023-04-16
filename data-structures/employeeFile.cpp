@@ -7,7 +7,7 @@
 using namespace std;
 class Employee
 {
- typedef struct EMPLOYEE
+ typedef struct emp
  {
  char name[10];
  int emp_id;
