@@ -87,8 +87,8 @@ void sequential::insert_student(student rec)
         fp.write((char*)&current,sizeof(student));
         }
         else
-        break;
-    i++­;
+            break;
+        i--­;
     }
     /*insert the record at (i+1)th position */
     i++;
