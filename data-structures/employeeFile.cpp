@@ -4,7 +4,7 @@
 #include<string.h>
 #include<conio.h>
 #include<stdlib.h>
-using name
+using namespace std;
 class EMP_CLASS
 {
  typedef struct EMPLOYEE
