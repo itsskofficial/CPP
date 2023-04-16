@@ -128,6 +128,8 @@ int main()
             cout<<"your priority is 2";
             }
             break;
+            }
+            
             case 2:
             {
                 cout<<"\nChoose 1 or 2\n 1-Poisioning\n 2-Allergies\n";
