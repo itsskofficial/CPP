@@ -57,10 +57,11 @@ int main()
 
         switch(op)
         { 
-            case 1: 
-            object.read();
-            break; 
-            
+            case 1:
+            { 
+                object.read();
+                break; 
+            }
             case 2:
             { 
                 cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
@@ -69,8 +70,9 @@ int main()
                 break;
             }
 
-      
-        case 3: cout<<"\nEnter the roll no.:";
+        case 3:
+        {} 
+        cout<<"\nEnter the roll no.:";
         cin>>rollno;
         object.delete_student(rollno);
         break;
