@@ -143,6 +143,7 @@ int main()
             }
             break;
             case 3:
+            {
             priority=5;
             dataprio[i]=5;
             cout<<"your priority is 5";
@@ -153,11 +154,12 @@ int main()
             default:
             cout<<"\nWrong choice";
             }
+            
             insert(id,age,name,priority);
             i++;
             break;
         }
-        
+
         case 2:
         remove();
         break;
