@@ -112,20 +112,20 @@ int sequential::delete_student(int rollno)
     { 
         fp.read((char*)&current,sizeof(student));
         if(current.status==0)
-    {
-    if(current.rollno>rollno)
-    {cout<<"\nRecord does not exist …";
-    fp.close();
-    return(0);
-    }
-    if(current.rollno==rollno)
-    {current.status=1;
-    fp.seekp(i*sizeof(student),ios::beg);
-    fp.write((char*)&current,sizeof(student));
-    fp.close();
-    return(1);
-    }
-    }
+        {
+            if(current.rollno>rollno)
+            {cout<<"\nRecord does not exist …";
+            fp.close();
+            return(0);
+            }
+            if(current.rollno==rollno)
+            {current.status=1;
+            fp.seekp(i*sizeof(student),ios::beg);
+            fp.write((char*)&current,sizeof(student));
+            fp.close();
+            return(1);
+            }
+            }
     }
     return(0);
 }
