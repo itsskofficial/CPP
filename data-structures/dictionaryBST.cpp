@@ -270,14 +270,17 @@ int main()
 		d1.updateWord(d1.root, searchWord);
 		break;
     }
-    
+
 	case 5:
+    {
 		cout<<"\nEnter the word to delete: ";
 		cin>>searchWord;
 		d1.deleteWord(d1.root, searchWord);
 		break;
-		
+    }
+
 	case 6:
+    {
 		cout<<"\nEnter the word to find comparisons: ";
 		cin >> searchWord;
 		d1.comparisons(d1.root, searchWord);
