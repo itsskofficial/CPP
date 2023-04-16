@@ -181,7 +181,7 @@ void Employee::Delete()
     return;
     }
     //calculating the position of record in seq. file using the pos of ind. file
-    int offset=pos*sizeof(Rec);
+    int offset=pos*sizeof(rec);
     seqfile.seekp(offset);//seeking the desired record for deletion
     strcpy(records.name,"");
     records.emp_id=-1; //logical deletion
