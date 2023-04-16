@@ -98,6 +98,7 @@ int main()
         switch(ch) 
         {
         case 1:
+        {
             cout<<"\nEnter the patient id : ";
             cin>>id;
             dataid[i]=id;
@@ -110,7 +111,7 @@ int main()
             cout<<"\n1-Accident\n2-Other issues\n3-General Checkup\n4-visiting\n";
             cout<<"\nEnter the type of case : ";
             cin>>a;
-            
+
             switch(a)
             {
             case 1:
@@ -155,6 +156,8 @@ int main()
             insert(id,age,name,priority);
             i++;
             break;
+        }
+        
         case 2:
         remove();
         break;
