@@ -53,10 +53,10 @@ void sequential::read()
     for(i=1;i<=n;i++)
     { 
         fp.read((char*)&crec,sizeof(student));
-    if(crec.status==0)
-    cout<<"\n"<<i<<") "<<crec.rollno<<""<<crec.name<<""<<setprecision(2)<<crec.marks;
-    else
-    cout<<"\n"<<i<<") "<<" ****** deleted *********";
+        if(crec.status==0)
+            cout<<"\n"<<i<<") "<<crec.rollno<<""<<crec.name<<""<<setprecision(2)<<crec.marks;
+        else
+            cout<<"\n"<<i<<") "<<" ****** deleted *********";
     }
     fp.close();
 }
