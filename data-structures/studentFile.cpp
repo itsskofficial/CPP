@@ -26,18 +26,18 @@ class sequential
             fp.close();
         }
         void read();  
-        void insert_student(student rec1);
+        void insert_student(student rec);
         int delete_student(int rollno);
         int search_student(int rollno);
         void pack();
         void update();
         void display(int recno) 
         { 
-            student rec1;
+            student rec;
             fp.open(master1,ios::binary | ios::in);
             fp.seekg(recno*sizeof(student),ios::beg);
-            fp.read((char*) &rec1,sizeof(student));
-            cout<<"\n"<<rec1.rollno<<" "<<rec1.name<<" "<<setprecision(2)<<rec1.marks;
+            fp.read((char*) &rec,sizeof(student));
+            cout<<"\n"<<rec.rollno<<" "<<rec.name<<" "<<setprecision(2)<<rec.marks;
             fp.close();
         }
 };
@@ -46,7 +46,7 @@ int main()
 { 
     sequential object("master.txt");
     int rollno,op,recno;
-    student rec1;
+    student rec;
 
     do
     { cout<<“\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update”;
@@ -55,8 +55,8 @@ int main()
     cin>>op;
     switch(op)
     { case 1: object.read();break; case 2: cout<<“\nEnter a record to be inserted(roll no,name,marks : “;
-    cin>>rec1.rollno>>rec1.name>>rec1.marks;
-    object.insert(rec1);
+    cin>>rec.rollno>>rec.name>>rec.marks;
+    object.insert(rec);
     break;
     case 3: cout<<“\nEnter the roll no.:”;
     cin>>rollno;
@@ -95,16 +95,16 @@ cout<<“\n”<<i<<“) “<<” ****** deleted *********”;
 }
 fp.close();
 }
-void sequential::insert_student(student rec1)
+void sequential::insert_student(student rec)
 { student crec;
 int n,i,k;
 fp.open(master1,ios::in | ios::out | ios::nocreate);
-rec1.status=0;
+rec.status=0;
 fp.seekg(0,ios::end);/*go to the end of file */
 n=fp.tellg()/sizeof(student);
 if(n==0)
 {
-fp.write((char*)&rec1,sizeof(student)); fp.close();
+fp.write((char*)&rec,sizeof(student)); fp.close();
 return;
 }
 /* Shift records until the point of insertion */
@@ -112,7 +112,7 @@ i=nÂ­1;
 while(i>=0)
 { fp.seekg(i*sizeof(student),ios::beg);
 fp.read((char*)&crec,sizeof(student));
-if(crec.rollno>rec1.rollno)
+if(crec.rollno>rec.rollno)
 { fp.seekp((i+1)*sizeof(student),ios::beg);
 fp.write((char*)&crec,sizeof(student));
 }
@@ -123,7 +123,7 @@ iÂ­Â­;
 /*insert the record at (i+1)th position */
 i++;
 fp.seekp(i*sizeof(student),ios::beg);
-fp.write((char*)&rec1,sizeof(student));
+fp.write((char*)&rec,sizeof(student));
 fp.close();
 }
 int sequential::delete_student(int rollno)
@@ -202,13 +202,13 @@ fp.close();
 temp.close();
 }void sequential::update()
 { int rollno;
-student rec1;
+student rec;
 cout<<“\n Enter the rollno of the record to be updated : “;
 cin>>rollno;
 cout<<“\nEnter a new record(roll no. name marks : “;
-cin>>rec1.rollno>>rec1.name>>rec1.marks;
+cin>>rec.rollno>>rec.name>>rec.marks;
 if(Delete(rollno))
-insert(rec1);
+insert(rec);
 else
 cout<<“\n Record not found :”;
 }
