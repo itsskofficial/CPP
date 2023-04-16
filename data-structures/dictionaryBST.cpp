@@ -236,63 +236,63 @@ int main()
 	do
     {
         switch(choice)
-	{
-        case 1:
         {
-            cout<<"\nEnter the number of words to insert: ";
-            cin >> n;
-            for(int i=0 ; i<n ; i++)
+            case 1:
             {
-                cout<<"\nEnter the word to be inserted: ";
-                cin >> newWord;
-                cout<<"\nEnter its meaning: ";
-                cin >> newMeaning;
-                if(d1.root == NULL)
-                    d1. root = new node(newWord, newMeaning);
-                else
-                    d1.insert(d1.root, newWord, newMeaning);
+                cout<<"\nEnter the number of words to insert: ";
+                cin >> n;
+                for(int i=0 ; i<n ; i++)
+                {
+                    cout<<"\nEnter the word to be inserted: ";
+                    cin >> newWord;
+                    cout<<"\nEnter its meaning: ";
+                    cin >> newMeaning;
+                    if(d1.root == NULL)
+                        d1. root = new node(newWord, newMeaning);
+                    else
+                        d1.insert(d1.root, newWord, newMeaning);
+                }
+                break;
             }
-            break;
-        }
 
-        case 2:
-        {
-            d1.display_asc(d1.root);
-            break;
-        }
+            case 2:
+            {
+                d1.display_asc(d1.root);
+                break;
+            }
 
-        case 3:
-        {
-            d1.display_desc(d1.root);
-            break;
-        }
+            case 3:
+            {
+                d1.display_desc(d1.root);
+                break;
+            }
 
-        case 4:
-        {
-            cout<<"\nEnter the word to search: ";
-            cin >> searchWord;
-            d1.updateWord(d1.root, searchWord);
-            break;
-        }
+            case 4:
+            {
+                cout<<"\nEnter the word to search: ";
+                cin >> searchWord;
+                d1.updateWord(d1.root, searchWord);
+                break;
+            }
 
-        case 5:
-        {
-            cout<<"\nEnter the word to delete: ";
-            cin>>searchWord;
-            d1.deleteWord(d1.root, searchWord);
-            break;
-        }
+            case 5:
+            {
+                cout<<"\nEnter the word to delete: ";
+                cin>>searchWord;
+                d1.deleteWord(d1.root, searchWord);
+                break;
+            }
 
-        case 6:
-        {
-            cout<<"\nEnter the word to find comparisons: ";
-            cin >> searchWord;
-            d1.comparisons(d1.root, searchWord);
+            case 6:
+            {
+                cout<<"\nEnter the word to find comparisons: ";
+                cin >> searchWord;
+                d1.comparisons(d1.root, searchWord);
+            }
+            
+            default:
+                cout<<"\nInvalid input!";
         }
-        
-        default:
-            cout<<"\nInvalid input!";
-	}
     } while (choice!=7)
 	
 	return 0;
