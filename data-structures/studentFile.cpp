@@ -160,7 +160,7 @@ int sequential::search_student(int rollno)
         }
     }
 
-    return(-­1);
+    return(-1);
 }
 
 void sequential::pack()
@@ -206,7 +206,7 @@ void sequential::update()
     cin>>rollno;
     cout<<"\nEnter a new record(roll no. name marks : ";
     cin>>rec.rollno>>rec.name>>rec.marks;
-    
+
     if(delete_student(rollno))
         insert_student(rec);
     else
