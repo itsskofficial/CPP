@@ -252,6 +252,7 @@ int main()
 		break;
 
 	case 2:
+    {
 		d1.display_asc(d1.root);
 		break;
 
