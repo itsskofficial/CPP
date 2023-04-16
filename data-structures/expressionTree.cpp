@@ -206,9 +206,11 @@ int main()
 				break;
             }
 
-			case 3: break;
+			case 3:
+             
+             break;
 		}
-        
+
 	} while(ch != 3);
 	
 	return 0;
