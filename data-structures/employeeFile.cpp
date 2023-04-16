@@ -234,15 +234,17 @@ void Employee::Append()
     cin>>id;
     indexfile.open("IND.DAT",ios::in|ios::binary);
     pos=-1;
+    
     //reading index file to obtain the index of desired record
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
-    {
-    if(id==ind_records.emp_id)//desired record found
-    {
-    pos=ind_records.position;//seeking the position
-    break;
+        {
+        if(id==ind_records.emp_id)//desired record found
+        {
+            pos=ind_records.position;//seeking the position
+            break;
+        }
     }
-    }
+
     if(pos==-1)
     {
         cout<<"\n Record is not present in the file";
