@@ -202,5 +202,5 @@ int main()
        cout<<"\n\tThank you";
        break;
         }
-  }while(ch!=8);
+  } while(ch!=8);
 }
