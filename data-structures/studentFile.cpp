@@ -15,15 +15,15 @@ struct student
 class sequential
 { 
     char master1[30];
-    fstream mas;
+    fstream fp;
     public:
         sequential(char *a)
         {
             strcpy(master1,a);
-            mas.open(master1, ios::binary|ios::in);
-            if(mas.fail())
-            mas.open(master1, ios::binary | ios::out);
-            mas.close();
+            fp.open(master1, ios::binary|ios::in);
+            if(fp.fail())
+            fp.open(master1, ios::binary | ios::out);
+            fp.close();
         }
         void read();  
         void insert(student rec1);
@@ -34,11 +34,11 @@ class sequential
 void display(int recno) 
 { 
     student rec1;
-mas.open(master1,ios::binary | ios::in | ios::nocreate);
-mas.seekg(recno*sizeof(student),ios::beg);
-mas.read((char*) &rec1,sizeof(student));
+fp.open(master1,ios::binary | ios::in | ios::nocreate);
+fp.seekg(recno*sizeof(student),ios::beg);
+fp.read((char*) &rec1,sizeof(student));
 cout<<“\n”<<rec1.rollno<<“”<<rec1.name<<“”<<setprecision(2)<<rec1.marks;
-mas.close();
+fp.close();
 }
 };
 void main()
@@ -77,39 +77,39 @@ case 6: object.pack();break;
 void sequential::read()
 { student crec; int i=1,n;
 cout<<“\n*********Data File*********\n”;
-mas.open(master1,ios::binary | ios::in | ios::nocreate);
-mas.seekg(0,ios::end);/*go to the end of file */
-n=mas.tellg()/sizeof(student);
-mas.seekg(0,ios::beg);
+fp.open(master1,ios::binary | ios::in | ios::nocreate);
+fp.seekg(0,ios::end);/*go to the end of file */
+n=fp.tellg()/sizeof(student);
+fp.seekg(0,ios::beg);
 for(i=1;i<=n;i++)
-{ mas.read((char*)&crec,sizeof(student));
+{ fp.read((char*)&crec,sizeof(student));
 if(crec.status==0)
 cout<<“\n”<<i<<“) “<<crec.rollno<<“”<<crec.name<<“”<<setprecision(2)<<crec.marks;
 else
 cout<<“\n”<<i<<“) “<<” ****** deleted *********”;
 }
-mas.close();
+fp.close();
 }
 void sequential::insert(student rec1)
 { student crec;
 int n,i,k;
-mas.open(master1,ios::in | ios::out | ios::nocreate);
+fp.open(master1,ios::in | ios::out | ios::nocreate);
 rec1.status=0;
-mas.seekg(0,ios::end);/*go to the end of file */
-n=mas.tellg()/sizeof(student);
+fp.seekg(0,ios::end);/*go to the end of file */
+n=fp.tellg()/sizeof(student);
 if(n==0)
 {
-mas.write((char*)&rec1,sizeof(student)); mas.close();
+fp.write((char*)&rec1,sizeof(student)); fp.close();
 return;
 }
 /* Shift records until the point of insertion */
 i=nÂ­1;
 while(i>=0)
-{ mas.seekg(i*sizeof(student),ios::beg);
-mas.read((char*)&crec,sizeof(student));
+{ fp.seekg(i*sizeof(student),ios::beg);
+fp.read((char*)&crec,sizeof(student));
 if(crec.rollno>rec1.rollno)
-{ mas.seekp((i+1)*sizeof(student),ios::beg);
-mas.write((char*)&crec,sizeof(student));
+{ fp.seekp((i+1)*sizeof(student),ios::beg);
+fp.write((char*)&crec,sizeof(student));
 }
 else
 break;
@@ -117,30 +117,30 @@ iÂ­Â­;
 }
 /*insert the record at (i+1)th position */
 i++;
-mas.seekp(i*sizeof(student),ios::beg);
-mas.write((char*)&rec1,sizeof(student));
-mas.close();
+fp.seekp(i*sizeof(student),ios::beg);
+fp.write((char*)&rec1,sizeof(student));
+fp.close();
 }
 int sequential::Delete(int rollno)
 { student crec;
-int i,n; mas.open(master1,ios::in | ios::out | ios::nocreate);
-mas.seekg(0,ios::end);/*go to the end of file */
-n=mas.tellg()/sizeof(student);
-mas.seekg(0,ios::beg);
+int i,n; fp.open(master1,ios::in | ios::out | ios::nocreate);
+fp.seekg(0,ios::end);/*go to the end of file */
+n=fp.tellg()/sizeof(student);
+fp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
-{ mas.read((char*)&crec,sizeof(student));
+{ fp.read((char*)&crec,sizeof(student));
 if(crec.status==0)
 {
 if(crec.rollno>rollno)
 {cout<<“\nRecord does not exist …”;
-mas.close();
+fp.close();
 return(0);
 }
 if(crec.rollno==rollno)
 {crec.status=1;
-mas.seekp(i*sizeof(student),ios::beg);
-mas.write((char*)&crec,sizeof(student));
-mas.close();
+fp.seekp(i*sizeof(student),ios::beg);
+fp.write((char*)&crec,sizeof(student));
+fp.close();
 return(1);
 }
 }
@@ -149,20 +149,20 @@ return(0);
 }
 int sequential::search(int rollno){ student crec;
 int i,n;
-mas.open(master1,ios::in | ios::out | ios::nocreate);
-mas.seekg(0,ios::end);/*go to the end of file */
-n=mas.tellg()/sizeof(student);
-mas.seekg(0,ios::beg);
+fp.open(master1,ios::in | ios::out | ios::nocreate);
+fp.seekg(0,ios::end);/*go to the end of file */
+n=fp.tellg()/sizeof(student);
+fp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
-{ mas.read((char*)&crec,sizeof(student));
+{ fp.read((char*)&crec,sizeof(student));
 if(crec.status==0)
 {
 if(crec.rollno>rollno)
-{mas.close();
+{fp.close();
 return(Â­1);
 }
 if(crec.rollno==rollno)
-{ mas.close();
+{ fp.close();
 return(i);
 }
 }
@@ -172,28 +172,28 @@ return(Â­1);
 void sequential::pack()
 { fstream temp;
 student crec;int i,n;
-mas.open(master1,ios::binary | ios::in);
+fp.open(master1,ios::binary | ios::in);
 temp.open(“temp.txt”,ios::out | ios::trunc | ios::binary);
-mas.seekg(0,ios::end);/*go to the end of file */
-n=mas.tellg()/sizeof(student);
-mas.seekg(0,ios::beg);
+fp.seekg(0,ios::end);/*go to the end of file */
+n=fp.tellg()/sizeof(student);
+fp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
-{ mas.read((char*)&crec,sizeof(student));
+{ fp.read((char*)&crec,sizeof(student));
 if(crec.status==0)
 temp.write((char*)&crec,sizeof(student));
 }
-mas.close();
+fp.close();
 temp.close();
 temp.open(“temp.txt”,ios::binary | ios::in);
-mas.open(master1,ios::binary | ios::out | ios::trunc);
+fp.open(master1,ios::binary | ios::out | ios::trunc);
 temp.seekg(0,ios::end);/*go to the end of file */
 n=temp.tellg()/sizeof(student);
 temp.seekg(0,ios::beg);
 for(i=0;i<n;i++)
 { temp.read((char*)&crec,sizeof(student));
-mas.write((char*)&crec,sizeof(student));
+fp.write((char*)&crec,sizeof(student));
 }
-mas.close();
+fp.close();
 temp.close();
 }void sequential::update()
 { int rollno;
