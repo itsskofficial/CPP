@@ -179,7 +179,8 @@ int main()
         }
 
         case 2:
-        remove();
+        {
+            remove();
         break;
         case 3:
         display();
