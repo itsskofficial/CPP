@@ -37,7 +37,7 @@ void display(int recno)
 fp.open(master1,ios::binary | ios::in);
 fp.seekg(recno*sizeof(student),ios::beg);
 fp.read((char*) &rec1,sizeof(student));
-cout<<"\n"<<rec1.rollno<<""<<rec1.name<<“”<<setprecision(2)<<rec1.marks;
+cout<<"\n"<<rec1.rollno<<" "<<rec1.name<<" "<<setprecision(2)<<rec1.marks;
 fp.close();
 }
 };
