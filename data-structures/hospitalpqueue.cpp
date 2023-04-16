@@ -217,8 +217,11 @@ int main()
                 break;
                 }
             }
+
             break;
-            case 5:
+        }
+        case 5:
+        {
             cout<<"\nExit"<<endl;
             break;
             default :
