@@ -256,17 +256,21 @@ int main()
 		d1.display_asc(d1.root);
 		break;
     }
-    
+
 	case 3:
+    {
 		d1.display_desc(d1.root);
 		break;
+    }
 
 	case 4:
+    {
 		cout<<"\nEnter the word to search: ";
 		cin >> searchWord;
 		d1.updateWord(d1.root, searchWord);
 		break;
-
+    }
+    
 	case 5:
 		cout<<"\nEnter the word to delete: ";
 		cin>>searchWord;
