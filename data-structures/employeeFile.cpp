@@ -245,8 +245,8 @@ void Employee::Append()
     }
     if(pos==-1)
     {
-    cout<<"\n Record is not present in the file";
-    return;
+        cout<<"\n Record is not present in the file";
+        return;
     }
     //calculate offset using position obtained from ind. file
     offset=pos*sizeof(records);
@@ -254,19 +254,20 @@ void Employee::Append()
     //seeking the record from seq. file using calculated offset
     seqfile.seekg(offset,ios::beg);//seeking for reading purpose
     seqfile.read((char *)&records,sizeof(records));
+
     if(records.emp_id==-1)
     {
-    cout<<"\n Record is not present in the file";
-    return;
+        cout<<"\n Record is not present in the file";
+        return;
     }
     else //emp_id=desired record’s id
     {
-    cout<<"\n The Record is present in the file and it is...";
-    cout<<"\n Name: "<<records.name;
-    cout<<"\n Emp_ID: "<<records.emp_id;
-    cout<<"\n Salary: "<<records.salary;
+        cout<<"\n The Record is present in the file and it is...";
+        cout<<"\n Name: "<<records.name;
+        cout<<"\n Emp_ID: "<<records.emp_id;
+        cout<<"\n Salary: "<<records.salary;
     }
-    
+
     seqfile.close();
     indexfile.close();
 }
