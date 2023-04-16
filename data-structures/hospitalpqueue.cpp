@@ -208,9 +208,14 @@ int main()
                         {
                             cout<<"Minor Accidents";
                             break;
+                        }
+
                         case 3:
+                        {
                             cout<<"Poisioning";
-                        break;
+                            break;
+                        }
+                        
                         case 4:
                         cout<<"Allergies";
                         break;
