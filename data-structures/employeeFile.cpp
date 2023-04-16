@@ -225,7 +225,7 @@ void Employee::Append()
     indexfile.close();
     cout<<"\n The record is Appended!!!";
     }
-    
+
 void Employee::Search()
 {
     fstream seqfile;
@@ -279,7 +279,7 @@ void main()
  Employee List;
  char ans='y';
  int choice,key;
- clrscr();
+ clrsrc();
  do
  {
   cout<<"\n             Main Menu             "<<endl;
