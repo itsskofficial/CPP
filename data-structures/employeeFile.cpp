@@ -22,7 +22,7 @@ class Employee
 
     rec records;
     ind ind_records;
-    
+
     public:
         Employee();
         void Create();
@@ -34,9 +34,10 @@ class Employee
 };
 
 Employee::Employee()//constructor 
-  {
+{
    strcpy(records.name,"");
-  }
+}
+
 void Employee::Create()
 {
  int i,j;
