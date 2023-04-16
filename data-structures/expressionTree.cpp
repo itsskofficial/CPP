@@ -210,9 +210,9 @@ int main()
             {
                 cout << "Deleting the tree: ";
                 e.deleteTree(e.root);
-                    break;
-		}
-
+                break;
+		    }
+        }
 	} while(ch != 3);
 	
 	return 0;
