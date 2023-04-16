@@ -153,8 +153,9 @@ int sequential::search_student(int rollno)
         return(Â­1);
     }
     if(current.rollno==rollno)
-    { fp.close();
-    return(i);
+    { 
+        fp.close();
+        return(i);
     }
     }
     }
