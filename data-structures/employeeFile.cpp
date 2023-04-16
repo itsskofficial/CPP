@@ -202,72 +202,73 @@ void Employee::Delete()
 
 void Employee::Append()
 {
- fstream seqfile;
- fstream indexfile;
- int pos;
- indexfile.open("IND.DAT",ios::in|ios::binary);
- indexfile.seekg(0,ios::end);
- pos=indexfile.tellg()/sizeof(ind_records);
- indexfile.close();
+    fstream seqfile;
+    fstream indexfile;
+    int pos;
+    indexfile.open("IND.DAT",ios::in|ios::binary);
+    indexfile.seekg(0,ios::end);
+    pos=indexfile.tellg()/sizeof(ind_records);
+    indexfile.close();
 
- indexfile.open("IND.DAT",ios::app|ios::binary);
- seqfile.open("EMP.DAT",ios::app|ios::binary);
+    indexfile.open("IND.DAT",ios::app|ios::binary);
+    seqfile.open("EMP.DAT",ios::app|ios::binary);
 
- cout<<"\n Enter the record for appending";
- cout<<"\nName: ";cin>>records.name;
- cout<<"\nEmp_ID: ";cin>>records.emp_id;
- cout<<"\nSalary: ";cin>>records.salary;
- seqfile.write((char*)&records,sizeof(records));//inserting rec at end in seq. file
- ind_records.emp_id=records.emp_id;           //inserting rec at end in ind. file
- ind_records.position=pos;                          //at calculated pos
- indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
- seqfile.close();
- indexfile.close();
- cout<<"\n The record is Appended!!!";
-}
-void Employee::Search()
-{
- fstream seqfile;
- fstream indexfile;
- int id,pos,offset;
- cout<<"\n Enter the Emp_ID for searching the record ";
- cin>>id;
- indexfile.open("IND.DAT",ios::in|ios::binary);
- pos=-1;
- //reading index file to obtain the index of desired record
- while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
- {
-  if(id==ind_records.emp_id)//desired record found
-  {
-   pos=ind_records.position;//seeking the position
-   break;
-  }
- }
-  if(pos==-1)
-  {
-  cout<<"\n Record is not present in the file";
-  return;
-  }
-//calculate offset using position obtained from ind. file
-  offset=pos*sizeof(records);
-  seqfile.open("EMP.DAT",ios::in|ios::binary);
-//seeking the record from seq. file using calculated offset
-  seqfile.seekg(offset,ios::beg);//seeking for reading purpose
-  seqfile.read((char *)&records,sizeof(records));
-  if(records.emp_id==-1)
-  {
-  cout<<"\n Record is not present in the file";
-  return;
-  }
-  else //emp_id=desired record’s id
-  {
-  cout<<"\n The Record is present in the file and it is...";
-  cout<<"\n Name: "<<records.name;
-  cout<<"\n Emp_ID: "<<records.emp_id;
-  cout<<"\n Salary: "<<records.salary;
-  }
-  seqfile.close();
-  indexfile.close();
+    cout<<"\n Enter the record for appending";
+    cout<<"\nName: ";cin>>records.name;
+    cout<<"\nEmp_ID: ";cin>>records.emp_id;
+    cout<<"\nSalary: ";cin>>records.salary;
+    seqfile.write((char*)&records,sizeof(records));//inserting rec at end in seq. file
+    ind_records.emp_id=records.emp_id;           //inserting rec at end in ind. file
+    ind_records.position=pos;                          //at calculated pos
+    indexfile.write((char*)&ind_records,sizeof(ind_records))<<flush;
+    seqfile.close();
+    indexfile.close();
+    cout<<"\n The record is Appended!!!";
+    }
+    void Employee::Search()
+    {
+    fstream seqfile;
+    fstream indexfile;
+    int id,pos,offset;
+    cout<<"\n Enter the Emp_ID for searching the record ";
+    cin>>id;
+    indexfile.open("IND.DAT",ios::in|ios::binary);
+    pos=-1;
+    //reading index file to obtain the index of desired record
+    while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
+    {
+    if(id==ind_records.emp_id)//desired record found
+    {
+    pos=ind_records.position;//seeking the position
+    break;
+    }
+    }
+    if(pos==-1)
+    {
+    cout<<"\n Record is not present in the file";
+    return;
+    }
+    //calculate offset using position obtained from ind. file
+    offset=pos*sizeof(records);
+    seqfile.open("EMP.DAT",ios::in|ios::binary);
+    //seeking the record from seq. file using calculated offset
+    seqfile.seekg(offset,ios::beg);//seeking for reading purpose
+    seqfile.read((char *)&records,sizeof(records));
+    if(records.emp_id==-1)
+    {
+    cout<<"\n Record is not present in the file";
+    return;
+    }
+    else //emp_id=desired record’s id
+    {
+    cout<<"\n The Record is present in the file and it is...";
+    cout<<"\n Name: "<<records.name;
+    cout<<"\n Emp_ID: "<<records.emp_id;
+    cout<<"\n Salary: "<<records.salary;
+    }
+    
+    seqfile.close();
+    indexfile.close();
 }
 void main()
 {
