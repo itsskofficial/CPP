@@ -11,10 +11,11 @@ struct student
     int status;
 };
 class sequential
-{ char master1[30];
-fstream mas;
-public:
-sequential(char *a)
+{ 
+        char master1[30];
+    fstream mas;
+    public:
+    sequential(char *a)
 {
 strcpy(master1,a);
 mas.open(master1,ios::binary|ios::in);
