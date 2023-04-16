@@ -66,9 +66,10 @@ int main()
                 cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
                 cin>>rec.rollno>>rec.name>>rec.marks;
                 object.insert_student(rec);
+                break;
             }
-            
-        break;
+
+      
         case 3: cout<<"\nEnter the roll no.:";
         cin>>rollno;
         object.delete_student(rollno);
