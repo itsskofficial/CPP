@@ -118,15 +118,17 @@ int main()
             {
                 cout<<"\nChoose 1 or 2\n 1-Major Accidents\n 2-Minor accidents\n";
                 cin>>sub;
-                if(sub==1){
-                priority=1;
-                dataprio[i]=1;
-                cout<<"your priority is 1";
+                if(sub==1)
+                {
+                    priority=1;
+                    dataprio[i]=1;
+                    cout<<"your priority is 1";
                 }
-                else{
-                priority=2;
-                dataprio[i]=2;
-                cout<<"your priority is 2";
+                else
+                {
+                    priority=2;
+                    dataprio[i]=2;
+                    cout<<"your priority is 2";
                 }
                 break;
             }
