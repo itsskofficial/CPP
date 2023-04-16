@@ -162,7 +162,7 @@ void expressiontree :: nonrecPostorder(node *temp)
 	}
 }
 
-void expressionTree :: deleteTree(node* temp)
+void expressiontree :: deleteTree(node* temp)
 {
     if (temp == NULL) 
         return;
