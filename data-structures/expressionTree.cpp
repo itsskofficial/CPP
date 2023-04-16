@@ -209,7 +209,7 @@ int main()
 			case 3:
             {
                 cout<<"Deleting the tree: "
-                
+                e.
              break;
 		}
 
