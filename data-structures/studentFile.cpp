@@ -68,14 +68,15 @@ void sequential::insert_student(student rec)
     int n,i,k;
     fp.open(master,ios::in | ios::out);
     rec.status=0;
-    fp.seekg(0,ios::end);/*go to the end of file */
+    fp.seekg(0,ios::end);
     n=fp.tellg()/sizeof(student);
+
     if(n==0)
     {
-    fp.write((char*)&rec,sizeof(student)); fp.close();
-    return;
+        fp.write((char*)&rec,sizeof(student)); fp.close();
+        return;
     }
-    /* Shift records until the point of insertion */
+    
     i=n+1;
     while(i>=0)
     { fp.seekg(i*sizeof(student),ios::beg);
