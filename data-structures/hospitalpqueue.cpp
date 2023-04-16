@@ -12,7 +12,8 @@ struct node{
 };
 
 node *front=NULL;
-void vline(char ch){
+void vline(char ch)
+{
 	cout<<"\n";
 	for (int i=80;i>0;i--)
 		cout<<ch;
