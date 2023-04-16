@@ -236,6 +236,7 @@ int main()
 	switch(choice)
 	{
         case 1:
+        {
             cout<<"\nEnter the number of words to insert: ";
             cin >> n;
             for(int i=0 ; i<n ; i++)
@@ -250,7 +251,8 @@ int main()
                     d1.insert(d1.root, newWord, newMeaning);
             }
             break;
-
+        }
+        
         case 2:
         {
             d1.display_asc(d1.root);
