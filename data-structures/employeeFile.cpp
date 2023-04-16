@@ -298,8 +298,11 @@ int main()
         switch(choice)
         {
             case 1:
-                    list.Create();
-                    break;
+            {
+                list.Create();
+                break;
+            }
+            
             case 2:
                 list.Display();
                 break;
