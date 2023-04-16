@@ -340,5 +340,6 @@ int main()
         cin>>ans;
     } while(ans=='y');
 
+    getch();
     return 0;
 }
