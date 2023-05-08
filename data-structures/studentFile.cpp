@@ -17,7 +17,7 @@ class sequential
     string master[30];
     fstream fp;
     public:
-        sequential(string *a)
+        sequential(string a)
         {
             strcpy(master,a);
             fp.open(master, ios::binary|ios::in);
