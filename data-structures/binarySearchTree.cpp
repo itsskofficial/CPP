@@ -178,7 +178,7 @@ int main()
  }
  else
   cout<<"ELEMENT FOUND"<<endl;                                                                                                       
- cout<<endl<<a<<endl;
+ cout<<a<<endl;
  obj.minvalue(obj.root);
  obj.mirror(obj.root);
  obj.inorder(obj.root);
