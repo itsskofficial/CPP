@@ -95,14 +95,14 @@ class Book
             if(level == 1 )
             {
                 cout<<" "<<root->data;
-                return 1;
             }
-            
+
             else if (level>1)
             {
                 printLevel(root->left,level-1);
                 printLevel(root->right,level-1);
             }
+            return 1;
         }
 
         int height(BTNode *node)
