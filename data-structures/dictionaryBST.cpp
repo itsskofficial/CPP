@@ -178,7 +178,6 @@ void Dictionary::deleteWord(node* p, string key)
 				{
 					q->left=p->left;
 					delete p;
-					return;
 				}
 
 			}
