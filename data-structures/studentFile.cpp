@@ -215,7 +215,7 @@ void sequential::update()
 
 int main()
 { 
-    sequential object("master.txt");
+    sequential object((char*)"master.txt");
     int rollno,ch,recno;
     student rec;
 
