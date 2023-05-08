@@ -142,7 +142,6 @@ void Dictionary::deleteWord(node* p, string key)
 				{
 					delete p;
 					q->right=NULL;
-					return;
 				}
 
 			}
@@ -153,14 +152,12 @@ void Dictionary::deleteWord(node* p, string key)
 				{
 					q->right = p->right;
 					delete p;
-					return;
 				}
 
 				else if(q->left == p)
 				{
 					q->left = p->right;
 					delete p;
-					return;
 				}
 
 			}
