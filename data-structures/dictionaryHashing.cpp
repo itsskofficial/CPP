@@ -3,6 +3,7 @@
 #include<stdlib.h>
 # define max 10
 using namespace std;
+
 typedef struct list
 {
 int data;
