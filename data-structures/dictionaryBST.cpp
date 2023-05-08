@@ -183,7 +183,6 @@ void Dictionary::deleteWord(node* p, string key)
 				p->word = s->word;
 				p->meaning = s->meaning;
 				deleteWord(s, s->word);
-				return;
 
 			}
 		}
