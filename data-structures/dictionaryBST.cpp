@@ -284,7 +284,7 @@ int main()
             }
             
             default:
-                cout<<"\nInvalid input!";
+                cout<<"\nExit!";
         }
     } while (choice != 7);
 
