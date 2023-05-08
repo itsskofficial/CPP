@@ -14,7 +14,7 @@ struct student
 };
 class sequential
 { 
-    char master[30];
+    char* master[30];
     fstream fp;
     public:
         sequential(char *a)
