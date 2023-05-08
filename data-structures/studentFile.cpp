@@ -14,10 +14,10 @@ struct student
 };
 class sequential
 { 
-    string master[30];
+    char master[30];
     fstream fp;
     public:
-        sequential(string a)
+        sequential(char *a)
         {
             strcpy(master,a);
             fp.open(master, ios::binary|ios::in);
