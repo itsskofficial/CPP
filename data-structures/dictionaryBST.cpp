@@ -135,7 +135,6 @@ void Dictionary::deleteWord(node* p, string key)
 				{
 					delete p;
 					q->left=NULL;
-					return;
 				}
 
 				if(q->right==p)
