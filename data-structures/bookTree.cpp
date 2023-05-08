@@ -95,7 +95,7 @@ class Book
             if(level == 1 )
                 cout<<" "<<root->data;
             else if (level>1)
-                {
+            {
                 printLevel(root->left,level-1);
                 printLevel(root->right,level-1);
             }
