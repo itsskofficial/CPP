@@ -54,7 +54,7 @@ void sequential::read()
     { 
         fp.read((char*)&current,sizeof(student));
         if(current.status==0)
-            cout<<"\n"<<i<<") "<<current.rollno<<""<<current.name<<""<<setprecision(2)<<current.marks;
+            cout<<"\n"<<i<<") "<<current.rollno<<" "<<current.name<<" "<<setprecision(2)<<current.marks;
         else
             cout<<"\n"<<i<<") "<<" ****** deleted *********";
     }
