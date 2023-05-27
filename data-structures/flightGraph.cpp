@@ -6,7 +6,7 @@ class flight
 { 	 
 	public:
 		int am[10][10];
-        char city_index[10];
+        char city_index[10][10];
 		flight();
 	   	int create();
 	   	void display(int city_count);
@@ -18,7 +18,7 @@ flight::flight()
 	int i,j;
 	for(i=0;i<10;i++)
 	{
-		strcpy(*city_index[i],"xx");
+		strcpy(city_index[i],"xx");
 	}
 	for(i=0;i<10;i++)
 	{
