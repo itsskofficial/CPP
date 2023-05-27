@@ -77,7 +77,7 @@ public:
    }
    else if(in_data > temp->data)
    {
-    this->search(temp->left , in_data);
+    this->search(temp->right , in_data);
    }
   }
   else
