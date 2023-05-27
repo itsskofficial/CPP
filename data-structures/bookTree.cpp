@@ -9,6 +9,7 @@ class BTNode
 };
 class Book
 {
+    
     public: BTNode *root, *temp;
     char d[20];
     Book()
