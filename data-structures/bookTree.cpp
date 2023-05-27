@@ -67,15 +67,15 @@ class Book
         }
     }
 
-        void rec_inorder(BTNode *root)
+    void rec_inorder(BTNode *root)
+    {
+        if(root!=NULL)
         {
-            if(root!=NULL)
-            {
-                rec_inorder(root->left);
-                cout<<root->data;
-                rec_inorder(root->right);
-            }
+            rec_inorder(root->left);
+            cout<<root->data;
+            rec_inorder(root->right);
         }
+    }
 
         void printLevelOrder(BTNode *root)
         {
