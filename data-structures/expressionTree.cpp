@@ -38,7 +38,7 @@ class stack
 {
 	int top;
 	node *stk[max];
-	
+
 	public:
 		stack()
 		{
@@ -152,7 +152,7 @@ void expressiontree :: nonrecPostorder(node *temp)
 			node *temp= s1.pop();
 			s2.push(temp);
 			if(temp->left)
-			s1.push(temp->left);
+				s1.push(temp->left);
 			if(temp->right)
 				s1.push(temp->right);
 		}
