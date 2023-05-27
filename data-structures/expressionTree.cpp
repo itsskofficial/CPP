@@ -21,6 +21,7 @@ class expressiontree
 	
 public:
 	node *root;
+	
 	expressiontree()
 	{
 		root=NULL;
