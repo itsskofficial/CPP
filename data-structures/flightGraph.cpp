@@ -6,7 +6,7 @@ class flight
 { 	 
 	public:
 		int am[10][10];
-        char city_index[10][10];
+        char city_index[10];
 		flight();
 	   	int create();
 	   	void display(int city_count);
