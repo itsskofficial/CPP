@@ -105,20 +105,20 @@ class Book
         return 1;
     }
 
-        int height(BTNode *node)
+    int height(BTNode *node)
+    {
+        if(node == NULL)
+            return 0;
+        else
         {
-            if(node == NULL)
-                return 0;
+            int lheight = height(node->left);
+            int rheight = height(node->right);
+            if (lheight>rheight)
+                return (lheight+1);
             else
-            {
-                int lheight = height(node->left);
-                int rheight = height(node->right);
-                if (lheight>rheight)
-                    return (lheight+1);
-                else
-                    return (rheight+1);
-            }
+                return (rheight+1);
         }
+    }
 };
 
 int main()
