@@ -3,13 +3,13 @@
 using namespace std;
 class BTNode
 {
- public:
- BTNode *left, *right;
- char data[10];
+    public:
+    BTNode *left, *right;
+    char data[10];
 };
 class Book
 {
-    
+
     public: BTNode *root, *temp;
     char d[20];
     Book()
