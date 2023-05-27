@@ -39,33 +39,33 @@ class stack
 	int top;
 	node *stk[max];
 	public:
-	stack()
-	{
-		top=-1;
-	}
-	
-	int empty()
-	{
-		if(top==-1)
-			return 1;
-		else 
-			return 0;
-	}
+		stack()
+		{
+			top=-1;
+		}
+		
+		int empty()
+		{
+			if(top==-1)
+				return 1;
+			else 
+				return 0;
+		}
 
-	void push(node *temp)
-	{
-		stk[++top]= temp;
-	}
+		void push(node *temp)
+		{
+			stk[++top]= temp;
+		}
 
-	node *pop()
-	{
-		return(stk[top--]);
-	}
-	
-	node *Top()
-	{
-		return(stk[top]);
-	}
+		node *pop()
+		{
+			return(stk[top--]);
+		}
+		
+		node *Top()
+		{
+			return(stk[top]);
+		}
 
 };
 
