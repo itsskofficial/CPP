@@ -26,7 +26,7 @@ public:
 	{
 		root=NULL;
 	}
-	
+
 	void create(string str);
 	void nonrecPostorder(node *temp);
     void deleteTree(node *temp);
@@ -38,7 +38,7 @@ class stack
 {
 	int top;
 	node *stk[max];
-public:
+	public:
 	stack()
 	{
 		top=-1;
