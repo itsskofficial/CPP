@@ -18,7 +18,7 @@ flight::flight()
 	int i,j;
 	for(i=0;i<10;i++)
 	{
-		strcpy(city_index[i],"xx");
+		strcpy(*city_index[i],"xx");
 	}
 	for(i=0;i<10;i++)
 	{
