@@ -21,11 +21,12 @@ class expressiontree
 	
 public:
 	node *root;
-	
+
 	expressiontree()
 	{
 		root=NULL;
 	}
+	
 	void create(string str);
 	void nonrecPostorder(node *temp);
     void deleteTree(node *temp);
