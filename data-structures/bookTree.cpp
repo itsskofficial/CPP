@@ -15,7 +15,7 @@ class Book
     {
         temp = root = NULL;
     }
-    
+
     void create()
     {
         char ans='y';
@@ -27,7 +27,6 @@ class Book
             cin>>temp->data;
             temp->left=NULL;
             temp->right=NULL;
-
             if(root == NULL)
             {
             root = temp;
@@ -36,7 +35,6 @@ class Book
             {
             insert(root, temp);
             }
-
             cout<<"\nDo You Want to Enter More Elements?(y/n)";
             cin>>ans;
         } while(ans == 'y'|| ans == 'Y');
