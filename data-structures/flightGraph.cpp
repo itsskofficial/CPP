@@ -6,7 +6,7 @@ class flight
 { 	 
 	public:
 		int am[10][10];
-        char city_index[10][10];
+        char city_index[10];
 		flight();
 	   	int create();
 	   	void display(int city_count);
@@ -72,7 +72,7 @@ int flight::create()
 			if(strcmp(city_index[j],d)==0)
 				di=j;
 		}
-		
+
 		am[si][di]=wt;
 		cout<<"\n\t Do you want to add more cities.....(y/n) : ";
 		cin>>c;	
