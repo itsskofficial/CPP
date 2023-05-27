@@ -88,22 +88,22 @@ class Book
         }
     }
 
-        int printLevel(BTNode *root, int level)
+    int printLevel(BTNode *root, int level)
+    {
+        if(root == NULL)
+            return 0;
+        if(level == 1 )
         {
-            if(root == NULL)
-                return 0;
-            if(level == 1 )
-            {
-                cout<<" "<<root->data;
-            }
-
-            else if (level>1)
-            {
-                printLevel(root->left,level-1);
-                printLevel(root->right,level-1);
-            }
-            return 1;
+            cout<<" "<<root->data;
         }
+
+        else if (level>1)
+        {
+            printLevel(root->left,level-1);
+            printLevel(root->right,level-1);
+        }
+        return 1;
+    }
 
         int height(BTNode *node)
         {
