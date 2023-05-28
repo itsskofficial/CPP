@@ -43,19 +43,19 @@ void GT::create_tree()
  root->ch_count = tchapters;
  for(i=0;i<tchapters;i++)
  {
-  root->child[i] = new node;
-  cout<<"Enter Chapter name\n";
-  cin>>root->child[i]->label;   
-  cout<<"Enter no. of sections in  Chapter: "<<root->child[i]->label;
-  cin>>root->child[i]->ch_count;
-  for(j=0;j<root->child[i]->ch_count;j++)
-  {
-   root->child[i]->child[j] = new node;
-   cout<<"Enter Section "<<j+1<<"name\n";
-   cin>>root->child[i]->child[j]->label;   
-   //cout<<"Enter no. of subsections in "<<r1->child[i]->child[j]->label;
-   //cin>>r1->child[i]->ch_count;
-  }  
+    root->child[i] = new node;
+    cout<<"Enter Chapter name\n";
+    cin>>root->child[i]->label;   
+    cout<<"Enter no. of sections in  Chapter: "<<root->child[i]->label;
+    cin>>root->child[i]->ch_count;
+    for(j=0;j<root->child[i]->ch_count;j++)
+    {
+        root->child[i]->child[j] = new node;
+        cout<<"Enter Section "<<j+1<<"name\n";
+        cin>>root->child[i]->child[j]->label;   
+        //cout<<"Enter no. of subsections in "<<r1->child[i]->child[j]->label;
+        //cin>>r1->child[i]->ch_count;
+    }  
 
  }
 
