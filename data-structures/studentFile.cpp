@@ -22,7 +22,7 @@ class sequential
             strcpy(master,a);
             fp.open(master, ios::binary|ios::in);
             if(fp.fail())
-            fp.open(master, ios::binary | ios::out);
+                fp.open(master, ios::binary | ios::out);
             fp.close();
         }
         void read();  
