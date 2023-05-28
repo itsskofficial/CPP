@@ -1,8 +1,4 @@
-#include<iostream>
-#include<iomanip>
-#include<fstream>
-#include<string.h>
-#include<stdlib.h>
+#include<bits/s
 using namespace std;
 class Employee
 {
