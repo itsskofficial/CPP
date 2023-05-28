@@ -70,6 +70,7 @@ class Graph
             u=from[v];
             cout<<data[u]<<"==>"<<data[v]<<"\tcost: "<<AM[u][v]<<endl;
             visited[v]=1;
+            
             for(int j=1;j<num;j++){
                 if(visited[j]==0&&AM[j][v]<distance[j])
                 {
