@@ -49,7 +49,7 @@ class Graph
     void prims()
     {
         cout<<"\nCities that we need to connect:\n";
-        int *visited=new int[num](),*distance=new int[num],*from=new int[num](),cost=0;
+        int *visited=new int[num],*distance=new int[num],*from=new int[num](),cost=0;
         visited[0]=1;
         for(int i=0;i<num;i++)
             distance[i]=AM[0][i];
