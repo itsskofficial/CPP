@@ -262,6 +262,7 @@ void Employee::Search()
         cout<<"\n Record is not present in the file";
         return;
     }
+    
     else //emp_id=desired record’s id
     {
         cout<<"\n The Record is present in the file and it is...";
