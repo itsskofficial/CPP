@@ -24,7 +24,7 @@ class GT
 {
     public:
         void create_tree();  
- void display(node * r1);
+        void display(node * r1);
      
         GT()
         {
