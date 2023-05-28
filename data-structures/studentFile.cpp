@@ -177,7 +177,7 @@ void sequential::pack()
     { 
         fp.read((char*)&current,sizeof(student));
         if(current.status==0)
-        temp.write((char*)&current,sizeof(student));
+            temp.write((char*)&current,sizeof(student));
     }
 
     fp.close();
