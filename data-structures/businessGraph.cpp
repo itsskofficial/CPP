@@ -75,7 +75,7 @@ class Graph
                 if(visited[j]==0 && AM[j][v]<distance[j])
                 {
                     distance[j]=AM[j][v];
-                    from[j]=v;
+                    from[j]=v4;
                 }
             }
 
