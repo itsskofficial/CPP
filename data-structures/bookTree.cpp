@@ -56,9 +56,7 @@ void GT::create_tree()
         //cout<<"Enter no. of subsections in "<<r1->child[i]->child[j]->label;
         //cin>>r1->child[i]->ch_count;
     }  
-
  }
-
 }
 
 
