@@ -1,156 +1,121 @@
-#include<iostream>
-#include<string.h>
+/*C++ Program To read details of a book consists of chapters,
+ *chapters consist of sections and sections consist of
+ *subsections. Construct a tree and print the nodes.
+ *Find the time and space requirements of your method.
+ **/
+# include <iostream>
+# include <cstdlib>
+# include <string.h>
 using namespace std;
-class BTNode
+/*
+ * Node Declaration
+ */
+struct node
+{
+    char label[10];
+    int ch_count;
+    struct node *child[10];
+}*root;
+
+/*
+ * Class Declaration
+ */
+class GT
 {
     public:
-    BTNode *left, *right;
-    char data[10];
+        void create_tree();  
+ void display(node * r1);
+     
+        GT()
+        {
+            root = NULL;
+        }
 };
-class Book
+
+void GT::create_tree()
 {
+ int tbooks,tchapters,i,j,k;
+ root = new node;
+ cout<<"Enter name of book";
+ cin>>root->label;
+ cout<<"Enter no. of chapters in book";
+ cin>>tchapters; 
+ root->ch_count = tchapters;
+ for(i=0;i<tchapters;i++)
+ {
+  root->child[i] = new node;
+  cout<<"Enter Chapter name\n";
+  cin>>root->child[i]->label;   
+  cout<<"Enter no. of sections in  Chapter: "<<root->child[i]->label;
+  cin>>root->child[i]->ch_count;
+  for(j=0;j<root->child[i]->ch_count;j++)
+  {
+   root->child[i]->child[j] = new node;
+   cout<<"Enter Section "<<j+1<<"name\n";
+   cin>>root->child[i]->child[j]->label;   
+   //cout<<"Enter no. of subsections in "<<r1->child[i]->child[j]->label;
+   //cin>>r1->child[i]->ch_count;
+  }  
 
-    public: BTNode *root, *temp;
-    char d[20];
-    Book()
-    {
-        temp = root = NULL;
-    }
+ }
 
-    void create()
-    {
-        char ans='y';
+}
 
-        do
-        {
-            temp = new BTNode();
-            cout<<"\nEnter The Element:";
-            cin>>temp->data;
-            temp->left=NULL;
-            temp->right=NULL;
-            if(root == NULL)
-            {
-            root = temp;
-            }
-            else
-            {
-            insert(root, temp);
-            }
-            cout<<"\nDo You Want to Enter More Elements?(y/n)";
-            cin>>ans;
-        } while(ans == 'y'|| ans == 'Y');
-    }
 
-    void insert(BTNode *root, BTNode *temp)
-    {
-        char ch;
-        cout<<"\nWhere to insert left/right?"<<root->data<<":";
-        cin>>ch;
+void GT::display(node * r1)
+{
+ int i,j,k,tchapters;
+ if(r1 != NULL)
+ { 
+  cout<<"\n-----Book Hierarchy---";
 
-        if(ch == 'r' || ch == 'R')
-        {
-            if(root->right == NULL)
-            {
-                root->right = temp;
-            }
-            else
-                insert(root->right, temp);
-        }
-        else
-        {
-            if(root->left == NULL)
-            {
-                root->left = temp;
-            }
-            else
-                insert(root->left, temp);
-        }
-    }
+  cout<<"\n Book title : "<<r1->label;
+  tchapters = r1->ch_count;
+  for(i=0;i<tchapters;i++)
+  {
+  
+   cout<<"\n  Chapter "<<i+1;
+   cout<<" "<<r1->child[i]->label;   
+    cout<<"\n Sections";
+   for(j=0;j<r1->child[i]->ch_count;j++)
+   {
+    //cin>>r1->child[i]->child[j]->label;   
+    cout<<"\n  "<<r1->child[i]->child[j]->label;
+   }  
 
-    void rec_inorder(BTNode *root)
-    {
-        if(root!=NULL)
-        {
-            rec_inorder(root->left);
-            cout<<root->data;
-            rec_inorder(root->right);
-        }
-    }
+  }
+ }
+}
 
-    void printLevelOrder(BTNode *root)
-    {
-        int h = height(root);
-        int i;
-        for (i=1;i<=h;i++)
-        {
-            cout<<"\n";
-            printLevel(root,i);
-        }
-    }
 
-    int printLevel(BTNode *root, int level)
-    {
-        if(root == NULL)
-            return 0;
-        if(level == 1 )
-        {
-            cout<<" "<<root->data;
-        }
-
-        else if (level>1)
-        {
-            printLevel(root->left,level-1);
-            printLevel(root->right,level-1);
-        }
-        return 1;
-    }
-
-    int height(BTNode *node)
-    {
-        if(node == NULL)
-            return 0;
-        else
-        {
-            int lheight = height(node->left);
-            int rheight = height(node->right);
-            if (lheight>rheight)
-                return (lheight+1);
-            else
-                return (rheight+1);
-        }
-    }
-};
-
+/*
+ * Main Contains Menu
+ */
 int main()
 {
     int choice;
-    Book b1;
-
-    do
+   GT gt;
+    while (1)
     {
-        cout<<"\n\tMain Menu:";
-        cout<<"\n1.Create";
-        cout<<"\n2.Display";
-        cout<<"\n3.Exit";
-        cout<<"\nEnter Your Choice:";
+        cout<<"-----------------"<<endl;
+        cout<<"Book Tree Creation"<<endl;
+        cout<<"-----------------"<<endl;
+        cout<<"1.Create"<<endl;
+        cout<<"2.Display"<<endl;
+        cout<<"3.Quit"<<endl;
+        cout<<"Enter your choice : ";
         cin>>choice;
-
         switch(choice)
         {
-            case 1: {
-                b1.create();
-                break;
-            }
-
-            case 2: {
-                if(b1.root==NULL)
-                    cout<<"\nTree Not Created";
-                else
-                    b1.printLevelOrder(b1.root);
-                break;
-            }
+        case 1:
+              gt.create_tree();
+        case 2:
+              gt.display(root);
+            break;
+        case 3:
+            exit(1);
+        default:
+            cout<<"Wrong choice"<<endl;
         }
-    } while(choice <=2);
-    
-    return 0; 
+    }
 }
