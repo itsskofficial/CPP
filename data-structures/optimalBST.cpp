@@ -20,7 +20,7 @@ int optimalCost(int frequency[], int i, int j)
 
     int min = INT_MAX;
 
-    for (int r = i; r <= j; ++r)
+    for (int r = i; r <= j; ++ r)
     {
         int cost = optimalCost(frequency, i, r - 1) + optimalCost(frequency, r + 1, j);
         if (cost < min)
