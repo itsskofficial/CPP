@@ -28,7 +28,10 @@ class Graph
             for(int j=0;j<i;j++)
                 cout<<AM[i][j]<<"\t";
             for(int j=i;j<n;j++)
-                if(j==i) {cout<<"0\t";AM[i][j]=AM[j][i]=0;}
+                if(j==i) 
+                {
+                    cout<<"0\t";
+                    AM[i][j]=AM[j][i]=0;}
                 else {cin>>cost;AM[i][j]=AM[j][i]=cost;}
         }
 
