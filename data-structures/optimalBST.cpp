@@ -11,10 +11,10 @@ int sum(int frequency[], int fIndex, int lIndex)
 
 int optimalCost(int frequency[], int fIndex, int lIndex)
 {
-    // if (lIndex < fIndex)
-    //     return 0;
-    // if (lIndex == fIndex)
-    //     return frequency[fIndex];
+    if (lIndex < fIndex)
+        return 0;
+    if (lIndex == fIndex)
+        return frequency[fIndex];
 
     int frequencySum = sum(frequency, fIndex, lIndex);
 
