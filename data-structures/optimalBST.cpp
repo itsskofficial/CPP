@@ -1,28 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int sum(int frequency[], int fIndex, int j)
+int sum(int frequency[], int fIndex, int lIndex)
 {
     int sum = 0;
-    for (int x = fIndex; x <= j; x++)
+    for (int x = fIndex; x <= lIndex; x++)
         sum += frequency[x];
     return sum;
 }
 
-int optimalCost(int frequency[], int fIndex, int j)
+int optimalCost(int frequency[], int fIndex, int lIndex)
 {
-    // if (j < fIndex)
+    // if (lIndex < fIndex)
     //     return 0;
-    // if (j == fIndex)
+    // if (lIndex == fIndex)
     //     return frequency[fIndex];
 
-    int frequencySum = sum(frequency, fIndex, j);
+    int frequencySum = sum(frequency, fIndex, lIndex);
 
     int min = INT_MAX;
 
-    for (int r = fIndex; r <= j; ++ r)
+    for (int r = fIndex; r <= lIndex; ++ r)
     {
-        int cost = optimalCost(frequency, fIndex, r - 1) + optimalCost(frequency, r + 1, j);
+        int cost = optimalCost(frequency, fIndex, r - 1) + optimalCost(frequency, r + 1, lIndex);
         if (cost < min)
             min = cost;
     }
