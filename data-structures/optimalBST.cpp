@@ -13,8 +13,8 @@ int optimalCost(int frequency[], int i, int j)
 {
     // if (j < i)
     //     return 0;
-    if (j == i)
-        return frequency[i];
+    // if (j == i)
+    //     return frequency[i];
 
     int frequencySum = sum(frequency, i, j);
 
