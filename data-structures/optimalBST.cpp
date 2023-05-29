@@ -30,11 +30,6 @@ int optimalCost(int frequency[], int i, int j)
     return min + frequencySum;
 }
 
-int optimalSearchTree(int keys[], int frequency[], int n)
-{
-    return 
-}
-
 int main()
 {
     int keys[] = {10, 12, 20};
@@ -42,7 +37,7 @@ int main()
 
     int n = sizeof(keys) / sizeof(keys[0]);
 
-    cout << "Cost of Optimal BST is " << optimalCost(frequency, 0, n - 1););
+    cout << "Cost of Optimal BST is " << optimalCost(frequency, 0, n - 1);
 
     return 0;
 }
