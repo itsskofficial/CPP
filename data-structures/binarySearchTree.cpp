@@ -158,11 +158,11 @@ public:
   }
  } 
  
- int depth(Bstnode *temp)
+ int depth(Bstnode *root)
  {
-  if(temp == NULL) 
+  if(root == NULL) 
    return 0;
-  return (max((depth(temp->left)),(depth(temp->right))) +1);  
+  return (max((depth(root->left)),(depth(root->right))) +1);  
  }
 };
 
