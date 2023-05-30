@@ -128,13 +128,13 @@ public:
   
  }
  
- void inorder(Bstnode *temp)
+ void inorder(Bstnode *root)
  {
-  if(temp != NULL)
+  if(root != NULL)
   {
-   inorder(temp->left);
-   cout<<temp->data<<"  ";
-   inorder(temp->right);
+   inorder(root->left);
+   cout<<root->data<<"  ";
+   inorder(root->right);
   }
  } 
  
