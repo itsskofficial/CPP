@@ -33,19 +33,19 @@ public:
   return ptr;
  }
  
- Bstnode *insert( Bstnode *root , int in_data)
+ Bstnode *insert( Bstnode *root , int x)
  {
   if( root == NULL )
   {
-   root = GetNewNode(in_data);
+   root = GetNewNode(x);
   }
-  else if( root->data > in_data)
+  else if( root->data > x)
   {
-   root->left = insert(root->left , in_data);
+   root->left = insert(root->left , x);
   }
   else
   {
-   root->right = insert( root->right , in_data);
+   root->right = insert( root->right , x);
   }
   return root;
  }
