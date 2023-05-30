@@ -24,10 +24,10 @@ public:
   root = NULL;
  }
  
- Bstnode *GetNewNode(int in_data)
+ Bstnode *GetNewNode(int x)
  {
   Bstnode * ptr = new Bstnode();
-  ptr->data = in_data;
+  ptr->data = x;
   ptr->left = NULL;
   ptr->right = NULL;
   return ptr;
