@@ -62,22 +62,22 @@ public:
   }
  }
  
- int search(Bstnode *root ,int in_data)
+ int search(Bstnode *root ,int x)
  {
   if( root != NULL)
   {
-   if(root->data == in_data)
+   if(root->data == x)
    {
     cout<<":-- RECORD FOUND --:"<<endl;
     return 1;
    }
-   else if(in_data < root->data)
+   else if(x < root->data)
    {
-    this->search(root->left, in_data);
+    this->search(root->left, x);
    }
-   else if(in_data > root->data)
+   else if(x > root->data)
    {
-    this->search(root->right , in_data);
+    this->search(root->right , x);
    }
   }
   else
