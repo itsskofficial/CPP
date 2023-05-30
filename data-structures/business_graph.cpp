@@ -41,7 +41,7 @@ void prims::primsAlgo(){
 			for (i=0;i<nodes;i++){
 				if (visited[i] == 2){
 					for (j=0;j<nodes;j++){
-						if (visited[j] == zero){
+						if (visited[j] == 0){
 							if (min>graph[i][j]){
 								min=graph[i][j];
 								x=i;
