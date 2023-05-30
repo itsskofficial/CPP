@@ -1,8 +1,4 @@
-#include <iostream>
-#include <iomanip>
-#include <fstream>
-#include <conio.h>
-#include <string.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 struct student
