@@ -33,21 +33,21 @@ public:
   return ptr;
  }
  
- Bstnode *insert( Bstnode *temp , int in_data)
+ Bstnode *insert( Bstnode *root , int in_data)
  {
-  if( temp == NULL )
+  if( root == NULL )
   {
-   temp = GetNewNode(in_data);
+   root = GetNewNode(in_data);
   }
-  else if( temp->data > in_data)
+  else if( root->data > in_data)
   {
-   temp->left = insert(temp->left , in_data);
+   root->left = insert(root->left , in_data);
   }
   else
   {
-   temp->right = insert( temp->right , in_data);
+   root->right = insert( root->right , in_data);
   }
-  return temp;
+  return root;
  }
  
  void input()
