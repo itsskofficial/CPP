@@ -34,7 +34,7 @@ void prims::primsAlgo(){
 	int min = 0, x, y;
 	int cost = 0;
 	for (i=0; i< nodes; i++)
-		visited[i] = zero;
+		visited[i] = 0;
 	visited[0] = 2;
 		while(ne<nodes-1){
 			min = infi ;
