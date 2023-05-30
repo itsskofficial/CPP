@@ -52,7 +52,7 @@ void prims::primsAlgo(){
 				}
 			}
 		
-		visited[x] = one;
+		visited[x] = 1;
 		visited[y] = 2;
 		cout<< "\n" << x << " --> "<<y;
 		cost += graph[x][y];
