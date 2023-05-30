@@ -88,13 +88,13 @@ public:
  }
  
  
- void minvalue(Bstnode *temp)
+ void minvalue(Bstnode *root)
  {
-  while(temp->left != NULL)
+  while(root->left != NULL)
   {
-   temp = temp->left;
+   root = root->left;
   }
-  cout<<"MINIMUM VALUE = "<<temp->data<<endl;
+  cout<<"MINIMUM VALUE = "<<root->data<<endl;
  }
    
  void mirror(Bstnode *temp)
