@@ -31,7 +31,7 @@ void prims::createGraph(){
 }
 void prims::primsAlgo(){
 	int selected[ROW], i, j, ne=0;
-	int = 0, one = , min = 0, x, y;
+	int min = 0, x, y;
 	int cost = 0;
 	for (i=0; i< nodes; i++)
 		selected[i] = zero;
