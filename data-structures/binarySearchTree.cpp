@@ -97,20 +97,20 @@ public:
   cout<<"MINIMUM VALUE = "<<root->data<<endl;
  }
    
- void mirror(Bstnode *temp)
+ void mirror(Bstnode *root)
  {
-  if(temp == NULL)
+  if(root == NULL)
   {
    return;
   }
   else
   {
    Bstnode *ptr;
-   mirror(temp->left);
-   mirror(temp->right);
-   ptr = temp->left;
-   temp->left = temp->right;
-   temp->right = ptr; 
+   mirror(root->left);
+   mirror(root->right);
+   ptr = root->left;
+   root->left = root->right;
+   root->right = ptr; 
   }
  }
  
