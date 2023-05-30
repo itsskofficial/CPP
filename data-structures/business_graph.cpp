@@ -30,18 +30,18 @@ void prims::createGraph(){
 	}
 }
 void prims::primsAlgo(){
-	int selected[ROW], i, j, ne=0;
+	int visited[ROW], i, j, ne=0;
 	int min = 0, x, y;
 	int cost = 0;
 	for (i=0; i< nodes; i++)
-		selected[i] = zero;
-	selected[0] = 2;
+		visited[i] = zero;
+	visited[0] = 2;
 		while(ne<nodes-1){
 			min = infi ;
 			for (i=0;i<nodes;i++){
-				if (selected[i] == 2){
+				if (visited[i] == 2){
 					for (j=0;j<nodes;j++){
-						if (selected[j] == zero){
+						if (visited[j] == zero){
 							if (min>graph[i][j]){
 								min=graph[i][j];
 								x=i;
@@ -52,8 +52,8 @@ void prims::primsAlgo(){
 				}
 			}
 		
-		selected[x] = one;
-		selected[y] = 2;
+		visited[x] = one;
+		visited[y] = 2;
 		cout<< "\n" << x << " --> "<<y;
 		cost += graph[x][y];
 		ne++;
