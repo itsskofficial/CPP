@@ -97,6 +97,6 @@ while choice!=4:
         d.delete(ele)
     elif choice==3:
         key=int(input("Enter key to find: "))
-        
+        d.find()
         
 
