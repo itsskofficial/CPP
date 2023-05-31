@@ -8,7 +8,8 @@ class Dictionary:
 
 
 choice=0
-print("What ")
+print("What do you want to do?")
+
 
 while choice!=4:
 
