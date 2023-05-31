@@ -6,8 +6,8 @@ class Dictionary:
 
     def insert(self,ele, chain_type):
         flag=0
-        for i in range(len(self.elements)):
-            if self.elements[i]['key']==0:
+        for i in self.elements)):
+            if i['key']==0:
                 flag=1
 
         if flag==1:
