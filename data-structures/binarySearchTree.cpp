@@ -100,16 +100,16 @@ public:
  {
     if(root == NULL)
     {
-    return;
+      return 0;
     }
     else
     {
-    node *ptr;
-    mirror(root->left);
-    mirror(root->right);
-    ptr = root->left;
-    root->left = root->right;
-    root->right = ptr; 
+      node *ptr;
+      mirror(root->left);
+      mirror(root->right);
+      ptr = root->left;
+      root->left = root->right;
+      root->right = ptr; 
     }
  }
  
