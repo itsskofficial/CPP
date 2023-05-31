@@ -19,7 +19,7 @@ void Business::createGraph()
 	{
 		for (j = i; j<offices; j++)
 		{
-			cout<<"\nEnter distance between "<<"office " i << " and "<< j <<": ";
+			cout<<"\nEnter distance between "<<"office "<< i << " and "<< j <<": ";
 			cin>>graph[i][j];
 			graph[j][i]=graph[i][j];
 		}
