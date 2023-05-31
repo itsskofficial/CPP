@@ -53,8 +53,7 @@ void BookTree::create()
 void BookTree::display(node*root)
 {
     if(root!=NULL)
-    {
-        
+    { 
         cout<<"\nName of the book:"<<root->label;
         for (int i=0; i<root->child_count; i++)
         {
