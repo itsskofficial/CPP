@@ -95,5 +95,6 @@ while choice!=4:
         d.insert(ele,chain_type)
     elif choice==2:
         d.delete(ele)
+    
         
 
