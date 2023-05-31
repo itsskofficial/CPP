@@ -23,7 +23,7 @@ class Dictionary:
                 else:
                     current=pos
                     while self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos:
-                        current=current+1
+                        current=(current+1)
                     
                     if self.elements[current]['key']==0:
                         self.elements[current]=ele
