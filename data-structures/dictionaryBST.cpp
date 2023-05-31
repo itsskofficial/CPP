@@ -62,7 +62,7 @@ void Dictionary::display_ascending(node *root)
 {
 	if(root->left!=NULL)
 		display_ascending(root->left);
-		
+
 	cout<<"\n" << root->word<<" \t" << root->meaning;
 
 	if(root->right!=NULL)
@@ -73,7 +73,9 @@ void Dictionary::display_descending(node *root)
 {
 	if(root->right!=NULL)
 			display_descending(root->right);
+
 	cout<<"\n" << root->word<<" \t" << root->meaning;
+	
 	if(root->left!=NULL)
 		display_descending(root->left);
 }
