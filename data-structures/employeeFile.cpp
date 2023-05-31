@@ -73,7 +73,7 @@ void Employee::display_records()
     indexfile.open("IND.DAT",ios::in|ios::out|ios::binary);
     indexfile.seekg(0,ios::beg);
     seqfile.seekg(0,ios::beg);
-    cout<<"\n The Contents of file are ..."<<endl;
+    cout<<"\n The contents of file are ..."<<endl;
     i=0;
 
     while(indexfile.read((char *)&ind_records,sizeof(ind_records)))
