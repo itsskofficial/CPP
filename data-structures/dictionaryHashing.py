@@ -26,9 +26,10 @@ class Dictionary:
                         current=current+1
                     
                     if self.elements[current]['key']==0:
-                    self.elements[current]=ele
-                    self.chain[pos]=current
+                        self.elements[current]=ele
+                        self.chain[pos]=current
                     else:
+                        
 
     
 
