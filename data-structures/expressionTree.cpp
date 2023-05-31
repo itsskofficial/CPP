@@ -63,7 +63,7 @@ class stack
 			return(stk[top--]);
 		}
 		
-		node *top()
+		node* top()
 		{
 			return(stk[top]);
 		}
