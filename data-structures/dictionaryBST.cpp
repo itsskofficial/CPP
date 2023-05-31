@@ -58,7 +58,7 @@ void Dictionary::insertWord(node* root, string key, string keyMeaning)
 	}
 }
 
-void Dictionary::display_ascending(node *root)		//inorder
+void Dictionary::display_ascending(node *root)		
 {
 	if(root->left!=NULL)
 		display_ascending(root->left);
@@ -93,7 +93,7 @@ void Dictionary::comparisons(node* root, string key)
 			root = root->right;
 		}
 
-		else if(key == p->word)
+		else if(key == root->word)
 		{
 			count++;
 			cout<<"Number of comparisons to find the word: " << count;
@@ -126,7 +126,7 @@ void Dictionary::deleteWord(node* root, string key)
 
 		else if(key > root->word)
 		{
-			parent=p;
+			parent=root;
 			p = root->right;
 		}
 
