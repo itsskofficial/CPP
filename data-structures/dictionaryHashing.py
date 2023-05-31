@@ -4,7 +4,9 @@ word = {
 }
 
 class Dictionary:
-    words=[[]]
+    words=[]
+    chain=[]
+    
 
 
 
