@@ -14,6 +14,7 @@ struct node
 };
 
 node *front=NULL;
+
 void vline(char ch)
 {
 	cout<<"\n";
