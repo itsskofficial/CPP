@@ -85,7 +85,6 @@ int main()
     i=0;
     do 
     {
-        vline('*');
         cout<<"\n1.Add patient\n";
         cout<<"2.Remove patient\n";
         cout<<"3.Display the queue\n";
