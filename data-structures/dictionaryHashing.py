@@ -1,5 +1,3 @@
-word = 
-
 class Dictionary:
     elements=[{
     'key':0,
