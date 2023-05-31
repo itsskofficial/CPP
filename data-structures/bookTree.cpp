@@ -16,9 +16,7 @@ struct node
     int ch_count;
     struct node *child[10];
 }*root;
-/*
- * Class Declaration
- */
+
 class GT
 {
     public:
