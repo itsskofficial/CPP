@@ -6,7 +6,8 @@ class Dictionary:
         pos=ele['key']%len(self.elements)
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
-        
+        else:
+            
 
         
 
