@@ -36,18 +36,18 @@ void Business::createGraph()
 }
 void Business::findShortestPath()
 {
-	int visited[100], i, j, ne=0;
+	int office_status[100], i, j, ne=0;
 	int min = 0, x, y;
 	int cost = 0;
 	for (i=0; i< offices; i++)
-		visited[i] = 0;
-	visited[0] = 2;
+		office_status[i] = 0;
+	office_status[0] = 2;
 		while(ne<offices-1){
 			min = INT_MAX ;
 			for (i=0;i<offices;i++){
-				if (visited[i] == 2){
+				if (office_status[i] == 2){
 					for (j=0;j<offices;j++){
-						if (visited[j] == 0){
+						if (office_status[j] == 0){
 							if (min>graph[i][j]){
 								min=graph[i][j];
 								x=i;
@@ -58,8 +58,8 @@ void Business::findShortestPath()
 				}
 			}
 		
-		visited[x] = 1;
-		visited[y] = 2;
+		office_status[x] = 1;
+		office_status[y] = 2;
 		cout<< "\n" << x << " --> "<<y;
 		cost += graph[x][y];
 		ne++;
