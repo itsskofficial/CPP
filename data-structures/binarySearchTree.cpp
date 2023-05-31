@@ -89,11 +89,11 @@ public:
  
  void minvalue(node *root)
  {
-  while(root->left != NULL)
-  {
-   root = root->left;
-  }
-  cout<<"MINIMUM VALUE = "<<root->data<<endl;
+    while(root->left != NULL)
+    {
+    root = root->left;
+    }
+    cout<<"MINIMUM VALUE = "<<root->data<<endl;
  }
    
  void mirror(node *root)
