@@ -83,10 +83,6 @@ class Dictionary:
                                     self.chain[self.chain_index[pos]]=current
                                     self.chain_index[pos]=current
 
-
-
-    
-
 choice=0
 d=Dictionary()
 while choice!=4:
