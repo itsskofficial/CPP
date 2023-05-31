@@ -153,7 +153,7 @@ void Dictionary::deleteWord(node* root, string key)
 
 			}
 
-			if(root->right!=NULL && root->left==NULL)	//right child only
+			if(root->right!=NULL && root->left==NULL)
 			{
 				if(parent->right == root)
 				{
@@ -169,7 +169,7 @@ void Dictionary::deleteWord(node* root, string key)
 
 			}
 
-			else if(root->left!=NULL && root->right==NULL)	//left child only
+			else if(root->left!=NULL && root->right==NULL)
 			{
 				if(parent->right == root)
 				{
