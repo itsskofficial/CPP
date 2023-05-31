@@ -15,6 +15,7 @@ class Dictionary:
                 self.elements[current]=ele
                 self.chain[pos]=current
             else:
+                current=pos
                 
     
 
