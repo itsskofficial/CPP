@@ -7,7 +7,8 @@ class Dictionary:
     words=[]
 
 
-choice
+choice=0
+print("What ")
 
 while choice!=4:
 
