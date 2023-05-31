@@ -20,8 +20,8 @@ class Dictionary:
                     while(self.elements[current]['key']!=0):
                         current=(current+1)%len(self.elements)
                     self.elements[current]=ele
-                    if self.chain[pos]
-                    self.chain[pos]=current
+                    if self.chain[pos]==-1:
+                        self.chain[pos]=current
                 else:
                     current=pos
                     while self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos or count==len(self.elements):
