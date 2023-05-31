@@ -82,22 +82,22 @@ class Dictionary:
                                 else:
                                     self.chain[self.chain_index[pos]]=current
                                     self.chain_index[pos]=current
-        def delete(self,key):
-            flag=0
-            for i in range(len(self.elements)):
-                if self.elements[i]['key']==key:
-                    temp=self.elements[i]
-                    self.elements[i]['key']=0
-                    self.elements[i]['value']=0
-                    self.chain[i]=-1
-                    for j in self.chain:
-                        if j==i:
-                            self.chain_index[temp['key']%len(self.elements)]==j
-                    flag=1
-            if flag==1:
-                print("Element deleted successfully")
-            else:
-                print("Element not found")
+    def delete(self,key):
+        flag=0
+        for i in range(len(self.elements)):
+            if self.elements[i]['key']==key:
+                temp=self.elements[i]
+                self.elements[i]['key']=0
+                self.elements[i]['value']=0
+                self.chain[i]=-1
+                for j in self.chain:
+                    if j==i:
+                        self.chain_index[temp['key']%len(self.elements)]==j
+                flag=1
+        if flag==1:
+            print("Element deleted successfully")
+        else:
+            print("Element not found")
 
 
 choice=0
