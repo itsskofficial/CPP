@@ -25,7 +25,7 @@ class Employee
         void Update();
         void delete_record();
         void append_record();
-        void search();
+        void search_record();
 };
 
 Employee::Employee()//constructor 
@@ -221,7 +221,7 @@ void Employee::append_record()
     cout<<"\n The record is Appended!!!";
     }
 
-void Employee::search()
+void Employee::search_record()
 {
     fstream seqfile;
     fstream indexfile;
@@ -324,7 +324,7 @@ int main()
 
             case 6:
             {
-                list.search();
+                list.search_record();
                 break;
             }
 
