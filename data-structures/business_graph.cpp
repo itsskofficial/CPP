@@ -81,7 +81,7 @@ void Business::findShortestPath()
 int main()
 {
 	Business mst;
-	cout << "\nBusiness business\n";
+	cout << "\nBusiness \n";
 	mst.createGraph();
 	mst.findShortestPath();
 	return 0;
