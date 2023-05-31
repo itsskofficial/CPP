@@ -107,21 +107,21 @@ void Dictionary::comparisons(node* root, string key)
 	cout<<"\nWord not found!";
 }
 
-node* Dictionary::minimumWord(node *p)
+node* Dictionary::minimumWord(node *root)
 {
 	while(root->left != NULL)
 	{
 		parent = root;
 		root = root->left;
 	}
-	
+
 	return root;
 }
 
 void Dictionary::deleteWord(node* root, string key)
 {
 	node *s;
-	while(root!=NULL)							//searching for word
+	while(root!=NULL)						
 	{
 		if(key < root->word)
 		{
