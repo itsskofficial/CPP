@@ -102,6 +102,6 @@ while choice!=4:
     elif choice==4:
         exit(1)
     else:
-        
+        print("\nEnter valid option number")
         
 
