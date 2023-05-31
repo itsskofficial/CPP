@@ -87,7 +87,8 @@ class Graph
 };
 
 int main()
-{   int n;
+{   
+    int n;
     cout<<"Enter number of cities: ";
     cin>>n;
     Graph<string> gr(n);
