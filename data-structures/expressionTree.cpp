@@ -191,7 +191,7 @@ int main()
 	do
 	{
 		cout<<"\n Enter Choice: ";
-		cout<<"\n\t1.Create expression tree \n\t2.Non Recursive Postorder Traversal \n\t3.Delete tree\n";
+		cout<<"\n\t1.Create expression tree \n\t2.Non Recursive Postorder Traversal \n\t3.Delete tree\n\t4.Exit";
 		cout<<"\n Choice: ";
 		cin>>ch;
 		
