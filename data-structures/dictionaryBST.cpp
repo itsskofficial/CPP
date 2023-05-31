@@ -127,7 +127,7 @@ void Dictionary::deleteWord(node* root, string key)
 		else if(key > root->word)
 		{
 			parent=root;
-			p = root->right;
+			root = root->right;
 		}
 
 		else if(key == root->word)				//word found
