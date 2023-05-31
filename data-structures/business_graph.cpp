@@ -34,8 +34,9 @@ void Business::createGraph()
 		}
 	}
 }
-void Business::findShortestPath(){
-	int visited[ROW], i, j, ne=0;
+void Business::findShortestPath()
+{
+	int [100], i, j, ne=0;
 	int min = 0, x, y;
 	int cost = 0;
 	for (i=0; i< offices; i++)
