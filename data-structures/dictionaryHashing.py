@@ -46,7 +46,6 @@ class Dictionary:
                     else:
                         count=1
                         temp=self.elements[current]
-                        temp
                         self.elements[current]=ele
                         if self.chain[pos]==-1:
                             self.chain[pos]=current
