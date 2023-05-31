@@ -4,6 +4,7 @@
 #include<cstdlib>
 using namespace std;
 #define MAX 30
+
 struct node{
 	int id,age;
 	char patient_name[MAX];
