@@ -118,7 +118,8 @@ class Dictionary:
             print("Element not found")
     
     def display(self):
-        for i in range(le(self.elements)):
+        print()
+        for i in range(len(self.elements)):
             print(f"")
 
 
