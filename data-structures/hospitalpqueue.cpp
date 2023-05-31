@@ -13,7 +13,7 @@ struct node
 	struct node *next;
 }*front;
 
-front=NULL;
+node *front=NULL;
 
 void vline(char ch)
 {
