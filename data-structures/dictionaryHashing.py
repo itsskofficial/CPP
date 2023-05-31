@@ -1,7 +1,7 @@
 class Dictionary:
     elements=[{
     'key':0,
-    'meaning':0
+    'value':0
 }]
     chain=[]
     
