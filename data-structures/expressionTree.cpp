@@ -218,7 +218,7 @@ int main()
 
 			default:
 			{
-				cout<< ""
+				cout<< "Enter valid option"
 			}
         }
 	} while(ch != 3);
