@@ -15,6 +15,7 @@ class node
 		left = NULL;
 		right = NULL;
 	}
+	
 	friend class Dictionary;
 };
 
