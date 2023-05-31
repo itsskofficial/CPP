@@ -66,7 +66,8 @@ class Dictionary:
                             current=(current+1)%len(self.elements)
                             count+=1
 
-                        if count
+                        if count==len(self.elements):
+                            
                         self.elements[current]=temp
 
                         if self.chain[pos]==-1:
