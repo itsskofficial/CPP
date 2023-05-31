@@ -31,7 +31,7 @@ public:
 
 	void insert(node*, string, string);
 	void display_asc(node *);
-	void display_desc(node *);
+	void display_descending(node *);
 	void comparisons(node*, string);
 	void updateWord(node*, string);
 	void deleteWord(node*, string);
@@ -65,13 +65,13 @@ void Dictionary::display_asc(node *p)		//inorder
 		display_asc(p->right);
 }
 
-void Dictionary::display_desc(node *p)
+void Dictionary::display_descending(node *p)
 {
 	if(p->right!=NULL)
-			display_desc(p->right);
+			display_descending(p->right);
 	cout<<"\n" << p->word<<" \t" << p->meaning;
 	if(p->left!=NULL)
-		display_desc(p->left);
+		display_descending(p->left);
 }
 
 void Dictionary::comparisons(node* p, string key)
@@ -257,7 +257,7 @@ int main()
 
             case 3:
             {
-                d1.display_desc(d1.root);
+                d1.display_descending(d1.root);
                 break;
             }
 
