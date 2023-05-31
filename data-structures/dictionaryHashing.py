@@ -1,7 +1,5 @@
 class Dictionary:
-    elements=[{
-    'key':0,
-    'value':0 } * 10]
+    elements=[{'key':0, 'value':0 } * 10]
     
     chain=[]
     
