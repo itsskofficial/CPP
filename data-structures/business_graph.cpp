@@ -41,6 +41,7 @@ void Business::findShortestPath()
 	int cost = 0;
 	for (i=0; i< offices; i++)
 		office_status[i] = 0;
+		
 	office_status[0] = 2;
 		while(k<offices-1)
 		{
