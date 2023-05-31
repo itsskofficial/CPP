@@ -4,7 +4,7 @@ class Dictionary:
     
     def insert(self,ele):
         pos=ele['key']%len(self.elements)
-        if 
+        if elements[pos]['key']
         
 
 
