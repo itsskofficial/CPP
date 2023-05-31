@@ -42,7 +42,7 @@ void Business::findShortestPath()
 	for (i=0; i< offices; i++)
 		office_status[i] = 0;
 	office_status[0] = 2;
-		while(ne<offices-1){
+		while(k<offices-1){
 			min = INT_MAX ;
 			for (i=0;i<offices;i++){
 				if (office_status[i] == 2){
@@ -62,7 +62,7 @@ void Business::findShortestPath()
 		office_status[y] = 2;
 		cout<< "\n" << x << " --> "<<y;
 		cost += graph[x][y];
-		ne++;
+		k++;
 }
 	cout<<"\nTotal cost is: "<< cost << endl;
 }
