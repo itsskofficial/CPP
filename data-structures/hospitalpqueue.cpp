@@ -113,7 +113,7 @@ int main()
                 cout<<"Enter the patient age: ";
                 cin>>age;
                 dataage[i]=age;
-                cout<<"\n1-Accident\n2-Other issues\n3-General Checkup\n4-Visiting\n";
+                cout<<"\n1-Accident\n2-Other issues\n3-General Checkup\n4-isiting\n";
                 cout<<"\nEnter the type of case : ";
                 cin>>a;
 
