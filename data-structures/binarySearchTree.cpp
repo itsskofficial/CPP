@@ -41,12 +41,13 @@ public:
     }
     else if( root->data > x)
     {
-    root->left = insert(root->left , x);
+      root->left = insert(root->left , x);
     }
     else
     {
-    root->right = insert( root->right , x);
+      root->right = insert( root->right , x);
     }
+    
     return root;
  }
  
