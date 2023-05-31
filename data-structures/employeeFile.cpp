@@ -20,10 +20,10 @@ class Employee
 
     public:
         Employee();
-        void create_records();
-        void display_records();
-        void update();
-        void delete();
+        void Create();
+        void Display();
+        void Update();
+        void Delete();
         void append();
         void search();
 };
@@ -33,7 +33,7 @@ Employee::Employee()//constructor
    strcpy(records.name,"");
 }
 
-void Employee::create_records()
+void Employee::Create()
 {
     int i,j;
     char ch='y';
@@ -64,7 +64,7 @@ void Employee::create_records()
     indexfile.close();
 }
 
-void Employee::display_records()
+void Employee::Display()
 {
     fstream seqfile;
     fstream indexfile;
@@ -97,7 +97,7 @@ void Employee::display_records()
     indexfile.close();
 }
 
-void Employee::update()
+void Employee::Update()
 {
     int pos,id;
     char New_name[10];
@@ -147,7 +147,7 @@ void Employee::update()
     indexfile.close();
 }
 
-void Employee::delete()
+void Employee::Delete()
 {
     int id,pos;
     cout<<"\n For deletion,";
@@ -294,25 +294,25 @@ int main()
         {
             case 1:
             {
-                list.create_records();
+                list.Create();
                 break;
             }
 
             case 2:
             {
-                list.display_records();
+                list.Display();
                 break;
             }
 
             case 3:
             {
-                list.update();
+                list.Update();
                 break;
             }
 
             case 4:
             {
-                list.delete();
+                list.Delete();
                 break;
             }
 
