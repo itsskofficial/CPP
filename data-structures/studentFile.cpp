@@ -214,7 +214,7 @@ int main()
 
     do
     { 
-        cout<<"\n\n1)Read(Print)\n2)Insert\n3)Delete\n4)Update";
+        cout<<"\n\n1)Read\n2)Insert\n3)Delete\n4)Update";
         cout<<"\n5)Search\n6)Pack\n7)Quit";
         cout<<"\nEnter Your Choice:";
         cin>>ch;
