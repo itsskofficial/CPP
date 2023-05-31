@@ -4,6 +4,7 @@ class Dictionary:
         self.chain=[-1 * 10]
 
     def insert(self,ele, chain_type):
+        
         pos=ele['key']%len(self.elements)
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
