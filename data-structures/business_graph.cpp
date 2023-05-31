@@ -45,7 +45,7 @@ void Business::findShortestPath()
 	for (i=0; i< offices; i++)
 		office_status[i] = NOT_VISITED;
 
-	office_status[0] = current;
+	office_status[0] = CURRENT;
 		while(k<offices-1)
 		{
 			min = INT_MAX ;
