@@ -11,7 +11,7 @@ struct node
 	char patient_name[MAX];
 	int priority;
 	struct node *next;
-}*front;
+};
 
 node *front=NULL;
 
