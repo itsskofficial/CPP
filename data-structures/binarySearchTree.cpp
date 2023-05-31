@@ -100,7 +100,7 @@ public:
  {
     if(root == NULL)
     {
-      return 0;
+      return;
     }
     else
     {
