@@ -24,7 +24,7 @@ class Employee
         void Display();
         void Update();
         void Delete();
-        void Append();
+        void append();
         void search();
 };
 
@@ -195,7 +195,7 @@ void Employee::Delete()
     cout<<"\n The record is deleted!!!";
 }
 
-void Employee::Append()
+void Employee::append()
 {
     fstream seqfile;
     fstream indexfile;
@@ -318,7 +318,7 @@ int main()
 
             case 5:
             {
-                list.Append();
+                list.append();
                 break;
             }
 
