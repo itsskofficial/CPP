@@ -195,7 +195,7 @@ void Dictionary::deleteWord(node* root, string key)
 			}
 		}
 	}
-	cout<<"\nWord NOT found!";
+	cout<<"\nWord not found!";
 }
 
 void Dictionary::updateWord(node* root, string key)
