@@ -63,7 +63,7 @@ class stack
 			return(stk[top--]);
 		}
 		
-		node* top()
+		node *Top()
 		{
 			return(stk[top]);
 		}
@@ -109,11 +109,11 @@ void expressiontree :: create(string str)
 			if(operator_st.empty())
 				operator_st.push(temp);
 			else
-				if(priority(ch)>priority(operator_st.top()->data))
+				if(priority(ch)>priority(operator_st.Top()->data))
 					operator_st.push(temp);
 				else
 				{
-					while(!operator_st.empty() && priority(ch)<= operator_st.top()->data)
+					while(!operator_st.empty() && priority(ch)<= operator_st.Top()->data)
 					{
 						node *operat = operator_st.pop();
 						operat->right= operand_st.pop();
