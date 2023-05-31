@@ -79,10 +79,8 @@ public:
         this->search(root->right , x);
       }
     }
-    else
-    {
-      return 0;
-    }
+      
+    return 0;
  }
  
  
@@ -159,7 +157,7 @@ public:
  {
     if(root == NULL) 
       return 0;
-      
+
     return (max((depth(root->left)),(depth(root->right))) +1);  
  }
 };
