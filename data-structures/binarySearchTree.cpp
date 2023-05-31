@@ -171,7 +171,7 @@ int main()
   a = obj.search(obj.root,10);
   if( a == 0)
   {
-    cout<<"ELEMENT NOT FOUND"<<endl;
+    cout<<"Element "<<endl;
   }
   else
     cout<<"ELEMENT FOUND"<<endl;                                                                                                       
