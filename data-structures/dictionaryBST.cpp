@@ -232,7 +232,7 @@ int main()
         cout<<"\n3. Display the dictionary in descending order";
         cout<<"\n4. Search and update a word";
         cout<<"\n5. Delete a word";
-        cout<<"\n6. Comparisons";
+        cout<<"\n6. Display comparisons needed to find a word";
         cout << "\n7. Exit";
         cout<<"\n\nEnter your choice: ";
         cin>>choice;
