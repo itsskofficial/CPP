@@ -5,6 +5,7 @@ word = {
 
 class Dictionary:
     words=[]
+    
 
 
 choice=0
