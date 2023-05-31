@@ -64,27 +64,27 @@ public:
  
  int search(node *root ,int x)
  {
-  if( root != NULL)
-  {
-   if(root->data == x)
-   {
-    cout<<":-- RECORD FOUND --:"<<endl;
-    return 1;
-   }
-   else if(x < root->data)
-   {
-    this->search(root->left, x);
-   }
-   else if(x > root->data)
-   {
-    this->search(root->right , x);
-   }
-  }
-  else
-  {
-    return 0;
-  }
-  return 2;
+    if( root != NULL)
+    {
+    if(root->data == x)
+    {
+      cout<<":-- RECORD FOUND --:"<<endl;
+      return 1;
+    }
+    else if(x < root->data)
+    {
+      this->search(root->left, x);
+    }
+    else if(x > root->data)
+    {
+      this->search(root->right , x);
+    }
+    }
+    else
+    {
+      return 0;
+    }
+    return 2;
  }
  
  
