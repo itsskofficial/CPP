@@ -17,7 +17,7 @@ class Dictionary:
                 if chain_type==0:
                     current=pos
                     while(self.elements[current]['key']==0):
-                        current=current+1
+                        current=(current+1)
                     self.elements[current]=ele
                     self.chain[pos]=current
                 else:
@@ -32,7 +32,7 @@ class Dictionary:
                         temp=self.elements[current]
                         self.elements[current]=ele
                         self.chain[pos]=current
-                        
+
 
     
 
