@@ -100,8 +100,10 @@ int main()
                 exit(1);
 
             default:
+            {
                 cout<<"Wrong choice";
-                exit(1)
+                exit(1);
+            }
         }
     }
 }
