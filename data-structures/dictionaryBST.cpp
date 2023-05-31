@@ -120,7 +120,7 @@ node* Dictionary::minimumWord(node *root)
 
 void Dictionary::deleteWord(node* root, string key)
 {
-	node *s;
+	node *min;
 	while(root!=NULL)						
 	{
 		if(key < root->word)
@@ -187,10 +187,10 @@ void Dictionary::deleteWord(node* root, string key)
 
 			else if(root->left!=NULL && root->right!=NULL)
 			{
-				s = minimumWord(root->right);
-				root->word = s->word;
-				root->meaning = s->meaning;
-				deleteWord(s, s->word);
+				min = minimumWord(root->right);
+				root->word = min->word;
+				root->meaning = min->meaning;
+				deleteWord(min, min->word);
 
 			}
 		}
