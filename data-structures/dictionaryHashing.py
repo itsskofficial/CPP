@@ -29,6 +29,6 @@ while choice!=4:
         key=int(input("Enter key: "))
         value=int(input("Enter value: "))
         ele={'key':key,'value':value}
-        chain_type=int(input("Enter c"))
+        chain_type=int(input("Ente"))
         
 
