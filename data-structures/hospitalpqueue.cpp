@@ -11,9 +11,9 @@ struct node
 	char patient_name[MAX];
 	int priority;
 	struct node *next;
-};
+}*front;
 
-node *front=NULL;
+front=NULL;
 
 void vline(char ch)
 {
