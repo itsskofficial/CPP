@@ -101,7 +101,7 @@ void Employee::update_record()
 {
     int pos,id;
     char new_name[10];
-    int New_emp_id;
+    int new_emp_id;
     int New_salary;
     cout<<"\n For updation,";
     cout<<"\n Enter the Emp_ID for for searching ";
