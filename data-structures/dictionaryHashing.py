@@ -4,8 +4,8 @@ word = {
 }
 
 class Dictionary:
-    words=[]
-    
+    words=[[{}]]
+
 
 
 choice=0
