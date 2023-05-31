@@ -16,10 +16,6 @@ class sequential
         sequential(char *a)
         {
             strcpy(master,a);
-            fp.open(master, ios::binary|ios::in);
-            if(fp.fail())
-                fp.open(master, ios::binary | ios::out);
-            fp.close();
         }
         void read();  
         void insert_student(student rec);
