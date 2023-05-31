@@ -115,16 +115,15 @@ public:
  
  void display()
  {
-  cout<<endl<<"--- INORDER TRAVERSAL ---"<<endl;
-  inorder(root);
-  cout<<endl;
-  cout<<endl<<"--- POSTORDER TRAVERSAL ---"<<endl;
-  postorder(root);
-  cout<<endl;
-  cout<<endl<<"--- PREORDER TRAVERSAL ---"<<endl;
-  preorder(root);
-  cout<<endl;
-  
+    cout<<endl<<"--- INORDER TRAVERSAL ---"<<endl;
+    inorder(root);
+    cout<<endl;
+    cout<<endl<<"--- POSTORDER TRAVERSAL ---"<<endl;
+    postorder(root);
+    cout<<endl;
+    cout<<endl<<"--- PREORDER TRAVERSAL ---"<<endl;
+    preorder(root);
+    cout<<endl;
  }
  
  void inorder(node *root)
