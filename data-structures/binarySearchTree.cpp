@@ -93,24 +93,24 @@ public:
     {
     root = root->left;
     }
-    cout<<"MINIMUM VALUE = "<<root->data<<endl;
+    cout<<"Minimum value = " <<root->data<<endl;
  }
    
  void mirror(node *root)
  {
-  if(root == NULL)
-  {
-   return;
-  }
-  else
-  {
-   node *ptr;
-   mirror(root->left);
-   mirror(root->right);
-   ptr = root->left;
-   root->left = root->right;
-   root->right = ptr; 
-  }
+    if(root == NULL)
+    {
+    return;
+    }
+    else
+    {
+    node *ptr;
+    mirror(root->left);
+    mirror(root->right);
+    ptr = root->left;
+    root->left = root->right;
+    root->right = ptr; 
+    }
  }
  
  void display()
