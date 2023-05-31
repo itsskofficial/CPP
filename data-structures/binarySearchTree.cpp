@@ -9,7 +9,7 @@ struct node
  node *right = NULL;
 };
 
-class BSTtree
+class Btree
 {
  
   int n;
