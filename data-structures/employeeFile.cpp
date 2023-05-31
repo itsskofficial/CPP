@@ -208,9 +208,12 @@ void Employee::append_record()
     seqfile.open("EMP.DAT",ios::app|ios::binary);
 
     cout<<"\n Enter the record for appending";
-    cout<<"\nName: ";cin>>records.name;
-    cout<<"\nEmp_ID: ";cin>>records.emp_id;
-    cout<<"\nSalary: ";cin>>records.salary;
+    cout<<"\nName: ";
+    cin>>records.name;
+    cout<<"\nEmp_ID: ";
+    cin>>records.emp_id;
+    cout<<"\nSalary: ";
+    cin>>records.salary;
     seqfile.write((char*)&records,sizeof(records));//inserting rec at end in seq. file
     ind_records.emp_id=records.emp_id;           //inserting rec at end in ind. file
     ind_records.position=pos;                          //at calculated pos
