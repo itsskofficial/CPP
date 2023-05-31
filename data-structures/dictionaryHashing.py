@@ -108,11 +108,9 @@ class Dictionary:
     
     def find(self,key):
         flag=0
-        pos=0
         for i in range(len(self.elements)):
             if self.elements[i]['key']==key:
                 flag=1
-                pos=i
         
         if flag==1:
             print("Element found")
