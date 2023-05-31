@@ -3,5 +3,6 @@ word = {
     'meaning':0
 }
 
-
+class Dictionary:
+    
 
