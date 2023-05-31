@@ -24,9 +24,9 @@ choice=0
 
 
 while choice!=4:
-    print("What do you want to do?")
+    print("")
     print("\n1. Insert a word\n2. Delete a word\n3. Find a word\n4. Exit")
-    choice=int(input())
+    choice=int(input("What do you want to do?"))
     if choice==1:
 
         
