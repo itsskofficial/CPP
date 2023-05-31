@@ -225,7 +225,7 @@ int main()
 				exit(1);
 			}
         }
-	} while(ch != 3);
+	} while(ch != 4);
 	
 	return 0;
 }
