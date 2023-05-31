@@ -8,18 +8,18 @@ struct node
     struct node*child[10];
 }* root;
 
-class GT
+class BookTree
 {
     public:
         void create_tree();
         void display(node*root);
-        GT()
+        BookTree()
         {
             root=NULL;
         }
 };
 
-void GT::create_tree()
+void BookTree::create_tree()
 {
     int i,j,k;
     root=new node;
@@ -51,7 +51,7 @@ void GT::create_tree()
     }    
 };
 
-void GT::display(node*root)
+void BookTree::display(node*root)
 {
     int i,j,k;
     if(root!=NULL)
@@ -78,7 +78,7 @@ void GT::display(node*root)
 
 int main(){
     int choice;
-    GT gt;
+    BookTree gt;
     while(1){
         cout<<"Welcome To Book Hierarchy!";
         cout<<"Choose from the following:";
