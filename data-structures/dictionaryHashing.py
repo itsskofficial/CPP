@@ -7,9 +7,11 @@ class Dictionary:
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
         else:
+            curr
             while(self.elements[pos]['key']==0):
                 pos=pos+1
             self.elements[pos]=ele
+            chain
 
 
         
