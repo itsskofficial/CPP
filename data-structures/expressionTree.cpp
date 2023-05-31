@@ -93,7 +93,8 @@ void expressiontree :: create(string str)
 	while(str[i]!= '\0')
 	{
 		ch = str[i];
-		
+		cout << str[i];
+
 		node *temp = new node();
 		temp->data = ch;
 		
