@@ -215,6 +215,11 @@ int main()
                 e.deleteTree(e.root);
                 break;
 		    }
+
+			default:
+			{
+				cout<< ""
+			}
         }
 	} while(ch != 3);
 	
