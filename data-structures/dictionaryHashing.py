@@ -69,14 +69,14 @@ class Dictionary:
                         if count==len(self.elements):
                             print("Hash table full, operation terminated")
                         else:
-                        self.elements[current]=temp
+                            self.elements[current]=temp
 
-                        if self.chain[pos]==-1:
-                            self.chain[pos]=current
-                            self.chain_index[pos]=current
-                        else:
-                            self.chain[self.chain_index[pos]]=current
-                            self.chain_index[pos]=current
+                            if self.chain[pos]==-1:
+                                self.chain[pos]=current
+                                self.chain_index[pos]=current
+                            else:
+                                self.chain[self.chain_index[pos]]=current
+                                self.chain_index[pos]=current
 
 
 
