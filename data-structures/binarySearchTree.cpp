@@ -9,7 +9,7 @@ struct node
  node *right = NULL;
 };
 
-class BSTree
+class BST
 {
  
   int n;
@@ -19,7 +19,7 @@ class BSTree
 public:
 
   node * root;
-  BSTree()
+  BST()
   {
     root = NULL;
   }
@@ -166,7 +166,7 @@ public:
 
 int main()
 {
- BSTree obj;
+ BST obj;
  obj.input();
  obj.display();
  int a = 0;
