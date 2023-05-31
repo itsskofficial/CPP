@@ -46,7 +46,7 @@ class Graph
                     AM[i][j]=INT_MAX;
     }
 
-    void prims()
+    void Business()
     {
         cout<<"\nCities that we need to connect:\n";
         int *visited=new int[num](),*distance=new int[num],*from=new int[num],cost=0;
@@ -92,6 +92,6 @@ int main()
     cout<<"Enter number of cities: ";
     cin>>n;
     Graph<string> gr(n);
-    gr.prims();
+    gr.Business();
     return 0;
 }

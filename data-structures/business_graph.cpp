@@ -1,14 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class prims
+class Business
 {
 	int graph[100][100], offices;
 	public:
 		void createGraph();
 		void primsAlgo();
 };
-void prims::createGraph(){
+
+void Business::createGraph(){
 	int i,j;
 	cout<<"Enter total offices: ";
 	cin>>offices;
@@ -26,7 +27,7 @@ void prims::createGraph(){
 		}
 	}
 }
-void prims::primsAlgo(){
+void Business::primsAlgo(){
 	int visited[ROW], i, j, ne=0;
 	int min = 0, x, y;
 	int cost = 0;
@@ -59,7 +60,7 @@ void prims::primsAlgo(){
 }
 int main()
 {
-	prims mst;
+	Business mst;
 	cout << "\n--------Prims Algorithm to connect several offices------\n";
 	mst.createGraph();
 	mst.primsAlgo();
