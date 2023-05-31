@@ -6,7 +6,7 @@ struct node
     char label[10];
     int child_count;
     struct node*child[10];
-}* root;
+} *root;
 
 class BookTree
 {
