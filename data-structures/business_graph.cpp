@@ -81,7 +81,7 @@ void Business::findShortestPath()
 int main()
 {
 	Business mst;
-	cout << "\n--------Prims Algorithm to connect several offices------\n";
+	cout << "\nPrims Algorithm to connect several offices\n";
 	mst.createGraph();
 	mst.findShortestPath();
 	return 0;
