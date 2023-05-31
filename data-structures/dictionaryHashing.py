@@ -24,14 +24,15 @@ class Dictionary:
                         count+=1
                     if count==len(self.elements):
                             print("Hash table full, operation terminated")
-                    self.elements[current]=ele
-
-                    if self.chain[pos]==-1:
-                        self.chain[pos]=current
-                        self.chain_index[pos]=current
                     else:
-                        self.chain[self.chain_index[pos]]=current
-                        self.chain_index[pos]=current
+                        self.elements[current]=ele
+
+                        if self.chain[pos]==-1:
+                            self.chain[pos]=current
+                            self.chain_index[pos]=current
+                        else:
+                            self.chain[self.chain_index[pos]]=current
+                            self.chain_index[pos]=current
                 else:
                     count=1
                     current=pos
