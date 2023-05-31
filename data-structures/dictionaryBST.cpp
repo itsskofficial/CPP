@@ -37,7 +37,7 @@ public:
 	void comparisons(node*, string);
 	void updateWord(node*, string);
 	void deleteWord(node*, string);
-	node* min_node(node *);
+	node* minimumWord(node *);
 };
 
 void Dictionary::insertWord(node* root, string key, string meaning)
@@ -75,7 +75,7 @@ void Dictionary::display_descending(node *root)
 			display_descending(root->right);
 
 	cout<<"\n" << root->word<<" \t" << root->meaning;
-	
+
 	if(root->left!=NULL)
 		display_descending(root->left);
 }
@@ -107,13 +107,14 @@ void Dictionary::comparisons(node* root, string key)
 	cout<<"\nWord not found!";
 }
 
-node* Dictionary::min_node(node *p)
+node* Dictionary::minimumWord(node *p)
 {
 	while(root->left != NULL)
 	{
 		parent = root;
 		root = root->left;
 	}
+	
 	return root;
 }
 
@@ -186,7 +187,7 @@ void Dictionary::deleteWord(node* root, string key)
 
 			else if(root->left!=NULL && root->right!=NULL)
 			{
-				s = min_node(root->right);
+				s = minimumWord(root->right);
 				root->word = s->word;
 				root->meaning = s->meaning;
 				deleteWord(s, s->word);
