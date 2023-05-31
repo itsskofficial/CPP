@@ -71,7 +71,8 @@ void BookTree::display(node*root)
     }
 }
 
-int main(){
+int main()
+{
     int choice;
     BookTree gt;
     while(1){
