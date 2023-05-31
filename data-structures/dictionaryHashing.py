@@ -53,6 +53,7 @@ class Dictionary:
                         else:
                             self.chain[self.chain_index[pos]]=current
                             self.chain_index[pos]=current
+                        pos=
                         while(self.elements[current]['key']!=0 or count==len(self.elements)):
                             current=(current+1)%len(self.elements)
                             count+=1
