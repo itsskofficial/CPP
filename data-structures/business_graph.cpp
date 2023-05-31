@@ -56,7 +56,7 @@ void Business::findShortestPath()
 				{
 					for (j=0;j<offices;j++)
 					{
-						if (office_status[j] == NOT_)
+						if (office_status[j] == NOT_VISITED)
 						{
 							if (min>graph[i][j])
 							{
