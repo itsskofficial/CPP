@@ -244,8 +244,8 @@ int main()
             {
                 cout<<"\nExit"<<endl;
                 break;
-                
             }
+            
             default :
                 cout<<"\nWrong choice\n";
         }
