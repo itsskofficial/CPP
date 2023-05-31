@@ -7,10 +7,9 @@ struct node
  int data;
  node *left = NULL;
  node *right = NULL;
- 
 };
 
-class Btree
+class BSTtree
 {
  
   int n;
