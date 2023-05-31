@@ -166,7 +166,6 @@ void Employee::delete_record()
         if(id==ind_records.emp_id) //desired record is found
         {
             pos=ind_records.position;
-            ind_records.emp_id=-1;
             break;
         }
     }
