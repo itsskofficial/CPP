@@ -24,7 +24,7 @@ public:
     root = NULL;
   }
  
-  node *GetNewNode(int x)
+  node *createNode(int x)
   {
     node * ptr = new node();
     ptr->data = x;
@@ -35,19 +35,19 @@ public:
  
  node *insert( node *root , int x)
  {
-  if( root == NULL )
-  {
-   root = GetNewNode(x);
-  }
-  else if( root->data > x)
-  {
-   root->left = insert(root->left , x);
-  }
-  else
-  {
-   root->right = insert( root->right , x);
-  }
-  return root;
+    if( root == NULL )
+    {
+    root = createNode(x);
+    }
+    else if( root->data > x)
+    {
+    root->left = insert(root->left , x);
+    }
+    else
+    {
+    root->right = insert( root->right , x);
+    }
+    return root;
  }
  
  void input()
