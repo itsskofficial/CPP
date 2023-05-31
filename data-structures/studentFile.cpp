@@ -6,7 +6,7 @@ struct student
     int rollno;
     char name[20];
     float marks;
-    int status;
+    int status; // 0 when present 1 when deleted
 };
 class sequential
 { 
