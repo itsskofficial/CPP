@@ -10,23 +10,23 @@ class Dictionary:
                 flag=1
 
         if flag==1:
-        pos=ele['key']%len(self.elements)
-        if self.elements[pos]['key']==0:
-            self.elements[pos]=ele
-        else:
-            if chain_type==0:
-                current=pos
-                while(self.elements[current]['key']==0):
-                    current=current+1
-                self.elements[current]=ele
-                self.chain[pos]=current
+            pos=ele['key']%len(self.elements)
+            if self.elements[pos]['key']==0:
+                self.elements[pos]=ele
             else:
-                current=pos
-                while(self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos):
-                    current=current+1
-                self.elements[current]=ele
-                self.chain[pos]=current
+                if chain_type==0:
+                    current=pos
+                    while(self.elements[current]['key']==0):
+                        current=current+1
+                    self.elements[current]=ele
+                    self.chain[pos]=current
                 else:
+                    current=pos
+                    while(self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos):
+                        current=current+1
+                    self.elements[current]=ele
+                    self.chain[pos]=current
+                    else:
 
     
 
