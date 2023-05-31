@@ -5,7 +5,7 @@ class Dictionary:
 
     def insert(self,ele, chain_type):
         flag=0
-        for i in range()
+        for i in range(len(self.elements)
         pos=ele['key']%len(self.elements)
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
