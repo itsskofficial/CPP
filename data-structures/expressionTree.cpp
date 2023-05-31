@@ -115,11 +115,11 @@ void expressiontree :: create(string str)
 				{
 					while(!operator_st.empty() && priority(ch)<= operator_st.get_top()->data)
 					{
-						node *operat = operator_st.pop();
-						operat->right= operand_st.pop();
-						operat->left = operand_st.pop();
+						node *op = operator_st.pop();
+						op->right= operand_st.pop();
+						op->left = operand_st.pop();
 						
-						operand_st.push(operat);
+						operand_st.push(op);
 					}
 					operator_st.push(temp);
 				}	
@@ -130,11 +130,11 @@ void expressiontree :: create(string str)
 	
 	while(!operator_st.empty())
 	{
-		node *operat = operator_st.pop();
-		operat->right= operand_st.pop();
-		operat->left = operand_st.pop();
+		node *op = operator_st.pop();
+		op->right= operand_st.pop();
+		op->left = operand_st.pop();
 		
-		operand_st.push(operat);
+		operand_st.push(op);
 	}
 	
 	root= operand_st.pop();
