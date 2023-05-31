@@ -40,7 +40,7 @@ void Business::createGraph()
 void Business::findShortestPath()
 {
 	int office_status[100], i, j, k=0;
-	int min, x, y;
+	int min, source, destination;
 	int cost = 0;
 
 	for (i=0; i< offices; i++)
@@ -61,18 +61,18 @@ void Business::findShortestPath()
 							if (min>graph[i][j])
 							{
 								min=graph[i][j];
-								x=i;
-								y=j;
+								source=i;
+								destination=j;
 							}
 						}
 					}
 				}
 			}
 		
-		office_status[x] = VISITED;
-		office_status[y] = CURRENT;
-		cout<< "\n" << x << " --> "<<y;
-		cost += graph[x][y];
+		office_status[source] = VISITED;
+		office_status[destination] = CURRENT;
+		cout<< "\n" << source << " --> "<<destination;
+		cost += graph[source][destination];
 		k++;
 }
 	cout<<"\nTotal cost is: "<< cost << endl;
