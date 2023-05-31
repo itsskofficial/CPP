@@ -8,7 +8,8 @@ class Dictionary:
     chain=[]
     
     def insert(ele):
-        pos=ele%
+        pos=ele%10
+        
 
 
 
