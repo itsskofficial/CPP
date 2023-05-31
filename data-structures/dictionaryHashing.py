@@ -112,6 +112,10 @@ class Dictionary:
             if self.elements[i]['key']==key:
                 flag=1
         
+        if flag==1:
+            print("Element found")
+        else:
+            print("Element not found")
 
 
 
