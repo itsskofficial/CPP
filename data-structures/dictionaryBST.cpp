@@ -226,8 +226,8 @@ int main()
 	Dictionary d1;
     do
     {
-        cout<<"\n\nDICTIONARY: ";
-        cout<<"\n\n1. Insert new words";
+        cout<<"\n\nDictionary: ";
+        cout<<"\n\n1.Insert new word";
         cout<<"\n2. Display the dictionary in ascending order";
         cout<<"\n3. Display the dictionary in descending order";
         cout<<"\n4. Search and update a word";
