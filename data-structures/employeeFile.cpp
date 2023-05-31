@@ -281,7 +281,7 @@ int main()
 
     do
     {
-        cout<<"\n             Main Menu             "<<endl;
+        cout<<"\nMain Menu"<<endl;
         cout<<"\n 1.Create";
         cout<<"\n 2.Display";
         cout<<"\n 3.Update";
