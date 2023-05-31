@@ -7,8 +7,8 @@ class Dictionary:
 }]
     chain=[]
     
-    def insert(ele):
-        pos=ele%len(seld.elements)
+    def insert(self,ele):
+        pos=ele%len(self.elements)
 
 
 
