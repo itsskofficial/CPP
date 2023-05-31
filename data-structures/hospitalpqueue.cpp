@@ -15,6 +15,12 @@ struct node
 
 node *front=NULL;
 
+void vline(char ch)
+{
+	cout<<"\n";
+	for (int i=80;i>0;i--)
+		cout<<ch;
+}
 
 void insert(int id,int age,char patient_name[],int priority)
 {
@@ -85,6 +91,7 @@ int main()
     i=0;
     do 
     {
+        vline('*');
         cout<<"\n1.Add patient\n";
         cout<<"2.Remove patient\n";
         cout<<"3.Display the queue\n";
