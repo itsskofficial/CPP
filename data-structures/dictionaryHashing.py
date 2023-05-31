@@ -5,5 +5,7 @@ word = {
 
 class Dictionary:
     words=[]
-    
+
+
+while choice
 
