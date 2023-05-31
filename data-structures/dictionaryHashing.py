@@ -9,7 +9,7 @@ class Dictionary:
     
     def insert(self,ele):
         pos=ele%len(self.elements)
-
+        
 
 
 
