@@ -22,7 +22,6 @@ class Dictionary:
 
 choice=0
 
-
 while choice!=4:
     choice=int(input("What do you want to do?\n1. Insert a word\n2. Delete a word\n3. Find a word\n4. Exit\nEnter option number: "))
     if choice==1:
@@ -30,6 +29,6 @@ while choice!=4:
         value=int(input("Enter value: "))
         ele={'key':key,'value':value}
         chain_type=int(input("Enter 0 for chaining without replacement and 1 for chaining with replacement: "))
-        
+
         
 
