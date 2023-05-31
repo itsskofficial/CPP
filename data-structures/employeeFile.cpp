@@ -104,7 +104,7 @@ void Employee::update_record()
     int new_emp_id;
     int new_salary;
     cout<<"\n For updation,";
-    cout<<"\n Enter the Emp ID for for searching ";
+    cout<<"\n Enter the employee ID for for searching ";
     cin>>id;
     fstream seqfile;
     fstream indexfile;
