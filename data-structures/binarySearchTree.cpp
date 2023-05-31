@@ -14,9 +14,8 @@ class BST
  
   int n;
   int x;
-  int flag;
   
-public:
+  public:
 
   node * root;
   BST()
@@ -47,7 +46,7 @@ public:
     {
       root->right = insert( root->right , x);
     }
-    
+
     return root;
  }
  
