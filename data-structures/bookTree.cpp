@@ -100,7 +100,7 @@ int main()
 
             default:
             {
-                cout<<"Wrong choice";
+                cout<<"Enter valid option";
                 exit(1);
             }
         }
