@@ -99,6 +99,8 @@ while choice!=4:
     elif choice==3:
         key=int(input("Enter key to find: "))
         d.find(key)
+    elif choice==4:
+        exit(1)
     else:
         
         
