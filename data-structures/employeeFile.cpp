@@ -102,9 +102,9 @@ void Employee::update_record()
     int pos,id;
     char new_name[10];
     int new_emp_id;
-    int New_salary;
+    int new_salary;
     cout<<"\n For updation,";
-    cout<<"\n Enter the Emp_ID for for searching ";
+    cout<<"\n Enter the Emp ID for for searching ";
     cin>>id;
     fstream seqfile;
     fstream indexfile;
@@ -132,13 +132,13 @@ void Employee::update_record()
     {
         cout<<"\n Enter the values for updation...";
         cout<<"\n Name: ";cin>>new_name;
-        cout<<"\n Salary: ";cin>>New_salary;
+        cout<<"\n Salary: ";cin>>new_salary;
         //calculating the position of record in seq. file using the pos of ind. file
         int offset=pos*sizeof(rec);
         seqfile.seekp(offset);//seeking the desired record for modification
         strcpy(records.name,new_name);//can be updated
         records.emp_id=id;//It's unique id,so don't change
-        records.salary=New_salary;//can be updated
+        records.salary=new_salary;//can be updated
         seqfile.write((char*)&records,sizeof(records))<<flush;
         cout<<"\n The record is updated!!!";
     }
