@@ -83,6 +83,7 @@ int expressiontree :: priority(char ch)
 		case '^':	
 				return 2;			
 	}
+	
 }
 
 void expressiontree :: create(string str)
