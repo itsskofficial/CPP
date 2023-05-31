@@ -7,7 +7,7 @@ class Dictionary:
     words=[]
     chain=[]
     
-    def insert(word, )
+    def insert(word,)
 
 
 
