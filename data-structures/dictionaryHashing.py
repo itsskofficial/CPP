@@ -117,8 +117,8 @@ class Dictionary:
         else:
             print("Element not found")
     
-    def display():
-        
+    def display(self):
+        for i in self.elem
 
 
 
