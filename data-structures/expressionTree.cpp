@@ -83,7 +83,7 @@ int expressiontree :: priority(char ch)
 		case '^':	
 			return 2;			
 		default:
-
+			return -1;
 	}
 }
 
