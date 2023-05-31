@@ -15,14 +15,14 @@ class node
 		left = NULL;
 		right = NULL;
 	}
-	
+
 	friend class Dictionary;
 };
 
 class Dictionary
 {
 public:
-	node *root, *q;	//q is parent here
+	node *root, *q;	
 	Dictionary()
 	{
 		root = NULL;
