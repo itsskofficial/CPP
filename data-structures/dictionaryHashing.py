@@ -110,7 +110,7 @@ class Dictionary:
         flag=0
         for i in range(len(self.elements)):
             if self.elements[i]['key']==key:
-                
+                flag=1
 
 
 choice=0
