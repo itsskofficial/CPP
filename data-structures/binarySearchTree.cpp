@@ -37,7 +37,7 @@ public:
  {
     if( root == NULL )
     {
-    root = createNode(x);
+      root = createNode(x);
     }
     else if( root->data > x)
     {
@@ -54,12 +54,12 @@ public:
  {
     cout<<"Enter number of elements in the BST : ";
     cin>>n;
-    
+
     for(int i = 0 ; i < n ; i++)
     {
-    cout<<"Data = ";
-    cin>>x;
-    root = insert(root , x);
+      cout<<"Data = ";
+      cin>>x;
+      root = insert(root , x);
     }
  }
  
