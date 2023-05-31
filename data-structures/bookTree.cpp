@@ -61,8 +61,6 @@ void BookTree::display(node*root)
             for (int j=0; j<root->child[i]->child_count; j++)
             {
                 cout<<"\nThe section"<<j+1<<"name:"<<root->child[i]->child[j]->label;
-            
-                
                 for (int k=0; k<root->child[i]->child[j]->child_count; k++)
                 {
                     cout<<"\nThe sub-sections"<<i+1<<"name:"<<root->child[i]->child[j]->label;
