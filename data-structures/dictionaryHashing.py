@@ -9,7 +9,7 @@ class Dictionary:
         else:
             while(self.elements[pos]['key']==0):
                 pos=pos+1
-            self.elements[pos]
+            self.elements[pos]=ele
 
 
         
