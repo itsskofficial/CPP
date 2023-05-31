@@ -21,7 +21,7 @@ class Employee
     public:
         Employee();
         void create_records();
-        void Display();
+        void display_records();
         void update();
         void delete();
         void append();
@@ -64,7 +64,7 @@ void Employee::create_records()
     indexfile.close();
 }
 
-void Employee::Display()
+void Employee::display_records()
 {
     fstream seqfile;
     fstream indexfile;
@@ -300,7 +300,7 @@ int main()
 
             case 2:
             {
-                list.Display();
+                list.display_records();
                 break;
             }
 
