@@ -7,7 +7,6 @@ struct node
     int child_count;
     struct node* child[10];
 } *root;
-
 class BookTree
 {
     public:
