@@ -21,7 +21,7 @@ class Dictionary:
 
 
 choice=0
-Dictionary d;
+d=Dictionary()
 while choice!=4:
     choice=int(input("What do you want to do?\n1. Insert a word\n2. Delete a word\n3. Find a word\n4. Exit\nEnter option number: "))
     if choice==1:
