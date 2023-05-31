@@ -11,7 +11,7 @@ class Dictionary:
             while(self.elements[current]['key']==0):
                 current=current+1
             self.elements[pos]=ele
-            chain[pos]=current
+            self.chain[pos]=current
 
 
         
