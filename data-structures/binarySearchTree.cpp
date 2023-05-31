@@ -79,7 +79,7 @@ public:
         this->search(root->right , x);
       }
     }
-      
+
     return 0;
  }
  
@@ -164,23 +164,23 @@ public:
 
 int main()
 {
- BST obj;
- obj.input();
- obj.display();
- int a = 0;
- a = obj.search(obj.root,10);
- if( a == 0)
- {
-  cout<<"ELEMENT NOT FOUND"<<endl;
- }
- else
-  cout<<"ELEMENT FOUND"<<endl;                                                                                                       
- cout<<a<<endl;
- obj.minvalue(obj.root);
- obj.mirror(obj.root);
- obj.inorder(obj.root);
- //int d ;
- cout<<endl<<obj.depth(obj.root);
- //cout<<endl<<d<<endl;
- return 0;
+  BST obj;
+  obj.input();
+  obj.display();
+  int a = 0;
+  a = obj.search(obj.root,10);
+  if( a == 0)
+  {
+    cout<<"ELEMENT NOT FOUND"<<endl;
+  }
+  else
+    cout<<"ELEMENT FOUND"<<endl;                                                                                                       
+  cout<<a<<endl;
+  obj.minvalue(obj.root);
+  obj.mirror(obj.root);
+  obj.inorder(obj.root);
+  //int d ;
+  cout<<endl<<obj.depth(obj.root);
+  //cout<<endl<<d<<endl;
+  return 0;
 }  
