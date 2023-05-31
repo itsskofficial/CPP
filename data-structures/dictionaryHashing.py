@@ -1,6 +1,8 @@
 class Dictionary:
-    elements=[{'key':0, 'value':0 } * 10]
-    chain=[-1 * 10]
+    def __init__(self):
+        
+        elements=[{'key':0, 'value':0 } * 10]
+        chain=[-1 * 10]
     
     def insert(self,ele):
         pos=ele['key']%len(self.elements)
