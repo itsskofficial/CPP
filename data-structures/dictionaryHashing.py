@@ -87,7 +87,7 @@ class Dictionary:
                 if self.elements[i]['key']==key:
                     self.elements[i]['key']=0
                     self.elements[i]['value']=0
-                    
+                
 
 choice=0
 d=Dictionary()
