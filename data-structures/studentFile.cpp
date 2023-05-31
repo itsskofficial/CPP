@@ -221,7 +221,7 @@ int main()
 
         switch(ch)
         { 
-            case 1:
+            case 2:
             { 
                 object.read();
                 break; 
