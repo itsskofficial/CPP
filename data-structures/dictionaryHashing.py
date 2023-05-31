@@ -9,7 +9,7 @@ class Dictionary:
 
 choice=0
 print("What do you want to do?")
-
+print("1.Insert a")
 
 while choice!=4:
 
