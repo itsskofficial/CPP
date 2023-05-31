@@ -23,7 +23,7 @@ class Employee
         void Create();
         void Display();
         void Update();
-        void Delete();
+        void delete_record();
         void append();
         void search();
 };
@@ -147,7 +147,7 @@ void Employee::Update()
     indexfile.close();
 }
 
-void Employee::Delete()
+void Employee::delete_record()
 {
     int id,pos;
     cout<<"\n For deletion,";
@@ -312,7 +312,7 @@ int main()
 
             case 4:
             {
-                list.Delete();
+                list.delete_record();
                 break;
             }
 
