@@ -83,11 +83,13 @@ class Dictionary:
                                     self.chain[self.chain_index[pos]]=current
                                     self.chain_index[pos]=current
         def delete(self,key):
+            flag=0
             for i in range(len(self.elements)):
                 if self.elements[i]['key']==key:
                     self.elements[i]['key']=0
                     self.elements[i]['value']=0
-                    
+                    flag=1
+
 
 choice=0
 d=Dictionary()
