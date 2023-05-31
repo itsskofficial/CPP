@@ -1,8 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class prims{
-	int graph[100][100], nodes;
+class prims
+{
+	int graph[100][100], offices;
 	public:
 		void createGraph();
 		void primsAlgo();
@@ -10,16 +11,16 @@ class prims{
 void prims::createGraph(){
 	int i,j;
 	cout<<"Enter total offices: ";
-	cin>>nodes;
-	for (i=0; i<nodes; i++){
-		for (j = i; j<nodes; j++){
+	cin>>offices;
+	for (i=0; i<offices; i++){
+		for (j = i; j<offices; j++){
 			cout<<"\nEnter distance between "<< i << " and "<< j <<": ";
 			cin>>graph[i][j];
 			graph[j][i]=graph[i][j];
 		}
 	}
-	for (i=0; i<nodes; i++){
-		for (j=0; j<nodes; j++){
+	for (i=0; i<offices; i++){
+		for (j=0; j<offices; j++){
 			if (graph[i][j]== 0)
 				graph[i][j]=INT_MAX;
 		}
@@ -29,14 +30,14 @@ void prims::primsAlgo(){
 	int visited[ROW], i, j, ne=0;
 	int min = 0, x, y;
 	int cost = 0;
-	for (i=0; i< nodes; i++)
+	for (i=0; i< offices; i++)
 		visited[i] = 0;
 	visited[0] = 2;
-		while(ne<nodes-1){
+		while(ne<offices-1){
 			min = INT_MAX ;
-			for (i=0;i<nodes;i++){
+			for (i=0;i<offices;i++){
 				if (visited[i] == 2){
-					for (j=0;j<nodes;j++){
+					for (j=0;j<offices;j++){
 						if (visited[j] == 0){
 							if (min>graph[i][j]){
 								min=graph[i][j];
