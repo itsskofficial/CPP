@@ -22,7 +22,8 @@ class Dictionary:
                     while(self.elements[current]['key']!=0 or count!=len(self.elements)):
                         current=(current+1)%len(self.elements)
                         count+=1
-
+                    if count==len(self.elements):
+                            print("Hash table full, operation terminated")
                     self.elements[current]=ele
 
                     if self.chain[pos]==-1:
