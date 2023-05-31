@@ -28,7 +28,7 @@ class Employee
         void search_record();
 };
 
-Employee::Employee()//constructor 
+Employee::Employee()
 {
    strcpy(records.name,"");
 }
