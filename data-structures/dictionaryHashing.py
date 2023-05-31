@@ -12,7 +12,7 @@ class Dictionary:
                 current=current+1
             self.elements[pos]=ele
             self.chain[pos]=current
-
+            
 
         
 
