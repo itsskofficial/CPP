@@ -11,7 +11,7 @@ struct node
 class BookTree
 {
     public:
-        void create_tree();
+        void create();
         void display(node*root);
         BookTree()
         {
@@ -19,7 +19,7 @@ class BookTree
         }
 };
 
-void BookTree::create_tree()
+void BookTree::create()
 {
     int i,j,k;
     root=new node;
@@ -87,7 +87,7 @@ int main(){
         switch(choice)
         {
             case 1:
-            gt.create_tree();
+            gt.create();
             break;
 
             case 2:
