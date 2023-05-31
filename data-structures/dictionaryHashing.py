@@ -99,7 +99,7 @@ class Dictionary:
                     if i in self.chain_index:
                         self.chain_index[self.chain_index.index(i)]==prev
                 else:
-                    
+                    se
                 flag=1
         if flag==1:
             print("Element deleted successfully")
