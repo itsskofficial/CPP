@@ -89,6 +89,7 @@ class Dictionary:
                     self.elements[i]['key']=0
                     self.elements[i]['value']=0
                     flag=1
+            if flag==1:
 
 
 choice=0
