@@ -33,6 +33,6 @@ while choice!=4:
         value=int(input("Enter value: "))
         ele={'key':key,'value':value}
         chain_type=int(input("Enter 0 for chaining without replacement and 1 for chaining with replacement: "))
-        d.insert(ele)
+        d.insert(ele,chain_type)
         
 
