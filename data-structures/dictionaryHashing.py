@@ -2,12 +2,13 @@ class Dictionary:
     elements=[{
     'key':0,
     'value':0
-}]
+} * 10]
+    
     chain=[]
     
     def insert(self,ele):
         pos=ele['key']%len(self.elements)
-        
+
         
 
 
