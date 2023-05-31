@@ -89,7 +89,8 @@ class Dictionary:
                 temp=self.elements[i]
                 self.elements[i]['key']=0
                 self.elements[i]['value']=0
-                self.chain[i]=-1
+                if self.chain[i]=-1:
+                
                 for j in self.chain:
                     if j==i:
                         self.chain_index[temp['key']%len(self.elements)]==j
