@@ -87,12 +87,6 @@ class Dictionary:
 
     
 
-            
-
-        
-
-
-
 choice=0
 d=Dictionary()
 while choice!=4:
