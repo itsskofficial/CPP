@@ -86,15 +86,15 @@ int main()
         {
             case 1:
             {
-                
-            }
                 bt.create();
                 break;
-
+            }
+                
             case 2:
+            {
                 bt.display(root);
                 break;
-
+            
             case 3:
             exit(1);
 
