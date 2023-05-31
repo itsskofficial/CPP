@@ -68,7 +68,6 @@ public:
     {
       if(root->data == x)
       {
-        cout<<":-- RECORD FOUND --:"<<endl;
         return 1;
       }
       else if(x < root->data)
