@@ -4,7 +4,7 @@ using namespace std;
 #define max 30
 
 class node
-{
+{ 
 
 	public:
 		char data;
