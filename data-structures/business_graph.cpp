@@ -2,7 +2,7 @@
 using namespace std;
 #define ROW 10
 #define COL 10
-#define infi 999
+#define infi INT_MAX
 
 class prims{
 	int graph[ROW][COL], nodes;
