@@ -2,11 +2,11 @@
 #include<math.h>
 using namespace std;
 
-struct Bstnode
+struct node
 {
  int data;
- Bstnode *left = NULL;
- Bstnode *right = NULL;
+ node *left = NULL;
+ node *right = NULL;
  
 };
 
@@ -18,22 +18,22 @@ class Btree
   int flag;
   
 public:
-  Bstnode * root;
+  node * root;
  Btree()
  {
   root = NULL;
  }
  
- Bstnode *GetNewNode(int x)
+ node *GetNewNode(int x)
  {
-  Bstnode * ptr = new Bstnode();
+  node * ptr = new node();
   ptr->data = x;
   ptr->left = NULL;
   ptr->right = NULL;
   return ptr;
  }
  
- Bstnode *insert( Bstnode *root , int x)
+ node *insert( node *root , int x)
  {
   if( root == NULL )
   {
@@ -62,7 +62,7 @@ public:
   }
  }
  
- int search(Bstnode *root ,int x)
+ int search(node *root ,int x)
  {
   if( root != NULL)
   {
@@ -88,7 +88,7 @@ public:
  }
  
  
- void minvalue(Bstnode *root)
+ void minvalue(node *root)
  {
   while(root->left != NULL)
   {
@@ -97,7 +97,7 @@ public:
   cout<<"MINIMUM VALUE = "<<root->data<<endl;
  }
    
- void mirror(Bstnode *root)
+ void mirror(node *root)
  {
   if(root == NULL)
   {
@@ -105,7 +105,7 @@ public:
   }
   else
   {
-   Bstnode *ptr;
+   node *ptr;
    mirror(root->left);
    mirror(root->right);
    ptr = root->left;
@@ -128,7 +128,7 @@ public:
   
  }
  
- void inorder(Bstnode *root)
+ void inorder(node *root)
  {
   if(root != NULL)
   {
@@ -138,7 +138,7 @@ public:
   }
  } 
  
- void postorder(Bstnode *temp)
+ void postorder(node *temp)
  {
   if(temp != NULL)
   {
@@ -148,7 +148,7 @@ public:
   }
  }
  
- void preorder(Bstnode *temp)
+ void preorder(node *temp)
  {
   if(temp != NULL)
   {
@@ -158,7 +158,7 @@ public:
   }
  } 
  
- int depth(Bstnode *root)
+ int depth(node *root)
  {
   if(root == NULL) 
    return 0;
