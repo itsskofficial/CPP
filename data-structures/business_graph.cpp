@@ -11,7 +11,6 @@ void prims::createGraph(){
 	int i,j;
 	cout<<"Enter total offices: ";
 	cin>>nodes;
-	cout<<"\nEnter adjacency matrix: \n";
 	for (i=0; i<nodes; i++){
 		for (j = i; j<nodes; j++){
 			cout<<"\nEnter distance between "<< i << " and "<< j <<": ";
