@@ -9,7 +9,8 @@ class Business
 		void primsAlgo();
 };
 
-void Business::createGraph(){
+void Business::createGraph()
+{
 	int i,j;
 	cout<<"Enter total offices: ";
 	cin>>offices;
