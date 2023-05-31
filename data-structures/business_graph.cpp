@@ -1,10 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ROW 10
-#define COL 10
 
 class prims{
-	int graph[][COL], nodes;
+	int graph[100][100], nodes;
 	public:
 		void createGraph();
 		void primsAlgo();
