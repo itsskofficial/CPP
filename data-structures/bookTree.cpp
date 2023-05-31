@@ -52,7 +52,6 @@ void BookTree::create()
 
 void BookTree::display(node*root)
 {
-    int i,j,k;
     if(root!=NULL)
     {
         
