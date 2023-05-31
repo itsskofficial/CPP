@@ -115,10 +115,10 @@ public:
  
  void display()
  {
-    cout<<endl<<"--- INORDER TRAVERSAL ---"<<endl;
+    cout<<endl<<"--- Inorder Traversal ---"<<endl;
     inorder(root);
     cout<<endl;
-    cout<<endl<<"--- POSTORDER TRAVERSAL ---"<<endl;
+    cout<<endl<<"--- Postorder Traversal ---"<<endl;
     postorder(root);
     cout<<endl;
     cout<<endl<<"--- PREORDER TRAVERSAL ---"<<endl;
