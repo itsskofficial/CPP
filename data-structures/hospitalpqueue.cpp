@@ -24,13 +24,13 @@ void vline(char ch)
 
 void insert(int id,int age,char patient_name[],int priority)
 {
-    node *temp,*ptr;
+    node *temp, *ptr;
     temp= new node;
     temp->id=id;
     temp->age=age;
     strcpy(temp->patient_name,patient_name);
     temp->priority=priority;
-    
+
     if (front == NULL || priority < front->priority) 
     {
         temp->next = front;
