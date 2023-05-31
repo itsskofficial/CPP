@@ -21,6 +21,7 @@ class node
 
 class Dictionary
 {
+	
 public:
 	node *root, *parent;	
 	Dictionary()
