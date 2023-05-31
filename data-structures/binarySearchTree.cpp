@@ -164,23 +164,21 @@ public:
 
 int main()
 {
-  BST obj;
-  obj.input();
-  obj.display();
+  BST t;
+  t.input();
+  t.display();
   int a = 0;
-  a = obj.search(obj.root,10);
+  a = t.search(t.root,10);
   if( a == 0)
   {
     cout<<"Element not found"<<endl;
   }
   else
     cout<<"Element found"<<endl;    
-                                                                                                       
-  obj.minvalue(obj.root);
-  obj.mirror(obj.root);
-  obj.inorder(obj.root);
-  //int d ;
-  cout<<endl<<obj.depth(obj.root);
-  //cout<<endl<<d<<endl;
+
+  t.minvalue(t.root);
+  t.mirror(t.root);
+  t.inorder(t.root);
+  cout<<endl<<t.depth(t.root);
   return 0;
 }  
