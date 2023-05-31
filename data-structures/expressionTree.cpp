@@ -76,12 +76,14 @@ int expressiontree :: priority(char ch)
 	{
 		case '+': 
 		case '-':
-				return 0;
+			return 0;
 		case '*':
 		case '/':	
-				return 1;
+			return 1;
 		case '^':	
-				return 2;			
+			return 2;			
+		default:
+
 	}
 }
 
