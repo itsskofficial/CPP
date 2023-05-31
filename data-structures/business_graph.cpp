@@ -14,8 +14,11 @@ void Business::createGraph()
 	int i,j;
 	cout<<"Enter total offices: ";
 	cin>>offices;
-	for (i=0; i<offices; i++){
-		for (j = i; j<offices; j++){
+
+	for (i=0; i<offices; i++)
+	{
+		for (j = i; j<offices; j++)
+		{
 			cout<<"\nEnter distance between "<< i << " and "<< j <<": ";
 			cin>>graph[i][j];
 			graph[j][i]=graph[i][j];
