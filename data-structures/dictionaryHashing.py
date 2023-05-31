@@ -118,7 +118,7 @@ class Dictionary:
             print("Element not found")
     
     def display(self):
-        print()
+        print("Element\tChain")
         for i in range(len(self.elements)):
             print(f"")
 
