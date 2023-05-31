@@ -120,7 +120,7 @@ class Dictionary:
     def display(self):
         print("\nElement\tChain")
         for i in range(len(self.elements)):
-            print(f"\n")
+            print(f"\n{self.eleme}")
 
 
 
