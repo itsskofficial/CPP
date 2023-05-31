@@ -42,7 +42,6 @@ class Dictionary:
                     if count==len(self.elements):
                             print("Hash table full, operation terminated")
                     else:
-    
                         if self.elements[current]['key']==0:
                             self.elements[current]=ele
 
