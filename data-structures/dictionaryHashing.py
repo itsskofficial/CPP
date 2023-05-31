@@ -34,8 +34,8 @@ class Dictionary:
                         self.chain[pos]=current
                         while(self.elements[current]['key']==0):
                             current=(current+1)%len(self.elements)
-                    self.elements[current]=ele
-                    self.chain[pos]=current
+                        self.elements[current]=ele
+                        self.chain[pos]=current
 
 
 
