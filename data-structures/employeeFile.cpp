@@ -263,7 +263,7 @@ void Employee::search_record()
     
     else //emp_id=desired record’s id
     {
-        cout<<"\n The record is present in the file and it is...";
+        cout<<"\n The record is present in the file...";
         cout<<"\n Name: "<<records.name;
         cout<<"\n Emp_ID: "<<records.emp_id;
         cout<<"\n Salary: "<<records.salary;
