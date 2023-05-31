@@ -90,6 +90,7 @@ class Dictionary:
                     self.elements[i]['value']=0
                     flag=1
             if flag==1:
+                print("Element deleted successfully")
 
 
 choice=0
