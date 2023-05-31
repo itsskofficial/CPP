@@ -4,7 +4,7 @@ using namespace std;
 #define COL 10
 
 class prims{
-	int graph[ROW][COL], nodes;
+	int graph[][COL], nodes;
 	public:
 		void createGraph();
 		void primsAlgo();
