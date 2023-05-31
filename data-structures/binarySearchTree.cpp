@@ -121,39 +121,39 @@ public:
     cout<<endl<<"--- Postorder Traversal ---"<<endl;
     postorder(root);
     cout<<endl;
-    cout<<endl<<"--- PREORDER TRAVERSAL ---"<<endl;
+    cout<<endl<<"--- Preorder Traversal ---"<<endl;
     preorder(root);
     cout<<endl;
  }
  
  void inorder(node *root)
  {
-  if(root != NULL)
-  {
-   inorder(root->left);
-   cout<<root->data<<"  ";
-   inorder(root->right);
-  }
+    if(root != NULL)
+    {
+    inorder(root->left);
+    cout<<root->data<<"  ";
+    inorder(root->right);
+    }
  } 
  
  void postorder(node *temp)
  {
-  if(temp != NULL)
-  {
-   postorder(temp->left);
-   postorder(temp->right);
-   cout<<temp->data<<" ";
-  }
+    if(temp != NULL)
+    {
+    postorder(temp->left);
+    postorder(temp->right);
+    cout<<temp->data<<" ";
+    }
  }
  
  void preorder(node *temp)
  {
-  if(temp != NULL)
-  {
-   cout<<temp->data<<" ";
-   preorder(temp->left);
-   preorder(temp->right);
-  }
+    if(temp != NULL)
+    {
+    cout<<temp->data<<" ";
+    preorder(temp->left);
+    preorder(temp->right);
+    }
  } 
  
  int depth(node *root)
