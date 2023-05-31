@@ -32,7 +32,7 @@ class Dictionary:
                         temp=self.elements[current]
                         self.elements[current]=ele
                         self.chain[pos]=current
-                        while(self.elements[current]['key']!=0 or count):
+                        while(self.elements[current]['key']!=0 or count==len(self.elements)):
                             current=(current+1)%len(self.elements)
                         self.elements[current]=ele
                         self.chain[pos]=current
