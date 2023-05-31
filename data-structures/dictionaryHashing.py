@@ -4,12 +4,12 @@ word = {
 }
 
 class Dictionary:
-    elements=[]
+    elements=[{}]
     chain=[]
     
     def insert(ele):
         pos=ele%10
-        
+
 
 
 
