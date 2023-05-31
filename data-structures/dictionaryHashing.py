@@ -27,6 +27,8 @@ while choice!=4:
     choice=int(input("What do you want to do?\n1. Insert a word\n2. Delete a word\n3. Find a word\n4. Exit\nEnter option number: "))
     if choice==1:
         key=int(input("Enter key: "))
+        value=int(input("Enter value: "))
+        
         chain_type=int(input(""))
         
 
