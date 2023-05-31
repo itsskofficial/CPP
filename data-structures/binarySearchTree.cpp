@@ -18,10 +18,10 @@ class BSTree
   
 public:
   node * root;
- BSTree()
- {
-  root = NULL;
- }
+  BSTree()
+  {
+    root = NULL;
+  }
  
  node *GetNewNode(int x)
  {
