@@ -24,8 +24,11 @@ void Business::createGraph()
 			graph[j][i]=graph[i][j];
 		}
 	}
-	for (i=0; i<offices; i++){
-		for (j=0; j<offices; j++){
+
+	for (i=0; i<offices; i++)
+	{
+		for (j=0; j<offices; j++)
+		{
 			if (graph[i][j]== 0)
 				graph[i][j]=INT_MAX;
 		}
