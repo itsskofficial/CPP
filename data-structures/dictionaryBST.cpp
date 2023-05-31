@@ -135,9 +135,9 @@ void Dictionary::deleteWord(node* root, string key)
 			root = root->right;
 		}
 
-		else if(key == root->word)				//word found
+		else if(key == root->word)				
 		{
-			if(root->left==NULL && root->right==NULL)	//no child
+			if(root->left==NULL && root->right==NULL)	
 			{
 				if(parent->left==root)
 				{
