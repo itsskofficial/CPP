@@ -4,7 +4,7 @@ using namespace std;
 struct node
 {
     char label[10];
-    int ch_count;
+    int child_count;
     struct node*child[10];
 }* root;
 
@@ -26,22 +26,22 @@ void BookTree::create()
     cout<<"Enter book name:";
     cin>>root->label;
     cout<<"Enter number of chapters:";
-    cin>>root->ch_count;
-    for (int i=0; i<root->ch_count; i++)
+    cin>>root->child_count;
+    for (int i=0; i<root->child_count; i++)
     {
         root->child[i]=new node;
         cout<<"Enter name of chapter"<<i+1<<":";
         cin>>root->child[i]->label;
         cout<<"Enter number of sections:";
-        cin>>root->child[i]->ch_count;
-        for (int j=0; j<root->child[i]->ch_count; j++)
+        cin>>root->child[i]->child_count;
+        for (int j=0; j<root->child[i]->child_count; j++)
         {
             root->child[i]->child[j]=new node;
             cout<<"Enter name of Section:"<<j+1<<":";
             cin>>root->child[i]->child[j]->label;
             cout<<"Enter number of sub-sections:";
-            cin>>root->child[i]->child[j]->ch_count;
-            for (int k=0; k<root->child[i]->child[j]->ch_count; k++)
+            cin>>root->child[i]->child[j]->child_count;
+            for (int k=0; k<root->child[i]->child[j]->child_count; k++)
             {
                 root->child[i]->child[j]->child[k]=new node;
                 cout<<"Enter name of Sub-Section:"<<k+1<<":";
@@ -58,15 +58,15 @@ void BookTree::display(node*root)
     {
         
         cout<<"\nName of the book:"<<root->label;
-        for (int i=0; i<root->ch_count; i++)
+        for (int i=0; i<root->child_count; i++)
         {
             cout<<"\nThe chapter"<<i+1<<"name:"<<root->child[i]->label;
-            for (int j=0; j<root->child[i]->ch_count; j++)
+            for (int j=0; j<root->child[i]->child_count; j++)
             {
                 cout<<"\nThe section"<<j+1<<"name:"<<root->child[i]->child[j]->label;
             
                 
-                for (int k=0; k<root->child[i]->child[j]->ch_count; k++)
+                for (int k=0; k<root->child[i]->child[j]->child_count; k++)
                 {
                     cout<<"\nThe sub-sections"<<i+1<<"name:"<<root->child[i]->child[j]->label;
                 }
