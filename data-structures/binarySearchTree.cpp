@@ -174,7 +174,7 @@ int main()
     cout<<"Element not found"<<endl;
   }
   else
-    cout<<"ELEMENT FOUND"<<endl;                                                                                                       
+    cout<<"Element found"<<endl;                                                                                                       
   cout<<a<<endl;
   obj.minvalue(obj.root);
   obj.mirror(obj.root);
