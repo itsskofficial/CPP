@@ -29,7 +29,7 @@ public:
 		parent = NULL;
 	}
 
-	void insert(node*, string, string);
+	void insertWord(node*, string, string);
 	void display_ascending(node *);
 	void display_descending(node *);
 	void comparisons(node*, string);
@@ -38,19 +38,19 @@ public:
 	node* min_node(node *);
 };
 
-void Dictionary::insert(node* p, string key, string keyMeaning)
+void Dictionary::insertWord(node* p, string key, string keyMeaning)
 {
 	if(key < p->word)
 	{
 		if(p->left != NULL)
-			insert(p->left, key, keyMeaning);
+			insertWord(p->left, key, keyMeaning);
 		else
 			p->left = new node(key, keyMeaning);
 	}
 	else if(key > p->word)
 	{
 		if(p->right != NULL)
-			insert(p->right, key, keyMeaning);
+			insertWord(p->right, key, keyMeaning);
 		else
 			p->right = new node(key, keyMeaning);
 	}
@@ -244,7 +244,7 @@ int main()
                     if(d1.root == NULL)
                         d1. root = new node(newWord, newMeaning);
                     else
-                        d1.insert(d1.root, newWord, newMeaning);
+                        d1.insertWord(d1.root, newWord, newMeaning);
                 }
                 break;
             }
