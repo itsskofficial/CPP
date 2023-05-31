@@ -118,7 +118,7 @@ class Dictionary:
             print("Element not found")
     
     def display(self):
-        print("\n\tChain")
+        print("\nElement\tChain")
         for i in range(len(self.elements)):
             print(f"\n{self.elements[i]['key']}")
 
