@@ -6,7 +6,7 @@ class Business
 	int graph[100][100], offices;
 	public:
 		void createGraph();
-		void primsAlgo();
+		void findShortestPath();
 };
 
 void Business::createGraph()
@@ -28,7 +28,7 @@ void Business::createGraph()
 		}
 	}
 }
-void Business::primsAlgo(){
+void Business::findShortestPath(){
 	int visited[ROW], i, j, ne=0;
 	int min = 0, x, y;
 	int cost = 0;
@@ -64,6 +64,6 @@ int main()
 	Business mst;
 	cout << "\n--------Prims Algorithm to connect several offices------\n";
 	mst.createGraph();
-	mst.primsAlgo();
+	mst.findShortestPath();
 	return 0;
 }
