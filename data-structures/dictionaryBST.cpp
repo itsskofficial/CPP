@@ -24,7 +24,7 @@ class Dictionary
 
 public:
 	node *root, *parent;
-		
+
 	Dictionary()
 	{
 		root = NULL;
@@ -40,57 +40,57 @@ public:
 	node* min_node(node *);
 };
 
-void Dictionary::insertWord(node* p, string key, string keyMeaning)
+void Dictionary::insertWord(node* root, string key, string keyMeaning)
 {
-	if(key < p->word)
+	if(key < root->word)
 	{
-		if(p->left != NULL)
-			insertWord(p->left, key, keyMeaning);
+		if(root->left != NULL)
+			insertWord(root->left, key, keyMeaning);
 		else
-			p->left = new node(key, keyMeaning);
+			root->left = new node(key, keyMeaning);
 	}
-	else if(key > p->word)
+	else if(key > root->word)
 	{
-		if(p->right != NULL)
-			insertWord(p->right, key, keyMeaning);
+		if(root->right != NULL)
+			insertWord(root->right, key, keyMeaning);
 		else
-			p->right = new node(key, keyMeaning);
+			root->right = new node(key, keyMeaning);
 	}
 }
 
-void Dictionary::display_ascending(node *p)		//inorder
+void Dictionary::display_ascending(node *root)		//inorder
 {
-	if(p->left!=NULL)
-		display_ascending(p->left);
-	cout<<"\n" << p->word<<" \t" << p->meaning;
-	if(p->right!=NULL)
-		display_ascending(p->right);
+	if(root->left!=NULL)
+		display_ascending(root->left);
+	cout<<"\n" << root->word<<" \t" << root->meaning;
+	if(root->right!=NULL)
+		display_ascending(root->right);
 }
 
-void Dictionary::display_descending(node *p)
+void Dictionary::display_descending(node *root)
 {
-	if(p->right!=NULL)
-			display_descending(p->right);
-	cout<<"\n" << p->word<<" \t" << p->meaning;
-	if(p->left!=NULL)
-		display_descending(p->left);
+	if(root->right!=NULL)
+			display_descending(root->right);
+	cout<<"\n" << root->word<<" \t" << root->meaning;
+	if(root->left!=NULL)
+		display_descending(root->left);
 }
 
-void Dictionary::comparisons(node* p, string key)
+void Dictionary::comparisons(node* root, string key)
 {
 	static int count = 0;
-	while(p!=NULL)
+	while(root!=NULL)
 	{
-		if(key < p->word)
+		if(key < root->word)
 		{
 			count++;
-			p = p->left;
+			root = root->left;
 		}
 
-		else if(key > p->word)
+		else if(key > root->word)
 		{
 			count++;
-			p = p->right;
+			root = root->right;
 		}
 
 		else if(key == p->word)
@@ -105,86 +105,86 @@ void Dictionary::comparisons(node* p, string key)
 
 node* Dictionary::min_node(node *p)
 {
-	while(p->left != NULL)
+	while(root->left != NULL)
 	{
-		parent = p;
-		p = p->left;
+		parent = root;
+		root = root->left;
 	}
-	return p;
+	return root;
 }
 
-void Dictionary::deleteWord(node* p, string key)
+void Dictionary::deleteWord(node* root, string key)
 {
 	node *s;
-	while(p!=NULL)							//searching for word
+	while(root!=NULL)							//searching for word
 	{
-		if(key < p->word)
+		if(key < root->word)
 		{
-			parent = p;
-			p = p->left;
+			parent = root;
+			root = root->left;
 		}
 
-		else if(key > p->word)
+		else if(key > root->word)
 		{
 			parent=p;
-			p = p->right;
+			p = root->right;
 		}
 
-		else if(key == p->word)				//word found
+		else if(key == root->word)				//word found
 		{
-			if(p->left==NULL && p->right==NULL)	//no child
+			if(root->left==NULL && root->right==NULL)	//no child
 			{
-				if(parent->left==p)
+				if(parent->left==root)
 				{
-					delete p;
+					delete root;
 					parent->left=NULL;
 				}
 
-				if(parent->right==p)
+				if(parent->right==root)
 				{
-					delete p;
+					delete root;
 					parent->right=NULL;
 				}
 
 			}
 
-			if(p->right!=NULL && p->left==NULL)	//right child only
+			if(root->right!=NULL && root->left==NULL)	//right child only
 			{
-				if(parent->right == p)
+				if(parent->right == root)
 				{
-					parent->right = p->right;
-					delete p;
+					parent->right = root->right;
+					delete root;
 				}
 
-				else if(parent->left == p)
+				else if(parent->left == root)
 				{
-					parent->left = p->right;
-					delete p;
+					parent->left = root->right;
+					delete root;
 				}
 
 			}
 
-			else if(p->left!=NULL && p->right==NULL)	//left child only
+			else if(root->left!=NULL && root->right==NULL)	//left child only
 			{
-				if(parent->right == p)
+				if(parent->right == root)
 				{
-					parent->right = p->left;
-					delete p;
+					parent->right = root->left;
+					delete root;
 				}
 
-				else if(parent->left == p)
+				else if(parent->left == root)
 				{
-					parent->left=p->left;
-					delete p;
+					parent->left=root->left;
+					delete root;
 				}
 
 			}
 
-			else if(p->left!=NULL && p->right!=NULL)
+			else if(root->left!=NULL && root->right!=NULL)
 			{
-				s = min_node(p->right);
-				p->word = s->word;
-				p->meaning = s->meaning;
+				s = min_node(root->right);
+				root->word = s->word;
+				root->meaning = s->meaning;
 				deleteWord(s, s->word);
 
 			}
@@ -193,20 +193,20 @@ void Dictionary::deleteWord(node* p, string key)
 	cout<<"\nWord NOT found!";
 }
 
-void Dictionary::updateWord(node* p, string key)
+void Dictionary::updateWord(node* root, string key)
 {
-	while(p!=NULL)
+	while(root!=NULL)
 	{
-		if(key < p->word)
-			p = p->left;
+		if(key < root->word)
+			root = root->left;
 
-		else if(key > p->word)
-			p = p->right;
+		else if(key > root->word)
+			root = root->right;
 
-		else if(key == p->word)
+		else if(key == root->word)
 		{
 			cout<<"\nEnter its new meaning: ";
-			cin>>p->meaning;
+			cin>>root->meaning;
 			return;
 		}
 	}
