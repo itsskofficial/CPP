@@ -22,7 +22,7 @@ class Employee
         Employee();
         void Create();
         void Display();
-        void Update();
+        void update();
         void delete();
         void append();
         void search();
@@ -97,7 +97,7 @@ void Employee::Display()
     indexfile.close();
 }
 
-void Employee::Update()
+void Employee::update()
 {
     int pos,id;
     char New_name[10];
@@ -306,7 +306,7 @@ int main()
 
             case 3:
             {
-                list.Update();
+                list.update();
                 break;
             }
 
