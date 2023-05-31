@@ -4,8 +4,9 @@ class Dictionary:
     
     def insert(self,ele):
         pos=ele['key']%len(self.elements)
-        if elements[pos]['key']==0:
-            elements[pos]['key']=
+        if self.elements[pos]['key']==0:
+            self.elements[pos]=ele
+
         
 
 
