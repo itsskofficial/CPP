@@ -58,7 +58,7 @@ class stack
 			stk[++top]= temp;
 		}
 
-		node *pop()
+		node* pop()
 		{
 			return(stk[top--]);
 		}
