@@ -52,7 +52,13 @@ public:
  
  void input()
  {
-  
+  cout<<"ENTER NUMBER OF ELEMENTS IN THE BST : ";
+  cin>>n;
+  for(int i = 0 ; i < n ; i++)
+  {
+   cout<<"NUMBER = ";
+   cin>>x;
+   root = insert(root , x);
   }
  }
  
