@@ -42,13 +42,19 @@ void Business::findShortestPath()
 	for (i=0; i< offices; i++)
 		office_status[i] = 0;
 	office_status[0] = 2;
-		while(k<offices-1){
+		while(k<offices-1)
+		{
 			min = INT_MAX ;
-			for (i=0;i<offices;i++){
-				if (office_status[i] == 2){
-					for (j=0;j<offices;j++){
-						if (office_status[j] == 0){
-							if (min>graph[i][j]){
+			for (i=0;i<offices;i++)
+			{
+				if (office_status[i] == 2)
+				{
+					for (j=0;j<offices;j++)
+					{
+						if (office_status[j] == 0)
+						{
+							if (min>graph[i][j])
+							{
 								min=graph[i][j];
 								x=i;
 								y=j;
