@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define current
+#define C
 
 class Business
 {
