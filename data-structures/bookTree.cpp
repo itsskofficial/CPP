@@ -21,7 +21,6 @@ class BookTree
 
 void BookTree::create()
 {
-    int i,j,k;
     root=new node;
     cout<<"Enter book name:";
     cin>>root->label;
