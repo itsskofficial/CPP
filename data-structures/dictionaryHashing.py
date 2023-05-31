@@ -86,6 +86,7 @@ class Dictionary:
             for i in range(len(self.elements)):
                 if self.elements[i]['key']==key:
                     self.elements[i]['key']=0
+                    self.elements[i]['value']=0
                     
 
 choice=0
