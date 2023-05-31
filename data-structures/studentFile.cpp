@@ -221,12 +221,7 @@ int main()
 
         switch(ch)
         { 
-            case 2:
-            { 
-                object.read();
-                break; 
-            }
-            case 2:
+             case 1:
             { 
                 cout<<"\nEnter a record to be inserted(roll no,name,marks) : ";
                 cin>>rec.rollno>>rec.name>>rec.marks;
@@ -234,6 +229,12 @@ int main()
                 break;
             }
 
+            case 2:
+            { 
+                object.read();
+                break; 
+            }
+    
             case 3:
             { 
                 cout<<"\nEnter the roll no.:";
