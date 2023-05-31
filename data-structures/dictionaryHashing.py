@@ -82,7 +82,7 @@ class Dictionary:
                                 else:
                                     self.chain[self.chain_index[pos]]=current
                                     self.chain_index[pos]=current
-            
+        def delete()
 
 choice=0
 d=Dictionary()
