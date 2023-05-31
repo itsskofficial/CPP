@@ -15,8 +15,9 @@ class Dictionary:
                 self.elements[current]=ele
                 self.chain[pos]=current
             else:
-                if self.elements[pos]['key']%len(self.elements):
+                if self.elements[pos]['key']%len(self.elements)==pos:
                     
+
     
 
             
