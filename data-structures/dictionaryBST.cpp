@@ -21,9 +21,10 @@ class node
 
 class Dictionary
 {
-	
+
 public:
-	node *root, *parent;	
+	node *root, *parent;
+		
 	Dictionary()
 	{
 		root = NULL;
