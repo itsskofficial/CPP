@@ -3,7 +3,7 @@ class Dictionary:
         self.elements=[{'key':0, 'value':0 } * 10]
         self.chain=[-1 * 10]
 
-    def insert(self,ele):
+    def insert(self,ele, chain_type):
         pos=ele['key']%len(self.elements)
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
