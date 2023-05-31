@@ -56,7 +56,7 @@ public:
   cin>>n;
   for(int i = 0 ; i < n ; i++)
   {
-   cout<<"NUMBER = ";
+   cout<<"Data = ";
    cin>>x;
    root = insert(root , x);
   }
