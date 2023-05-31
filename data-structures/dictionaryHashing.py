@@ -29,7 +29,7 @@ class Dictionary:
                         self.elements[current]=ele
                         self.chain[pos]=current
                     else:
-                        count=
+                        count=1
                         temp=self.elements[current]
                         self.elements[current]=ele
                         self.chain[pos]=current
