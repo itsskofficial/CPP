@@ -228,7 +228,7 @@ int main()
             }
             case 2:
             { 
-                cout<<"\nEnter a record to be inserted(roll no,name,marks : ";
+                cout<<"\nEnter a record to be inserted(roll no,name,marks) : ";
                 cin>>rec.rollno>>rec.name>>rec.marks;
                 object.insert_student(rec);
                 break;
