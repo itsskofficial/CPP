@@ -20,7 +20,7 @@ class Employee
 
     public:
         Employee();
-        void Create();
+        void create_records();
         void Display();
         void update();
         void delete();
@@ -33,7 +33,7 @@ Employee::Employee()//constructor
    strcpy(records.name,"");
 }
 
-void Employee::Create()
+void Employee::create_records()
 {
     int i,j;
     char ch='y';
@@ -294,7 +294,7 @@ int main()
         {
             case 1:
             {
-                list.Create();
+                list.create_records();
                 break;
             }
 
