@@ -36,14 +36,14 @@ void BookTree::create()
         for (int j=0; j<root->child[i]->child_count; j++)
         {
             root->child[i]->child[j]=new node;
-            cout<<"Enter name of Section:"<<j+1<<":";
+            cout<<"Enter name of section:"<<j+1<<":";
             cin>>root->child[i]->child[j]->label;
             cout<<"Enter number of sub-sections:";
             cin>>root->child[i]->child[j]->child_count;
             for (int k=0; k<root->child[i]->child[j]->child_count; k++)
             {
                 root->child[i]->child[j]->child[k]=new node;
-                cout<<"Enter name of Sub-Section:"<<k+1<<":";
+                cout<<"Enter name of sub-Section:"<<k+1<<":";
                 cin>>root->child[i]->child[j]->label;
             }
         }
