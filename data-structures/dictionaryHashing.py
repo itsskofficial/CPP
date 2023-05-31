@@ -95,9 +95,9 @@ while choice!=4:
         d.insert(ele,chain_type)
     elif choice==2:
         key=int(input("Enter key to delete: "))
-        d.delete()
+        d.delete(key)
     elif choice==3:
         key=int(input("Enter key to find: "))
-        d.find()
+        d.find(key)
         
 
