@@ -69,7 +69,8 @@ void sequential::insert_student(student rec)
 
     if(n==0)
     {
-        fp.write((char*)&rec,sizeof(student)); fp.close();
+        fp.write((char*)&rec,sizeof(student)); 
+        fp.close();
         return;
     }
 
