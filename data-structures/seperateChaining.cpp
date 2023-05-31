@@ -18,7 +18,7 @@ class hashtable{
             }
         }
         void insert(int x){
-            node *p,*q;
+            node *p,*parent;
             p=new node;
             p->data=x;
             int loc;
@@ -27,16 +27,16 @@ class hashtable{
                 table[loc]=p;
             }
             else{
-                q=table[loc];
-                while (q->next!=NULL){
-                    q=q->next;
+                parent=table[loc];
+                while (parent->next!=NULL){
+                    parent=parent->next;
                 }
-                q->next=p;
+                parent->next=p;
             }
         }
 
         node* find(int x){
-            node *p,*q;
+            node *p,*parent;
             int loc;
             loc=x%MAX;
             p=table[loc];

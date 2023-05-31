@@ -22,11 +22,11 @@ class node
 class Dictionary
 {
 public:
-	node *root, *q;	
+	node *root, *parent;	
 	Dictionary()
 	{
 		root = NULL;
-		q = NULL;
+		parent = NULL;
 	}
 
 	void insert(node*, string, string);
@@ -105,7 +105,7 @@ node* Dictionary::min_node(node *p)
 {
 	while(p->left != NULL)
 	{
-		q = p;
+		parent = p;
 		p = p->left;
 	}
 	return p;
@@ -118,13 +118,13 @@ void Dictionary::deleteWord(node* p, string key)
 	{
 		if(key < p->word)
 		{
-			q = p;
+			parent = p;
 			p = p->left;
 		}
 
 		else if(key > p->word)
 		{
-			q=p;
+			parent=p;
 			p = p->right;
 		}
 
@@ -132,31 +132,31 @@ void Dictionary::deleteWord(node* p, string key)
 		{
 			if(p->left==NULL && p->right==NULL)	//no child
 			{
-				if(q->left==p)
+				if(parent->left==p)
 				{
 					delete p;
-					q->left=NULL;
+					parent->left=NULL;
 				}
 
-				if(q->right==p)
+				if(parent->right==p)
 				{
 					delete p;
-					q->right=NULL;
+					parent->right=NULL;
 				}
 
 			}
 
 			if(p->right!=NULL && p->left==NULL)	//right child only
 			{
-				if(q->right == p)
+				if(parent->right == p)
 				{
-					q->right = p->right;
+					parent->right = p->right;
 					delete p;
 				}
 
-				else if(q->left == p)
+				else if(parent->left == p)
 				{
-					q->left = p->right;
+					parent->left = p->right;
 					delete p;
 				}
 
@@ -164,15 +164,15 @@ void Dictionary::deleteWord(node* p, string key)
 
 			else if(p->left!=NULL && p->right==NULL)	//left child only
 			{
-				if(q->right == p)
+				if(parent->right == p)
 				{
-					q->right = p->left;
+					parent->right = p->left;
 					delete p;
 				}
 
-				else if(q->left == p)
+				else if(parent->left == p)
 				{
-					q->left=p->left;
+					parent->left=p->left;
 					delete p;
 				}
 
