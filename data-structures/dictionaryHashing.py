@@ -93,7 +93,7 @@ class Dictionary:
                     next=self.chain[i]
                     for j in self.chain:
                         if j==i:
-                            prev=
+                            prev=se
                     for j in self.chain:
                         if j==i:
                             self.chain_index[temp['key']%len(self.elements)]==j
