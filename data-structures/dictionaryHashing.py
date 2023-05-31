@@ -85,6 +85,7 @@ class Dictionary:
         def delete(self,key):
             for i in self.elements:
                 if i['key']==key:
+                    
 
 choice=0
 d=Dictionary()
