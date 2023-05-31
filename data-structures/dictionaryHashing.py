@@ -22,10 +22,10 @@ class Dictionary:
                     self.chain[pos]=current
                 else:
                     current=pos
-                    while(self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos):
+                    while self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos):
                         current=current+1
                     
-                    if 
+                    if self
                     self.elements[current]=ele
                     self.chain[pos]=current
                     else:
