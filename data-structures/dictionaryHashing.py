@@ -9,11 +9,11 @@ class Dictionary:
             self.elements[pos]=ele
         else:
             if (chain_type==0):
-            current=pos
-            while(self.elements[current]['key']==0):
-                current=current+1
-            self.elements[current]=ele
-            self.chain[pos]=current
+                current=pos
+                while(self.elements[current]['key']==0):
+                    current=current+1
+                self.elements[current]=ele
+                self.chain[pos]=current
     
 
             
