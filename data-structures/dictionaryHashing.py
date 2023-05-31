@@ -106,7 +106,8 @@ class Dictionary:
         else:
             print("Element not found")
     
-    def find(self,key)
+    def find(self,key):
+        
 
 
 choice=0
