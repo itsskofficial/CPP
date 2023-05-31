@@ -42,7 +42,7 @@ void Business::findShortestPath()
 	int office_status[100], i, j, k=0;
 	int min, x, y;
 	int cost = 0;
-	
+
 	for (i=0; i< offices; i++)
 		office_status[i] = NOT_VISITED;
 
@@ -52,11 +52,11 @@ void Business::findShortestPath()
 			min = INT_MAX ;
 			for (i=0;i<offices;i++)
 			{
-				if (office_status[i] == 2)
+				if (office_status[i] == CURRENT)
 				{
 					for (j=0;j<offices;j++)
 					{
-						if (office_status[j] == 0)
+						if (office_status[j] == NOT_)
 						{
 							if (min>graph[i][j])
 							{
