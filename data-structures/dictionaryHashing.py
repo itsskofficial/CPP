@@ -90,7 +90,8 @@ class Dictionary:
                     self.elements[i]['value']=0
                     self.chain[i]=-1
                     for j in self.chain:
-                        if 
+                        if j==i:
+                            self.chain
                     flag=1
             if flag==1:
                 print("Element deleted successfully")
