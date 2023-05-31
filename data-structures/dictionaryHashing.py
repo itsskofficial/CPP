@@ -1,10 +1,10 @@
-word = {
-    'key':0,
-    'meaning':0
-}
+word = 
 
 class Dictionary:
-    elements=[{}]
+    elements=[{
+    'key':0,
+    'meaning':0
+}]
     chain=[]
     
     def insert(ele):
