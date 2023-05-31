@@ -69,8 +69,8 @@ void Business::findShortestPath()
 				}
 			}
 		
-		office_status[x] = 1;
-		office_status[y] = 2;
+		office_status[x] = VISITED;
+		office_status[y] = CURRENT;
 		cout<< "\n" << x << " --> "<<y;
 		cost += graph[x][y];
 		k++;
