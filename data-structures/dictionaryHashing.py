@@ -6,7 +6,7 @@ class Dictionary:
 
     def insert(self,ele, chain_type):
         flag=0
-        for i in self.elements)):
+        for i in self.elements:
             if i['key']==0:
                 flag=1
 
