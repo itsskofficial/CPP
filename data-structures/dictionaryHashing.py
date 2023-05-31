@@ -86,7 +86,7 @@ class Dictionary:
             flag=0
             for i in range(len(self.elements)):
                 if self.elements[i]['key']==key:
-                    temp=self.elements[i]['key']
+                    temp=self.elements[i]
                     self.elements[i]['key']=0
                     self.elements[i]['value']=0
                     self.chain[i]=-1
