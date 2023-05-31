@@ -2,7 +2,7 @@ class Dictionary:
     def __init__(self):
         self.elements=[{'key':0, 'value':0 } * 10]
         self.chain=[-1 * 10]
-        self.chain_index=[]
+        self.chain_index=[-1 * 10]
 
     def insert(self,ele, chain_type):
         flag=0
