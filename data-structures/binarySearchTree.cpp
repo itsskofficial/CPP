@@ -52,14 +52,15 @@ public:
  
  void input()
  {
-  cout<<"Enter number of elements in the BST : ";
-  cin>>n;
-  for(int i = 0 ; i < n ; i++)
-  {
-   cout<<"Data = ";
-   cin>>x;
-   root = insert(root , x);
-  }
+    cout<<"Enter number of elements in the BST : ";
+    cin>>n;
+    
+    for(int i = 0 ; i < n ; i++)
+    {
+    cout<<"Data = ";
+    cin>>x;
+    root = insert(root , x);
+    }
  }
  
  int search(node *root ,int x)
