@@ -48,7 +48,12 @@ class Dictionary:
                         temp=self.elements[current]
                         temp
                         self.elements[current]=ele
-                        self.chain[pos]=current
+                        if self.chain[pos]==-1:
+                            self.chain[pos]=current
+                            self.chain_index[pos]=current
+                        else:
+                            self.chain[self.chain_index[pos]]=current
+                            self.chain_index[pos]=current
                         while(self.elements[current]['key']!=0 or count==len(self.elements)):
                             current=(current+1)%len(self.elements)
                             count+=1
