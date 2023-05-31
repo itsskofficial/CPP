@@ -81,15 +81,16 @@ int main()
         cout<<"Choose from the following:";
         cout<<"\n1.Create\n2.Display\n3.Exit\n";
         cin>>choice;
+
         switch(choice)
         {
             case 1:
-            bt.create();
-            break;
+                bt.create();
+                break;
 
             case 2:
-            bt.display(root);
-            break;
+                bt.display(root);
+                break;
 
             case 3:
             exit(1);
