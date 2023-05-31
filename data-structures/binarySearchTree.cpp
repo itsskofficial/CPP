@@ -17,20 +17,21 @@ class BSTree
   int flag;
   
 public:
+
   node * root;
   BSTree()
   {
     root = NULL;
   }
  
- node *GetNewNode(int x)
- {
-  node * ptr = new node();
-  ptr->data = x;
-  ptr->left = NULL;
-  ptr->right = NULL;
-  return ptr;
- }
+  node *GetNewNode(int x)
+  {
+    node * ptr = new node();
+    ptr->data = x;
+    ptr->left = NULL;
+    ptr->right = NULL;
+    return ptr;
+  }
  
  node *insert( node *root , int x)
  {
