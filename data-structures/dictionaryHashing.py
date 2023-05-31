@@ -97,7 +97,7 @@ class Dictionary:
                     self.chain[prev]=next
                     self.chain[i]=-1
                     if i in self.chain_index:
-                        self.chain_index[temp['key']%len(self.elements)]==j
+                        self.chain_index[]==j
                     flag=1
         if flag==1:
             print("Element deleted successfully")
