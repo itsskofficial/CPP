@@ -53,8 +53,7 @@ class stack
 				return 0;
 		}
 
-		void 
-push(node *temp)
+		void push(node *temp)
 		{
 			stk[++top]= temp;
 		}
