@@ -7,5 +7,5 @@ class Dictionary:
     words=[]
 
 
-while choice
+while choice!=4
 
