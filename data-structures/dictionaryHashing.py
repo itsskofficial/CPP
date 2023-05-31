@@ -15,14 +15,13 @@ class Dictionary:
                 self.elements[current]=ele
                 self.chain[pos]=current
             else:
-                if self.elements[pos]['key']%len(self.elements)==pos:
-                    current=pos
-                    while(self.elements[current]['key']==0):
-                        current=current+1
-                    self.elements[current]=ele
-                    self.chain[pos]=current
+                current=pos
+                while(self.elements[current]['key']==0):
+                    current=current+1
+                self.elements[current]=ele
+                self.chain[pos]=current
                 else:
-                    
+
     
 
             
