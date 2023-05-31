@@ -74,8 +74,9 @@ void BookTree::display(node*root)
 int main()
 {
     int choice;
-    BookTree gt;
-    while(1){
+    BookTree bt;
+    while(1)
+    {
         cout<<"Welcome To Book Hierarchy!";
         cout<<"Choose from the following:";
         cout<<"\n1.Create\n2.Display\n3.Exit\n";
@@ -83,11 +84,11 @@ int main()
         switch(choice)
         {
             case 1:
-            gt.create();
+            bt.create();
             break;
 
             case 2:
-            gt.display(root);
+            bt.display(root);
             break;
 
             case 3:
