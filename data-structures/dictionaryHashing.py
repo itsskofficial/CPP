@@ -31,7 +31,7 @@ class Dictionary:
                     else:
                         temp=self.elements[current]
                         self.elements[current]=ele
-                        
+                        self.chain[pos]=current
 
     
 
