@@ -77,6 +77,7 @@ void Business::findShortestPath()
 }
 	cout<<"\nTotal cost is: "<< cost << endl;
 }
+
 int main()
 {
 	Business mst;
