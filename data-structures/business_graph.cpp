@@ -36,7 +36,7 @@ void Business::createGraph()
 }
 void Business::findShortestPath()
 {
-	int office_status[100], i, j, ne=0;
+	int office_status[100], i, j, k=0;
 	int min = 0, x, y;
 	int cost = 0;
 	for (i=0; i< offices; i++)
