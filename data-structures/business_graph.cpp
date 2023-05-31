@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define CURRENT 2
+#define VISITED 1
 #define 
 
 class Business
