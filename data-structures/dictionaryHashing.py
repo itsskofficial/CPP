@@ -1,6 +1,6 @@
 class Dictionary:
     def __init__(self):
-        self.elements=[{'key':0, 'value':0 } 10]
+        self.elements=[{'key':0, 'value':0 }] * 10
         self.chain=[-1] * 10
         self.chain_index=[-1 * 10]
 
