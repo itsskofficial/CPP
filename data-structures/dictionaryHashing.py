@@ -5,4 +5,5 @@ word = {
 
 class Dictionary:
     words=[]
+    
 
