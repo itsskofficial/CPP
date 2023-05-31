@@ -17,19 +17,19 @@ struct node
     struct node *child[10];
 }*root;
 
-class GT
+class BookTree
 {
     public:
         void create_tree();  
         void display(node * r1);
      
-        GT()
+        BookTree()
         {
             root = NULL;
         }
 };
 
-void GT::create_tree()
+void BookTree::create_tree()
 {
  int tbooks,tchapters,i,j,k;
  root = new node;
@@ -57,7 +57,7 @@ void GT::create_tree()
 }
 
 
-void GT::display(node * r1)
+void BookTree::display(node * r1)
 {
  int i,j,k,tchapters;
  if(r1 != NULL)
@@ -89,7 +89,7 @@ void GT::display(node * r1)
 int main()
 {
     int choice;
-   GT gt;
+   BookTree gt;
     while (1)
     {
         cout<<"-----------------"<<endl;
