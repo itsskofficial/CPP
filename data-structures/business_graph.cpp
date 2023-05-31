@@ -2,7 +2,7 @@
 using namespace std;
 #define CURRENT 2
 #define VISITED 1
-#define NOTVISITED 0
+#define NOT_VISITED 0
 
 class Business
 {
