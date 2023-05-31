@@ -4,5 +4,5 @@ word = {
 }
 
 class Dictionary:
-    
+    words=[]
 
