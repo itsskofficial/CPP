@@ -25,7 +25,7 @@ void prims::createGraph(){
 	for (i=0; i<nodes; i++){
 		for (j=0; j<nodes; j++){
 			if (graph[i][j]== 0)
-				graph[i][j]=infi;
+				graph[i][j]=INT_MAX;
 		}
 	}
 }
@@ -37,7 +37,7 @@ void prims::primsAlgo(){
 		visited[i] = 0;
 	visited[0] = 2;
 		while(ne<nodes-1){
-			min = infi ;
+			min = INT_MAX ;
 			for (i=0;i<nodes;i++){
 				if (visited[i] == 2){
 					for (j=0;j<nodes;j++){
