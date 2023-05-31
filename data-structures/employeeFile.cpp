@@ -151,7 +151,7 @@ void Employee::delete_record()
 {
     int id,pos;
     cout<<"\n For deletion,";
-    cout<<"\n Enter the Emp_ID for for searching ";
+    cout<<"\n Enter the employee ID for for searching ";
     cin>>id;
     fstream seqfile;
     fstream indexfile;
