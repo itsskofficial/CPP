@@ -40,21 +40,21 @@ public:
 	node* min_node(node *);
 };
 
-void Dictionary::insertWord(node* root, string key, string keyMeaning)
+void Dictionary::insertWord(node* root, string key, string meaning)
 {
 	if(key < root->word)
 	{
 		if(root->left != NULL)
-			insertWord(root->left, key, keyMeaning);
+			insertWord(root->left, key, meaning);
 		else
-			root->left = new node(key, keyMeaning);
+			root->left = new node(key, meaning);
 	}
 	else if(key > root->word)
 	{
 		if(root->right != NULL)
-			insertWord(root->right, key, keyMeaning);
+			insertWord(root->right, key, meaning);
 		else
-			root->right = new node(key, keyMeaning);
+			root->right = new node(key, meaning);
 	}
 }
 
