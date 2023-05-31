@@ -94,17 +94,16 @@ int main()
             {
                 bt.display(root);
                 break;
-            
+            }
+
             case 3:
-            exit(1);
+                exit(1);
 
             default:
-            cout<<"Wrong choice";
-
+                cout<<"Wrong choice";
+                exit(1)
         }
-
     }
-
 }
 
 
