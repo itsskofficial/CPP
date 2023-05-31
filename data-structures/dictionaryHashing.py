@@ -68,6 +68,7 @@ class Dictionary:
 
                         if count==len(self.elements):
                             print("Hash table full, operation terminated")
+                        else:
                         self.elements[current]=temp
 
                         if self.chain[pos]==-1:
