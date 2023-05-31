@@ -8,6 +8,7 @@ class Dictionary:
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
         else:
+            if (chain_type==0):
             current=pos
             while(self.elements[current]['key']==0):
                 current=current+1
