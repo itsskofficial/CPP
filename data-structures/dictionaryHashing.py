@@ -92,7 +92,7 @@ class Dictionary:
             if flag==1:
                 print("Element deleted successfully")
             else:
-                print("Element not deleted")
+                print("Element not found")
 
 
 choice=0
