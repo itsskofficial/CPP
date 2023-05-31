@@ -42,39 +42,9 @@ class Dictionary:
                     if count==len(self.elements):
                             print("Hash table full, operation terminated")
                     else:
-                        
                     
-                    if self.elements[current]['key']==0:
-                        self.elements[current]=ele
-
-                        if self.chain[pos]==-1:
-                            self.chain[pos]=current
-                            self.chain_index[pos]=current
-                        else:
-                            self.chain[self.chain_index[pos]]=current
-                            self.chain_index[pos]=current
-                    else:
-                        count=1
-                        temp=self.elements[current]
-                        self.elements[current]=ele
-
-                        if self.chain[pos]==-1:
-                            self.chain[pos]=current
-                            self.chain_index[pos]=current
-                        else:
-                            self.chain[self.chain_index[pos]]=current
-                            self.chain_index[pos]=current
-
-                        pos=temp%len(self.elements)
-
-                        while(self.elements[current]['key']!=0 or count==len(self.elements)):
-                            current=(current+1)%len(self.elements)
-                            count+=1
-
-                        if count==len(self.elements):
-                            print("Hash table full, operation terminated")
-                        else:
-                            self.elements[current]=temp
+                        if self.elements[current]['key']==0:
+                            self.elements[current]=ele
 
                             if self.chain[pos]==-1:
                                 self.chain[pos]=current
@@ -82,6 +52,35 @@ class Dictionary:
                             else:
                                 self.chain[self.chain_index[pos]]=current
                                 self.chain_index[pos]=current
+                        else:
+                            count=1
+                            temp=self.elements[current]
+                            self.elements[current]=ele
+
+                            if self.chain[pos]==-1:
+                                self.chain[pos]=current
+                                self.chain_index[pos]=current
+                            else:
+                                self.chain[self.chain_index[pos]]=current
+                                self.chain_index[pos]=current
+
+                            pos=temp%len(self.elements)
+
+                            while(self.elements[current]['key']!=0 or count==len(self.elements)):
+                                current=(current+1)%len(self.elements)
+                                count+=1
+
+                            if count==len(self.elements):
+                                print("Hash table full, operation terminated")
+                            else:
+                                self.elements[current]=temp
+
+                                if self.chain[pos]==-1:
+                                    self.chain[pos]=current
+                                    self.chain_index[pos]=current
+                                else:
+                                    self.chain[self.chain_index[pos]]=current
+                                    self.chain_index[pos]=current
 
 
 
