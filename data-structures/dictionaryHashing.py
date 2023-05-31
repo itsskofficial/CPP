@@ -7,8 +7,8 @@ class Dictionary:
         if self.elements[pos]['key']==0:
             self.elements[pos]=ele
         else:
-            while(self.elements[pos]['key']==0)
-            pos=(pos+1)%len(self.elements)
+            while(self.elements[pos]['key']==0):
+                pos=(pos+1)%len(self.elements)
 
 
         
