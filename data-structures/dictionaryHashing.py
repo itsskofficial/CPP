@@ -22,7 +22,7 @@ class Dictionary:
                     self.elements[current]=ele
                     if self.chain[pos]==-1:
                         self.chain[pos]=current
-                        self.chain[]
+                        self.chain_index[pos]=current
                     else:
                         self.chain[self.chain_index[pos]]=current
                 else:
