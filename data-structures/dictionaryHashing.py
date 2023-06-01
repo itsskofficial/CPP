@@ -132,7 +132,7 @@ while choice!=5:
         key=int(input("Enter key: "))
         value=int(input("Enter value: "))
         ele={'key':key,'value':value}
-        chain_type=int(input("Enter 0 for chaining without replacement and 1 for chaining with replacement: "))
+        chain_type=int(input("\nEnter 0 for chaining without replacement and 1 for chaining with replacement: "))
         d.insert(ele,chain_type)
     elif choice==2:
         key=int(input("\nEnter key to delete: "))
