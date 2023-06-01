@@ -3,7 +3,7 @@ n= int(input("Enter number of clients: "))
 
 class Hashtable:
 	def __init__(self):
-		self.table[10]=[null]
+		self.table[10]=[0] * 10
 		self.pos=null
 	def insert_element(x):
 		pos=x%10
