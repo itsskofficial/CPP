@@ -24,8 +24,8 @@ class Hashtable:
 					current=(pos + count**2) % 10
 					count+=1
 					if count==10:
-                            print("\nHash table full, operation terminated")
-                else:
+						print("\nHash table full, operation terminated")
+					else:
                     self.table[current]=ele
                     
 	def delete(self,ele):
