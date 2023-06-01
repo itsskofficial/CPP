@@ -48,10 +48,10 @@ class Hashtable:
 				flag=1
 				current=i
 		if flag==1:
-            print(f"Element found at position {current}")
-        else:
-            print("Element not found")
-            
+			print(f"Element found at position {current}")
+		else:
+			print("Element not found")
+			
 	def display_elements(self):
 		for i in range(10):
 			print(f"{self.table[i]}\n")
