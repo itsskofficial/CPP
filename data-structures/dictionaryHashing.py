@@ -37,7 +37,7 @@ class Dictionary:
                     count=1
                     current=pos + 1
 
-                    while self.elements[current]['key']==0 or self.elements[pos]['key']%len(self.elements)!=pos or count!=len(self.elements):
+                    while self.elements[current]['key']!=0 or self.elements[pos]['key']%len(self.elements)!=pos or count!=len(self.elements):
                         current=(current+1)%len(self.elements)
                         count+=1
                     
@@ -84,7 +84,7 @@ class Dictionary:
                                     self.chain_index[pos]=current
         else:
             print("\nHash table full, operation terminated")
-            
+
     def delete(self,key):
         flag=0
         for i in range(len(self.elements)):
