@@ -3,7 +3,7 @@ class Hashtable:
 	def __init__(self):
 		self.table[10]=[0] * 10
 	def insert(self,ele,probe_type):
-		pos=x%10
+		pos=ele%10
 		if (self.table[pos]!=0):
 			self.table[pos]=ele
 		else:
