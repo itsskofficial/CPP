@@ -31,7 +31,7 @@ class Hashtable:
 	def remove_element(self,ele):
 		pos=x%10
 		if (self.table[pos]!=0):
-			ele=table[pos]
+			ele=self.table[pos]
 			return ele
 		else:
 			pos=(pos+1)%10
