@@ -137,7 +137,7 @@ void expressiontree :: create(string str)
 		operand_st.push(op);
 	}
 	
-	root= operand_st.pop();
+	root = operand_st.pop();
 	
 }
 
