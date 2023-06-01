@@ -62,6 +62,7 @@ void sequential::insert_student(student rec)
     rec.status=0;
     fp.seekg(0,ios::end);
     n=fp.tellg()/sizeof(student);
+    fp.seekg(0,)
 
     if(n==0)
     {
