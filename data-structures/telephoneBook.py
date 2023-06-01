@@ -1,4 +1,5 @@
-#accepting number of clientsclass Hashtable:
+#accepting number of clients
+class Hashtable:
 	def __init__(self):
 		self.table[10]=[0] * 10
 		self.pos=-1
