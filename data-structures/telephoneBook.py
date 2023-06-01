@@ -9,7 +9,7 @@ class Hashtable:
 		pos=x%10
 		if (self.table[pos]!=0):
 			self.table[pos]=x
-		elif:
+		else:
 			for i in range(n):
 				if (table[pos]!=0):
 					table[pos]=x
