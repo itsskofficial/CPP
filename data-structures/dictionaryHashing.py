@@ -19,7 +19,7 @@ class Dictionary:
                     count=1
                     current=pos + 1
 
-                    while(self.elements[current]['key']!=0 or count!=len(self.elements)):
+                    while(self.elements[current]['key']!=0 and count!=len(self.elements)):
                         current=(current+1)%len(self.elements)
                         count+=1
                     if count==len(self.elements):
