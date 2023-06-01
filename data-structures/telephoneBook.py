@@ -32,7 +32,9 @@ class Hashtable:
 		for i in range(10):
 			if self.table[i]==ele:
 				self.table[i]=0
-				
+				print("Element removed")
+            else:
+
 			
 	def display_elements():
 		for i in range(n):
