@@ -11,7 +11,7 @@ class Hashtable:
 			self.table[pos]=x
 		else:
 			if probe_type==0:
-				
+				current
                 for i in range(n):
                     if (table[pos]!=0):
                         table[pos]=x
