@@ -28,7 +28,7 @@ class Hashtable:
                 else:
                     self.table[current]=ele
                     
-	def remove_element(ele):
+	def remove_element(self,ele):
 		pos=x%10
 		if (self.table[pos]!=0):
 			ele=table[pos]
