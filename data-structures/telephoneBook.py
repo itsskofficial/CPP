@@ -48,7 +48,7 @@ ch=0
 
 while ch!=4:
 	print("Welcome user, these are your options: ")
-	print("1.Insert an element\n2.Remove an element]\n3.Search an element\n4.Display elements")
+	print("1.Insert an element\n2.Remove an element]\n3.Search an element\n4.Display elements\n5.Exit")
 	ch=int(input("Enter your choice: "))
 	if ch==1:
 		x=int(input("Enter element to insert: "))
