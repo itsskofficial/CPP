@@ -20,8 +20,8 @@ class Hashtable:
 			else:
 				count=1
 				current=pos
-                while self.table[current]!=0 and count!=10:
-                    current=(pos + count**2) % 10
+				while self.table[current]!=0 and count!=10:
+					current=(pos + count**2) % 10
                     count+=1
                 if count==10:
                             print("\nHash table full, operation terminated")
