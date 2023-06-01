@@ -7,8 +7,8 @@ class Hashtable:
 		self.pos=-1
 	def insert_element(self,x):
 		pos=x%10
-		if (table[pos]!=null):
-			table[pos]=x
+		if (self.table[pos]!=null):
+			self.table[pos]=x
 		elif:
 			for i in range(n):
 				if (table[pos]!=null):
