@@ -54,7 +54,7 @@ class Hashtable:
 			
 	def display(self):
 		for i in range(10):
-			print(f"{self.table[i]}\n")
+			print(f"\n{self.table[i]}\n")
 
 t=Hashtable()
 choice=0
