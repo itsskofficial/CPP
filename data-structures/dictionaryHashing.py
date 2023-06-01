@@ -83,7 +83,8 @@ class Dictionary:
                                     self.chain[self.chain_index[pos]]=current
                                     self.chain_index[pos]=current
         else:
-            print("")
+            print("\nHash table full, operation terminated")
+            
     def delete(self,key):
         flag=0
         for i in range(len(self.elements)):
