@@ -10,14 +10,16 @@ class Hashtable:
 		if (self.table[pos]!=0):
 			self.table[pos]=x
 		else:
-			for i in range(n):
-				if (table[pos]!=0):
-					table[pos]=x
-					return pos
-				else:
-					pos=(pos+1)%10
-			if i==n-1:
-				return -1
+			if probe_type==0:
+				
+                for i in range(n):
+                    if (table[pos]!=0):
+                        table[pos]=x
+                        return pos
+                    else:
+                        pos=(pos+1)%10
+                if i==n-1:
+                    return -1
 	def remove_element(x):
 		pos=x%10
 		if (table[pos]!=null):
