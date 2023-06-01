@@ -29,10 +29,12 @@ class Hashtable:
                     self.table[current]=ele
                     
 	def remove_element(self,ele):
+		flag=0
 		for i in range(10):
 			if self.table[i]==ele:
 				self.table[i]=0
-				
+                flag=1
+			
             
 
 			
