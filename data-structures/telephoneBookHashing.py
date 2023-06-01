@@ -53,6 +53,7 @@ class Hashtable:
 			print("Element not found")
 			
 	def display(self):
+		print("\nElements")
 		for i in range(10):
 			print(f"\n{self.table[i]}\n")
 
