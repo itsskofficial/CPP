@@ -4,7 +4,7 @@ class Dictionary:
         self.chain=[-1] * 10
         self.chain_index=[-1 ] * 10
 
-    def insert(self,ele, chain_type):
+    def insert(self,ele,chain_type):
         flag=0
         for i in self.elements:
             if i['key']==0:
