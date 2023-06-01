@@ -113,9 +113,9 @@ class Dictionary:
                 flag=1
         
         if flag==1:
-            print("Element found")
+            print("\nElement found")
         else:
-            print("Element not found")
+            print("\nElement not found")
     
     def display(self):
         print("\nElement\tChain")
