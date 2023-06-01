@@ -38,6 +38,16 @@ class Hashtable:
             print("Element removed")
         else:
             print("Element not found")
+	def remove_element(self,ele):
+		flag=0
+		for i in range(10):
+			if self.table[i]==ele:
+				self.table[i]=0
+                flag=1
+		if flag==1:
+            print("Element removed")
+        else:
+            print("Element not found")
             
 	def display_elements(self):
 		for i in range(10):
