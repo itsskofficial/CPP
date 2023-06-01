@@ -12,7 +12,7 @@ class Hashtable:
 		else:
 			if probe_type==0:
 				current=pos+1
-                while 
+                while self.table[current]
                     if (table[pos]!=0):
                         table[pos]=x
                         return pos
