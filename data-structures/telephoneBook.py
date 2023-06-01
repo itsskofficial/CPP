@@ -30,7 +30,9 @@ class Hashtable:
                     
 	def remove_element(self,ele):
 		for i in range(10):
-			if self.table[]
+			if self.table[i]==ele:
+				self.table[i]=0
+				
 			
 	def display_elements():
 		for i in range(n):
