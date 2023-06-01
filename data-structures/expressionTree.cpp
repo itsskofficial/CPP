@@ -219,6 +219,13 @@ int main()
                 break;
 		    }
 
+			case 4:
+            {
+                cout << "Deleting the tree: ";
+                e.deleteTree(e.root);
+                break;
+		    }
+
 			default:
 			{
 				cout<< "Enter valid option";
