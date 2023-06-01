@@ -14,6 +14,7 @@ class Hashtable:
 				count=1
 				current=pos+1
                 while self.table[current]!=0 and count!=10:
+                    
                     if (table[pos]!=0):
                         table[pos]=x
                         return pos
