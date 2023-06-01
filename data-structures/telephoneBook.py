@@ -57,16 +57,26 @@ class Hashtable:
 			print(f"{self.table[i]}\n")
 
 t=Hashtable()
-ch=0
+choice=0
 
-while ch!=4:
-	print("Welcome user, these are your options: ")
-	print("1.Insert an element\n2.Remove an element]\n3.Search an element\n4.Display elements\n5.Exit")
-	ch=int(input("Enter your choice: "))
-	if ch==1:
-		x=int(input("Enter element to insert: "))
-		pos=t.insert_element(x)
-		if pos==-1:
-			print("Can't insert element, table full")
-		else:
-			print(f"{x} is inserted at {pos}")
+while choice!=5:
+    choice=int(input("\nWhat do you want to do?\n1. Insert an element\n2. Delete an element\n3. Find an element\n4. Display elements\n5. Exit\n\nEnter option number: "))
+    if choice==1:
+        key=int(input("\nEnter key: "))
+        value=int(input("Enter value: "))
+        ele={'key':key,'value':value}
+        chain_type=int(input("\nEnter 0 for chaining without replacement and 1 for chaining with replacement: "))
+        d.insert(ele,chain_type)
+    elif choice==2:
+        key=int(input("\nEnter key to delete: "))
+        d.delete(key)
+    elif choice==3:
+        key=int(input("\nEnter key to find: "))
+        d.find(key)
+    elif choice==4:
+        d.display()
+    elif choice==5:
+        exit(1)
+    else:
+        print("\nEnter valid option number")
+        exit(1)
