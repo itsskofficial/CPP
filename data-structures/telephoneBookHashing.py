@@ -33,7 +33,7 @@ class Hashtable:
 		for i in range(10):
 			if self.table[i]==ele:
 				self.table[i]=0
-                flag=1
+				flag=1
 		if flag==1:
             print("Element removed")
         else:
