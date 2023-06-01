@@ -62,7 +62,7 @@ choice=0
 while choice!=5:
     choice=int(input("\nWhat do you want to do?\n1. Insert an element\n2. Delete an element\n3. Find an element\n4. Display elements\n5. Exit\n\nEnter option number: "))
     if choice==1:
-        ele=int(input("Enter element: "))
+        ele=int(input("\nEnter element: "))
         probe_type=int(input("\nEnter 0 for linear probing and 1 for quadratic probing: "))
         t.insert(ele,probe_type)
     elif choice==2:
