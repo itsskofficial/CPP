@@ -16,12 +16,12 @@ class Hashtable:
                 while self.table[current]!=0 and count!=10:
                     current=(current+1)%10
                     count+=1
-    
-                    if (table[pos]!=0):
-                        table[pos]=x
-                        return pos
-                    else:
-                        pos=(pos+1)%10
+
+                if (table[pos]!=0):
+                    table[pos]=x
+                    return pos
+                else:
+                    pos=(pos+1)%10
                 if i==n-1:
                     return -1
 	def remove_element(x):
