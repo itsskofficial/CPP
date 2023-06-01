@@ -16,8 +16,8 @@ class Hashtable:
 				if count==10:
 					print("\nHash table full, operation terminated")
 				else:
-                    self.table[current]=ele
-        	else:
+					self.table[current]=ele
+			else:
                 count=1
 		        current=pos
                 while self.table[current]!=0 and count!=10:
