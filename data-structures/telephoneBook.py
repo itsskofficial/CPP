@@ -40,8 +40,8 @@ class Hashtable:
             print("Element not found")
             
 	def display_elements():
-		for i in range(n):
-			print(table[pos])
+		for i in range(10):
+			print(table[i])
 
 t=Hashtable()
 ch=0
