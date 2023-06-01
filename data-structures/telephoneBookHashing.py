@@ -67,10 +67,10 @@ while choice!=5:
         probe_type=int(input("\nEnter 0 for linear probing and 1 for quadratic probing: "))
         t.insert(ele,probe_type)
     elif choice==2:
-        key=int(input("\nEnter key to delete: "))
+        ele=int(input("\nEnter key to delete: "))
         t.delete(ele)
     elif choice==3:
-        key=int(input("\nEnter key to find: "))
+        ele=int(input("\nEnter key to find: "))
         t.find(ele)
     elif choice==4:
         t.display()
