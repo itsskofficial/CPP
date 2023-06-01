@@ -34,7 +34,7 @@ class Hashtable:
 			if self.table[i]==ele:
 				self.table[i]=0
                 flag=1
-			
+		
             
 
 			
