@@ -17,7 +17,7 @@ class Dictionary:
             else:
                 if chain_type==0:
                     count=1
-                    current=pos
+                    current=pos + 1
 
                     while(self.elements[current]['key']!=0 or count!=len(self.elements)):
                         current=(current+1)%len(self.elements)
