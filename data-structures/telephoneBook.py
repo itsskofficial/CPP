@@ -38,7 +38,8 @@ class Hashtable:
             print("Element removed")
         else:
             print("Element not found")
-	def remove_element(self,ele):
+	
+	def searchj_element(self,ele):
 		flag=0
 		for i in range(10):
 			if self.table[i]==ele:
