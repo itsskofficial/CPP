@@ -24,7 +24,10 @@ class Hashtable:
                 while self.table[current]!=0 and count!=10:
                     current=(count**2) % 10
                     count+=1
-
+                if count==10:
+                            print("\nHash table full, operation terminated")
+                else:
+                    self.table[current]=ele
                     
 	def remove_element(x):
 		pos=x%10
