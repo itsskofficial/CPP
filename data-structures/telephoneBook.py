@@ -47,7 +47,7 @@ class Hashtable:
                 flag=1
 		        current=i
 		if flag==1:
-            print("Element removed")
+            print(f"Element found at position {current}")
         else:
             print("Element not found")
             
