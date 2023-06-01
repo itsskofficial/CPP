@@ -11,7 +11,7 @@ class Hashtable:
 			self.table[pos]=x
 		elif:
 			for i in range(n):
-				if (table[pos]!=null):
+				if (table[pos]!=0):
 					table[pos]=x
 					return pos
 				else:
