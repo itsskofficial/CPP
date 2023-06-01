@@ -36,9 +36,9 @@ class Hashtable:
                 flag=1
 		if flag==1:
             print("Element removed")
+        else:
+            print("Element not found")
             
-
-			
 	def display_elements():
 		for i in range(n):
 			print(table[pos])
