@@ -29,12 +29,7 @@ class Hashtable:
                     self.table[current]=ele
                     
 	def remove_element(self,ele):
-		pos=x%10
-		if (self.table[pos]!=0):
-			ele=self.table[pos]
-			return ele
-		else:
-			pos=(pos+1)%10
+		for i in range(len(self.table))
 	def display_elements():
 		for i in range(n):
 			print(table[pos])
