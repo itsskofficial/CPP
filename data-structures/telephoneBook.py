@@ -1,5 +1,5 @@
 #accepting number of clients
-n= int(input("Enter number of clients: "))
+n = int(input("Enter number of clients: "))
 
 class Hashtable:
 	def __init__(self):
