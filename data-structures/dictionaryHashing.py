@@ -135,10 +135,10 @@ while choice!=5:
         chain_type=int(input("Enter 0 for chaining without replacement and 1 for chaining with replacement: "))
         d.insert(ele,chain_type)
     elif choice==2:
-        key=int(input("Enter key to delete: "))
+        key=int(input("\nEnter key to delete: "))
         d.delete(key)
     elif choice==3:
-        key=int(input("Enter key to find: "))
+        key=int(input("\nEnter key to find: "))
         d.find(key)
     elif choice==4:
         d.display()
