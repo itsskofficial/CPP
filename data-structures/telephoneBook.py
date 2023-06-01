@@ -1,7 +1,4 @@
-#accepting number of clients
-n = int(input("Enter number of clients: "))
-
-class Hashtable:
+#accepting number of clientsclass Hashtable:
 	def __init__(self):
 		self.table[10]=[0] * 10
 		self.pos=-1
