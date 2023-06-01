@@ -67,7 +67,7 @@ while choice!=5:
         t.insert(ele,probe_type)
     elif choice==2:
         key=int(input("\nEnter key to delete: "))
-        t.delete(ele))
+        t.delete(ele)
     elif choice==3:
         key=int(input("\nEnter key to find: "))
         t.find(ele)
