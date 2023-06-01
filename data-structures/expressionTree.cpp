@@ -221,10 +221,9 @@ int main()
 
 			case 4:
             {
-                cout << "Deleting the tree: ";
-                e.deleteTree(e.root);
-                break;
-		    }
+
+				exit(1);
+			}
 
 			default:
 			{
