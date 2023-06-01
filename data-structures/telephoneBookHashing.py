@@ -36,17 +36,17 @@ class Hashtable:
 				flag=1
 		if flag==1:
 			print("Element removed")
-        else:
-            print("Element not found")
+		else:
+			print("Element not found")
 	
 	def find(self,ele):
 		flag=0
-        current=-1
+		current=-1
 		for i in range(10):
 			if self.table[i]==ele:
 				self.table[i]=0
-                flag=1
-		        current=i
+				flag=1
+				current=i
 		if flag==1:
             print(f"Element found at position {current}")
         else:
