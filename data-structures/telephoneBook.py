@@ -6,7 +6,7 @@ class Hashtable:
 	def insert_element(self,ele,probe_type):
 		pos=x%10
 		if (self.table[pos]!=0):
-			self.table[pos]=x
+			self.table[pos]=ele
 		else:
             if probe_type==0:
                 count=1
