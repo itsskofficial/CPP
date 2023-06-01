@@ -18,7 +18,7 @@ class Hashtable:
 				else:
 					self.table[current]=ele
 			else:
-                count=1
+				count=1
 		        current=pos
                 while self.table[current]!=0 and count!=10:
                     current=(pos + count**2) % 10
