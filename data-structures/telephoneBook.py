@@ -41,6 +41,7 @@ class Hashtable:
 	
 	def search_element(self,ele):
 		flag=0
+        current=-1
 		for i in range(10):
 			if self.table[i]==ele:
 				self.table[i]=0
