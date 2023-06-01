@@ -16,8 +16,8 @@ class Hashtable:
                     count+=1
                 if count==len(self.elements):
                             print("\nHash table full, operation terminated")
-                    else:
-                        self.table[current]=ele
+                else:
+                    self.table[current]=ele
                 if (table[pos]!=0):
                     table[pos]=x
                     return pos
