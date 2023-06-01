@@ -18,13 +18,6 @@ class Hashtable:
                             print("\nHash table full, operation terminated")
                 else:
                     self.table[current]=ele
-                if (table[pos]!=0):
-                    table[pos]=x
-                    return pos
-                else:
-                    pos=(pos+1)%10
-                if i==n-1:
-                    return -1
 	def remove_element(x):
 		pos=x%10
 		if (table[pos]!=null):
