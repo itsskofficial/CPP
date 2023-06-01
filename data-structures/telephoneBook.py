@@ -22,7 +22,7 @@ class Hashtable:
                 count=1
                 current=pos
                 while self.table[current]!=0 and count!=10:
-                    current=()
+                    current=(count)
                     
 	def remove_element(x):
 		pos=x%10
