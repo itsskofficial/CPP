@@ -65,7 +65,7 @@ while choice!=5:
         key=int(input("\nEnter key: "))
         value=int(input("Enter value: "))
         ele={'key':key,'value':value}
-        chain_type=int(input("\nEnter 0 for linear probing and 1 for quadratic probing: "))
+        probe_type=int(input("\nEnter 0 for linear probing and 1 for quadratic probing: "))
         t.insert(ele,probe_type)
     elif choice==2:
         key=int(input("\nEnter key to delete: "))
