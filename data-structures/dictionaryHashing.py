@@ -40,6 +40,7 @@ class Dictionary:
                     while self.elements[current]['key']!=0 or self.elements[pos]['key']%len(self.elements)!=pos or count!=len(self.elements):
                         current=(current+1)%len(self.elements)
                         count+=1
+                        print(count)
                     
                     if count==len(self.elements):
                             print("\nHash table full, operation terminated")
