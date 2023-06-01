@@ -100,7 +100,7 @@ class Dictionary:
                     self.chain[prev]=next
                     self.chain[i]=-1
                     if i in self.chain_index:
-                        self.chain_index[self.chain_index.index(i)]==prev
+                        self.chain_index[self.chain_index.index(i)]=prev
                 else:
                     self.chain_index[temp['key']%len(self.elements)]=-1
                 flag=1
