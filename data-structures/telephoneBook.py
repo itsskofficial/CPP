@@ -34,7 +34,8 @@ class Hashtable:
 			if self.table[i]==ele:
 				self.table[i]=0
                 flag=1
-		
+		if flag==1:
+            print("Element removed")
             
 
 			
