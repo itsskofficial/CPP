@@ -39,7 +39,7 @@ class Hashtable:
         else:
             print("Element not found")
 	
-	def searchj_element(self,ele):
+	def search_element(self,ele):
 		flag=0
 		for i in range(10):
 			if self.table[i]==ele:
