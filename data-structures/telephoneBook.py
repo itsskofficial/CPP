@@ -2,7 +2,6 @@
 class Hashtable:
 	def __init__(self):
 		self.table[10]=[0] * 10
-		self.pos=-1
 	def insert_element(self,ele,probe_type):
 		pos=x%10
 		if (self.table[pos]!=0):
