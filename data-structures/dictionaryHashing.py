@@ -102,9 +102,9 @@ class Dictionary:
                     self.chain_index[temp%len(self.elements)]=-1
                 flag=1
         if flag==1:
-            print("Element deleted successfully")
+            print("\nElement deleted successfully")
         else:
-            print("Element not found")
+            print("\nElement not found")
     
     def find(self,key):
         flag=0
