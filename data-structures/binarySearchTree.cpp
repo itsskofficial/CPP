@@ -133,23 +133,23 @@ class BST
         }
     } 
     
-    void postorder(node *temp)
+    void postorder(node *root)
     {
-        if(temp != NULL)
+        if(root != NULL)
         {
-        postorder(temp->left);
-        postorder(temp->right);
-        cout<<temp->data<<" ";
+        postorder(root->left);
+        postorder(root->right);
+        cout<<root->data<<" ";
         }
     }
     
-    void preorder(node *temp)
+    void preorder(node *root)
     {
-        if(temp != NULL)
+        if(root != NULL)
         {
-        cout<<temp->data<<" ";
-        preorder(temp->left);
-        preorder(temp->right);
+        cout<<root->data<<" ";
+        preorder(root->left);
+        preorder(root->right);
         }
     } 
     
