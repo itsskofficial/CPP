@@ -11,8 +11,9 @@ class Hashtable:
 			self.table[pos]=x
 		else:
 			if probe_type==0:
+				count=
 				current=pos+1
-                while self.table[current]!=0 and count!=
+                while self.table[current]!=0 and count!=10:
                     if (table[pos]!=0):
                         table[pos]=x
                         return pos
