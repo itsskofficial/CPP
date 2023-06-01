@@ -127,7 +127,7 @@ class Dictionary:
 choice=0
 d=Dictionary()
 while choice!=5:
-    choice=int(input("\nWhat do you want to do?\n1. Insert an element\n2. Delete an element\n3. Find an element\n4. Display elements\n5. Exit\nEnter option number: "))
+    choice=int(input("\nWhat do you want to do?\n1. Insert an element\n2. Delete an element\n3. Find an element\n4. Display elements\n5. Exit\n\nEnter option number: "))
     if choice==1:
         key=int(input("Enter key: "))
         value=int(input("Enter value: "))
