@@ -7,7 +7,7 @@ class Hashtable:
 		if (self.table[pos]!=0):
 			self.table[pos]=ele
 		else:
-            if probe_type==0:
+			if probe_type==0:
                 count=1
                 current=pos+1
                 while self.table[current]!=0 and count!=10:
