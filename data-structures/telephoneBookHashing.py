@@ -23,10 +23,10 @@ class Hashtable:
 				while self.table[current]!=0 and count!=10:
 					current=(pos + count**2) % 10
 					count+=1
-					if count==10:
-						print("\nHash table full, operation terminated")
-					else:
-                    self.table[current]=ele
+				if count==10:
+					print("\nHash table full, operation terminated")
+				else:
+					self.table[current]=ele
                     
 	def delete(self,ele):
 		flag=0
