@@ -41,7 +41,7 @@ class Hashtable:
             
 	def display_elements(self.):
 		for i in range(10):
-			print(self.table[i])
+			print(f"{self.table[i]})
 
 t=Hashtable()
 ch=0
