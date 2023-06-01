@@ -1,7 +1,7 @@
 #accepting number of clients
 class Hashtable:
 	def __init__(self):
-		self.table[10]=[0] * 10
+		self.table=[0] * 10
 	def insert(self,ele,probe_type):
 		pos=ele%10
 		if (self.table[pos]!=0):
