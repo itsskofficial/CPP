@@ -2,15 +2,15 @@
 n= int(input("Enter number of clients: "))
 
 class Hashtable:
-                def __init__(self):
-                self.table[10]=[0] * 10
-                self.pos=-1
-                def insert_element(self,x,probe_type):
-                pos=x%10
-                if (self.table[pos]!=0):
-                self.table[pos]=x
-                else:
-                if probe_type==0:
+	def __init__(self):
+		self.table[10]=[0] * 10
+		self.pos=-1
+	def insert_element(self,x,probe_type):
+		pos=x%10
+		if (self.table[pos]!=0):
+			self.table[pos]=x
+		else:
+            if probe_type==0:
                 count=1
                 current=pos+1
                 while self.table[current]!=0 and count!=10:
