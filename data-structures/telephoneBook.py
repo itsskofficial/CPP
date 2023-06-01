@@ -66,13 +66,13 @@ while choice!=5:
         value=int(input("Enter value: "))
         ele={'key':key,'value':value}
         chain_type=int(input("\nEnter 0 for chaining without replacement and 1 for chaining with replacement: "))
-        d.insert(ele,chain_type)
+        t.insert(ele,chain_type)
     elif choice==2:
         key=int(input("\nEnter key to delete: "))
-        d.delete(key)
+        t.delete(key)
     elif choice==3:
         key=int(input("\nEnter key to find: "))
-        d.find(key)
+        t.find(key)
     elif choice==4:
         d.display()
     elif choice==5:
