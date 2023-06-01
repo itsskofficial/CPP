@@ -39,9 +39,9 @@ class Hashtable:
         else:
             print("Element not found")
             
-	def display_elements(self.):
+	def display_elements(self):
 		for i in range(10):
-			print(f"{self.table[i]})
+			print(f"{self.table[i]}\n")
 
 t=Hashtable()
 ch=0
