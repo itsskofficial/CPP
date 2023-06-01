@@ -74,7 +74,7 @@ while choice!=5:
         key=int(input("\nEnter key to find: "))
         t.find(key)
     elif choice==4:
-        d.display()
+        t.display()
     elif choice==5:
         exit(1)
     else:
