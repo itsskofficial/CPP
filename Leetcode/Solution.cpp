@@ -1,207 +1,79 @@
-// https://leetcode.com/problems/integer-to-roman
+// https://leetcode.com/problems/longest-common-prefix
 
-class Solution 
-{
-    public:
-        string intToRoman(int num) 
+class Solution {
+public:
+    string shortestString(vector<string> strs) 
+    {
+        string shortest;
+        int temp = 0;
+        int i = 0;
+        for (string s : strs) 
         {
-            string s = "", x = "";
-
-            int n = to_string(num).length();
-            int r1 = 4, r2 = 9, d1 = 5, d2 = 10, q1 = 0, q2 = 1;
-            int temp1, temp2, temp3;
-
-            for (int i = 0; i < n; i++)
+            if (i == 0) 
             {
-                temp3 = num % d2;
-                if (temp3 != 0)
-                {   
-                    if (i < 3)
-                    {
-                        temp1 = temp3 - q1;
-                        if (temp1 > d1)
-                        {
-                            if (temp1 == r2)
-                            {
-                                switch(i)
-                                {
-                                    case 0 :
-                                    {
-                                        x = "IX";
-                                        break;
-                                    }
-                                        
-                                    case 1 :
-                                    {
-                                        x = "XC";
-                                        break;
-                                    }
-                                        
-                                    case 2 :
-                                    {
-                                        x = "CM";
-                                        break;
-                                    }
-
-                                }
-                            
-                            }
-
-                            else
-                            {
-                                temp2 = temp1 - d1;
-                                temp2 = temp2 / q2;
-                                
-                                for (int j = 0; j < temp2; j++)
-                                {
-                                    switch(i)
-                                    {
-                                        case 0 :
-                                        {
-                                            x += "I";
-                                            break;
-                                        }
-                                            
-                                        case 1 :
-                                        {
-                                            x += "X";
-                                            break;
-                                        }
-                                            
-                                        case 2 :
-                                        {
-                                            x += "C";
-                                            break;
-                                        }
-
-                                    }
-                                }
-                                
-                                switch(i)
-                                {
-                                    case 0 :
-                                    {
-                                        x = "V" + x;
-                                        break;
-                                    }
-                                        
-                                    case 1 :
-                                    {
-                                        x = "L" + x;
-                                        break;
-                                    }
-                                        
-                                    case 2 :
-                                    {
-                                        x = "D" + x;
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-
-                        else if (temp1 < d1)
-                        {
-                            temp2 = temp1 / q2;
-                            if (temp1 == r1)
-                            {
-                                switch(i)
-                                {
-                                    case 0 :
-                                    {
-                                        x = "IV";
-                                        break;
-                                    }
-                                        
-                                    case 1 :
-                                    {
-                                        x = "XL";
-                                        break;
-                                    }
-                                        
-                                    case 2 :
-                                    {
-                                        x = "CD";
-                                        break;
-                                    }
-
-                                }
-                            }
-
-                            else
-                            {
-                                for (int j = 0; j < temp2; j++)
-                                {
-                                    switch(i)
-                                    {
-                                        case 0 :
-                                        {
-                                            x += "I";
-                                            break;
-                                        }
-                                            
-                                        case 1 :
-                                        {
-                                            x += "X";
-                                            break;
-                                        }
-                                            
-                                        case 2 :
-                                        {
-                                            x += "C";
-                                            break;
-                                        }
-
-                                    }
-                                }
-
-                            }
-                        }
-
-                        else
-                        {
-                            switch(i)
-                            {
-                                case 0 :
-                                {
-                                    x = "V";
-                                    break;
-                                }
-                                    
-                                case 1 :
-                                {
-                                    x = "L";
-                                    break;
-                                }
-                                    
-                                case 2 :
-                                {
-                                    x = "D";
-                                    break;
-                                }
-
-                            }
-                        }
-                    }
-                    else 
-                    {
-                        temp1 = temp3 - q1;
-                        temp2 = temp1 / q2;
-                        for (int j = 0; j < temp2; j++)
-                        {
-                            x += "M";
-                        }
-                    }
-                }
-                s = x + s;
-                q1 = temp3;
-                x = "";
-                d1 *= 10;
-                d2 *= 10;
-                r1 *= 10;
-                r2 *= 10;
-                q2 *= 10;
+                temp = s.length();
+                shortest = s;
+                i++;
             }
-        return s;
+            else if (s.length() < temp) 
+            {
+                temp = s.length();
+                shortest = s;
+            }
         }
+
+        return shortest;
+    }
+    
+    string longestCommonPrefix(vector<string>& strs) 
+    {
+        int counter = 0;
+        int i = 0;
+        int flag = 0;
+        int n = 0;
+        char c = '\0';
+        string answer = "";
+        string temp = "";
+
+        n = shortestString(strs).length();
+
+        while(counter < n)
+        {
+            for (auto& iter : strs)
+            {
+                temp += iter[counter];
+            }
+
+            c = temp[0];
+
+            for (i = 1; i < temp.length(); i++)
+            {
+                if (c != temp[i])
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+
+            if (flag == 1 && counter == 0)
+            {
+                return answer;
+            }
+
+            if (flag == 1)
+            {
+                return answer;
+            }
+
+            else
+            {
+                answer += c;
+                temp = "";
+                c = '\0';
+                counter++;
+            }
+        }
+
+        return answer;
+    }
 };
