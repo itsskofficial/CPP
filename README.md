@@ -1,2 +1,2 @@
 # CPP
-A collection of C++ projects, information and much more
+A collection of CPP projects, programs and papers
