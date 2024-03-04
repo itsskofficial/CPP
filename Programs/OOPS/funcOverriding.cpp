@@ -2,6 +2,7 @@
 using namespace std;
 
 class Shape {
+    public:
     float radius;
     float height, width;
     public:
@@ -19,6 +20,7 @@ class Shape {
 };
 
 class Quadrangle: public Shape{
+    public:
     float  calcArea(){
         float area = height *  width;
         return area;
@@ -28,6 +30,7 @@ class Quadrangle: public Shape{
 int main(){
     Quadrangle q;
     cout<<"Enter height and width: ";
-    cin
+    cin>>q.height>>q.width;
+    cout<<"Area is: "<<q.calcArea()<<endl;
     return 0;
 }
