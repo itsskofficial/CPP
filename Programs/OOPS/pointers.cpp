@@ -16,6 +16,9 @@ int main()
         cout<<num[i]<<endl;
         p++;
     }
+    for(i=0;i<5;i++)
+        cout<<num[i]<<endl;
+        
 
     // *p = 16;
     // cout << "Value: " << num << endl;
