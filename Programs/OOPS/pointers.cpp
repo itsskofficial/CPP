@@ -14,5 +14,9 @@ int main()
     *p = 16;
     cout << "Value: " << num << endl;
 
+    p++;
+    *p = 34;
+    cout << "Value: " << *p << endl;
+
     return 0;
 }
