@@ -18,5 +18,8 @@ int main()
     *p = 34;
     cout << "Value: " << *p << endl;
 
+    p--;
+    cout << "Value " << *p << endl;
+
     return 0;
 }
